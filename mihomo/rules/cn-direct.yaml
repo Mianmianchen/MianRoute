@@ -1,4 +1,4 @@
-# 中国直连补充：迁移既有快手直连集合；含用户明确保留的海外Kwai例外。
+# 中国直连补充：原用户指定快手集合（去已知广告）加用户指定wyjsq.com。
 payload:
 - DOMAIN-SUFFIX,00y9334535.com
 - DOMAIN-SUFFIX,027g3nkf40.com
@@ -122,7 +122,6 @@ payload:
 - DOMAIN-SUFFIX,acfunchina.com
 - DOMAIN-SUFFIX,acfunchina.net
 - DOMAIN-SUFFIX,acguxhda.com
-- DOMAIN-SUFFIX,adkwai.com
 - DOMAIN-SUFFIX,aievsge.com
 - DOMAIN-SUFFIX,aikgmgre.com
 - DOMAIN-SUFFIX,aiwvegax.com
@@ -678,3 +677,4 @@ payload:
 - DOMAIN-SUFFIX,zwaztizp.com
 - DOMAIN-SUFFIX,zygvqivs.com
 - DOMAIN-SUFFIX,ecukwai.com
+- DOMAIN-SUFFIX,wyjsq.com
