@@ -1,0 +1,8 @@
+# 仅6条已确认广告域：用户adukwai + AdGuard MobileFilter明确5条；非全量广告库。
+payload:
+- DOMAIN-SUFFIX,adukwai.com
+- DOMAIN-SUFFIX,adkwai.com
+- DOMAIN-SUFFIX,open.e.kuaishou.cn
+- DOMAIN-SUFFIX,open.e.kuaishou.com
+- DOMAIN-SUFFIX,open.kuaishouzt.com
+- DOMAIN-SUFFIX,open.kwaizt.com
