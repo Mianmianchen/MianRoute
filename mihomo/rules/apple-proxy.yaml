@@ -1,4 +1,6 @@
-# Migrated draft; behavior: classical; format: yaml
+# behavior: classical; format: yaml
+# Apple proxy, APNs, Intelligence/Siri and related services.
+# Exact Apple CDN aliases below do not match entire shared CDN zones.
 payload:
 - DOMAIN-SUFFIX,push.apple.com
 - AND,((NETWORK,TCP),(DST-PORT,5223),(IP-CIDR,17.0.0.0/8))
@@ -93,3 +95,6 @@ payload:
 - DOMAIN-SUFFIX,itunes.apple.com
 - DOMAIN-SUFFIX,safebrowsing.apple
 - DOMAIN,weather-analytics-events.apple.com
+- DOMAIN,appldnld.apple.com.edgesuite.net
+- DOMAIN-SUFFIX,ls.apple.com.akadns.net
+- DOMAIN-SUFFIX,ls.apple.com.edgesuite.net
