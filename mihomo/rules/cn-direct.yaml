@@ -1,4 +1,4 @@
-# 中国直连补充及用户指定直连例外：含Steam明确9个下载主机，不扩大共享CDN。
+# 公共直连补充：大陆服务域名和 Steam 大陆下载主机。
 payload:
 - DOMAIN-SUFFIX,00y9334535.com
 - DOMAIN-SUFFIX,027g3nkf40.com
