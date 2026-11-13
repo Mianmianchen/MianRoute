@@ -1,4 +1,5 @@
-# 中国直连补充及用户指定直连例外：含Steam明确9个下载主机，不扩大共享CDN。
+# 通用直连补充：用户批准旧域名/关键词/IP例外、快手集合与明确Steam下载主机。
+# DNS引用仅取可用域名条件，不代表执行IPv4条件；IP条目保留原解析行为。
 payload:
 - DOMAIN-SUFFIX,00y9334535.com
 - DOMAIN-SUFFIX,027g3nkf40.com
@@ -687,3 +688,7 @@ payload:
 - DOMAIN,lv.queniujq.cn
 - DOMAIN,xz.pphimalayanrt.com
 - DOMAIN,client-update.queniuqe.com
+- DOMAIN,wiki.slarker.me
+- DOMAIN-SUFFIX,daowaking.com
+- DOMAIN-KEYWORD,uhdnow
+- IP-CIDR,103.118.252.38/32
