@@ -1,0 +1,8 @@
+# 海外代理补充；游戏分类含完整CN条目，EA包含Origin。
+payload:
+- GEOSITE,steam
+- GEOSITE,ubisoft
+- GEOSITE,ea
+- GEOSITE,playstation
+- GEOSITE,nintendo
+- GEOSITE,epicgames

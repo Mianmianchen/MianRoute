@@ -1,4 +1,4 @@
-# 中国直连补充：原用户指定快手集合（去已知广告）加用户指定wyjsq.com。
+# 中国直连补充及用户指定直连例外：含Steam明确9个下载主机，不扩大共享CDN。
 payload:
 - DOMAIN-SUFFIX,00y9334535.com
 - DOMAIN-SUFFIX,027g3nkf40.com
@@ -678,3 +678,12 @@ payload:
 - DOMAIN-SUFFIX,zygvqivs.com
 - DOMAIN-SUFFIX,ecukwai.com
 - DOMAIN-SUFFIX,wyjsq.com
+- DOMAIN,dl.steam.clngaa.com
+- DOMAIN,st.dl.bscstorage.net
+- DOMAIN,st.dl.eccdnx.com
+- DOMAIN,st.dl.pinyuncloud.com
+- DOMAIN,steampowered.com.8686c.com
+- DOMAIN,alibaba.cdn.steampipe.steamcontent.com
+- DOMAIN,lv.queniujq.cn
+- DOMAIN,xz.pphimalayanrt.com
+- DOMAIN,client-update.queniuqe.com
