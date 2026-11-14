@@ -1,0 +1,47 @@
+{
+  "snapshot_date_utc": "2026-11-13",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
+      "sha256": "5c00cbf3cf228e53717ef51a16150b488487ec91e8266a14ca48ebbbe2135b15",
+      "url_kind": "mutable_upstream_url",
+      "immutable_revision_verified": false,
+      "snapshot_cache_name": "hagezi.txt",
+      "snapshot_size_bytes": 4466245
+    },
+    {
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "sha256": "3503aa3a16795a5856a921d829daf74c0d56a07ebed56446e19a961ede9f9144",
+      "url_kind": "mutable_upstream_url",
+      "immutable_revision_verified": false,
+      "snapshot_cache_name": "adguard.txt",
+      "snapshot_size_bytes": 4674006
+    }
+  ],
+  "outputs": {
+    "ads.yaml": "9806f458c51d19447b603235940b4ff3615f074537bd3c6e5a6535e67d10acb4",
+    "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
+  },
+  "runtime_validation": {
+    "core": "v1.19.34",
+    "tests": 1104,
+    "passed": 1104,
+    "all_outbounds_local_sentinels": true,
+    "external_connections_needed": false,
+    "note": "Local synthetic CONNECT requests exercise actual rule selection; both HTTP proxy outbounds terminate at local capture servers and return 200 before closing; no target contacted. Does not test user applications/network."
+  },
+  "notes": [
+    "No Loyalsoldier input used to generate rules; old list only compared.",
+    "HaGeZi includes privacy/security categories.",
+    "No guarantee of no false positives or exact old coverage.",
+    "Use blacklist AND NOT exceptions, never force exceptions DIRECT."
+  ],
+  "build_script_sha256": "d8045a0f912f71da3c2d0ca3f80f9429e1ec7be50913081d5785a913a4e7f730",
+  "reproducibility": {
+    "cached_inputs_verified": true,
+    "rebuild_outputs_match": true,
+    "python_dependency": "PyYAML==6.0.3",
+    "public_input_archive_available": false,
+    "note": "Hashes identify the exact retained inputs, but mutable source URLs do not guarantee those bytes remain downloadable. Cached inputs reproduce both outputs; fresh-network reproduction is not guaranteed."
+  }
+}
