@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "a545346243cc3a427cbab53e7c227df36f31a9cc4544d6deb6f39dd9d317d3d1",
+    "ads.yaml": "1646e0631d628afcaff1642ef8ab8552e9f89b329ac0f96a6b0b3a62e3212476",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -29,8 +29,8 @@
     "HaGeZi includes privacy/security categories.",
     "No guarantee of no false positives or exact old coverage.",
     "Use blacklist AND NOT exceptions, never force exceptions DIRECT.",
-    "Only the reviewed memcyco.com rule was removed; the November 21 full-list refresh was not imported.",
-    "User-requested PureIP service block, with no change to either pinned ad-list input."
+    "User-requested PureIP service block, with no change to either pinned ad-list input.",
+    "Pinned November 13 sources retain existing baseline plus independently reviewed changes; the full November 21 refresh was not imported."
   ],
   "build_script_sha256": "0071d43064adbdcece9dea3e2fea42e4e29ba5a494452af9e9c756a4021af523",
   "reproducibility": {
@@ -52,6 +52,14 @@
         "hagezi": "6033fe872ee360ff34da5a9e826558030938fc7e",
         "adguard": "58932f5c9acd722be5c2f80c78af6c3096e753c5"
       }
+    },
+    {
+      "domain": "sgimage.netmarble.com",
+      "review_date_utc": "2026-11-21",
+      "reason": "Mixed launcher markup, CSS and images with tracker path; upstream removes whole host block, rather than widening a URL-path rule.",
+      "issue": "https://github.com/AdguardTeam/AdguardFilters/issues/247040",
+      "fix": "https://github.com/AdguardTeam/AdguardFilters/commit/19c30825085c1524699dffa6578f82accc11696e",
+      "tracking_issue": "https://github.com/AdguardTeam/AdguardFilters/issues/214155"
     }
   ],
   "historical_baseline_runtime_validation": {
