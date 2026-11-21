@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "a65e8e979672b3dd422e2bc60c231e41729e85ed9df3090179cc54dc71cdf6f9",
+    "ads.yaml": "03f4f5168b1a53bf692ee18abd978f10c3e590cdb29e7423554ff7ed11ba7df6",
     "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
   },
   "notes": [
@@ -31,7 +31,8 @@
     "Use blacklist AND NOT exceptions, never force exceptions DIRECT.",
     "User-requested PureIP service block, with no change to either pinned ad-list input.",
     "Pinned November 13 sources retain existing baseline plus independently reviewed changes; the full November 21 refresh was not imported.",
-    "Generic ad-server rule evidence attributed to The EasyList authors (https://easylist.to/); GPL-3.0-or-later option selected under https://easylist.to/pages/licence.html. Existing HaGeZi and AdGuard notices remain unchanged."
+    "Generic ad-server rule evidence attributed to The EasyList authors (https://easylist.to/); GPL-3.0-or-later option selected under https://easylist.to/pages/licence.html. Existing HaGeZi and AdGuard notices remain unchanged.",
+    "This reviewed China Ads-Union supplement uses primary EasyList China maintainer evidence credited to EasyList China contributors. AdGuard imports the same source; comparison is not independent. Keep exact host scope."
   ],
   "build_script_sha256": "5b0f1451b1f837a466c811ada6ae80010f4d38f31e46232ae64c53c01602188f",
   "reproducibility": {
@@ -48847,6 +48848,186 @@
         "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
         "line": 65721
       }
+    },
+    {
+      "domain": "f7jxqt8z3.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at www.wanmeisxs.cc. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1322",
+        "https://github.com/easylist/easylistchina/commit/288e998b3a1689d2448174149d04ae732662a08d"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1322,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175278,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "glz2qv7q4.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at m.quanbiqu.com. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1324",
+        "https://github.com/easylist/easylistchina/commit/df9159b85a77daea62cbd89b77c70288c4ee9817"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1324,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175280,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "gv0a0qcb0e.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at www.zzbiquge.cc. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1333",
+        "https://github.com/easylist/easylistchina/commit/baa2730008a2178e0669a49f9e539f09cbd63804"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1333,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175289,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "id8zba92r.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at m.taobiquge.com. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1319",
+        "https://github.com/easylist/easylistchina/commit/76aca3b94b40f100d4992ff7975f66a6af1c6065"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1319,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175275,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "jpgupp8mi.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at m.shuhaige.net. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1318",
+        "https://github.com/easylist/easylistchina/commit/1239e87f674f1b44c8a0929337e84f9846d5294a"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1318,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175274,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "lbr3rnhge.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at m.shuhaige.net. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1321",
+        "https://github.com/easylist/easylistchina/commit/7efab892b13dc99ed81f1995887a9c0f79510362"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1321,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175277,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "nr2lzi2bi.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at m.quanbiqu.com. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1323",
+        "https://github.com/easylist/easylistchina/commit/df9159b85a77daea62cbd89b77c70288c4ee9817"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1323,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175279,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "srqeavxrk.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at www.zzbiquge.cc. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1317",
+        "https://github.com/easylist/easylistchina/commit/baa2730008a2178e0669a49f9e539f09cbd63804"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1317,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175273,
+        "shared_provenance": true
+      }
+    },
+    {
+      "domain": "wsa1ov5uo.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China added this unconditional exact DNS-representable ads host to Ads-Union in a maintainer change naming a concrete reading page at m.shuhaige.net. The same bare host is present in AdGuard DNS's imported EasyList China section; treat it as shared provenance and block the exact host only.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/blob/560a345168f36ca2bfbbf3280b0037451d6e3c80/easylistchina.txt#L1320",
+        "https://github.com/easylist/easylistchina/commit/7efab892b13dc99ed81f1995887a9c0f79510362"
+      ],
+      "candidate_snapshot_evidence": {
+        "canonical_commit": "560a345168f36ca2bfbbf3280b0037451d6e3c80",
+        "canonical_sha256": "f41dae36c1c3585c60a863347d36167fb3fb63e7126c332fc7e4b77e15b7ff6d",
+        "canonical_line": 1320,
+        "aggregate_url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+        "aggregate_snapshot_sha256": "2b29fea961b201fc0c1aaa1771cdf262157e5e97dcb0c41e36039297836d6589",
+        "aggregate_snapshot_date_utc": "2026-11-21T14:08:30.549Z",
+        "aggregate_line": 175276,
+        "shared_provenance": true
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -52147,5 +52328,23 @@
     "blocklists_unchanged": true,
     "device_validation": false,
     "routing": "Fall through the existing advertising gate; do not force DIRECT."
+  },
+  "weekly_cn_nine_validation": {
+    "base_commit": "177ee9ab8dc737679869cd56e242e859e830e00e",
+    "exact_additions": [
+      "f7jxqt8z3.com",
+      "glz2qv7q4.com",
+      "gv0a0qcb0e.com",
+      "id8zba92r.com",
+      "jpgupp8mi.com",
+      "lbr3rnhge.com",
+      "nr2lzi2bi.com",
+      "srqeavxrk.com",
+      "wsa1ov5uo.com"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "ede02db5d3c217bcf44a74052d7e79705e36af80240fdc4eda4febfdd246c175",
+    "device_validation": false
   }
 }
