@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "7687da95a2d064bea578148a1ecc07a2121784eb8466ec617a6eb9c75e8c8f55",
+    "ads.yaml": "d37710fb08838cab311ff520e9ec533b057c8bbb7beae4cfd01358991964c986",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -223,6 +223,108 @@
         "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
         "line": 15967
       }
+    },
+    {
+      "domain": "afhovwatn.in",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard maintainers explicitly added unqualified ||afhovwatn.in^ in JapaneseFilter/sections/adservers.txt for ad blocking; separately present as a literal at the pinned HaGeZi Pro snapshot. Limit the local addition to this exact domain, without extending to descendants.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/94a63e1cb052469ad947dbd70f8e5c06774a717e"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 117972,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 10809
+      }
+    },
+    {
+      "domain": "amazingfork.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard maintainers explicitly added unqualified ||amazingfork.com^ in BaseFilter/sections/adservers.txt for ad blocking; separately present as a literal at the pinned HaGeZi Pro snapshot. Limit the local addition to this exact domain, without extending to descendants.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/0d32e8c480f241c9a999b1efb0e4d9cdf5bfa400"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 120199,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 29
+      }
+    },
+    {
+      "domain": "fujckovr.in",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard maintainers explicitly added unqualified ||fujckovr.in^ in JapaneseFilter/sections/adservers.txt for ad blocking; separately present as a literal at the pinned HaGeZi Pro snapshot. Limit the local addition to this exact domain, without extending to descendants.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/94a63e1cb052469ad947dbd70f8e5c06774a717e"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 156508,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 10808
+      }
+    },
+    {
+      "domain": "namebrain.org",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard maintainers explicitly added unqualified ||namebrain.org^ in BaseFilter/sections/adservers.txt for ad blocking; separately present as a literal at the pinned HaGeZi Pro snapshot. Limit the local addition to this exact domain, without extending to descendants.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/d1b15f3de63a6a44f7f996245669b1653fdbda9f"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 188438,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 30
+      }
+    },
+    {
+      "domain": "saqtuwrryaft.in",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard maintainers explicitly added unqualified ||saqtuwrryaft.in^ in BaseFilter/sections/adservers.txt for ad blocking; separately present as a literal at the pinned HaGeZi Pro snapshot. Limit the local addition to this exact domain, without extending to descendants.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/3aadaa5dbaae99ffa62396e025a4a2edc1e808ad"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 211251,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 26
+      }
+    },
+    {
+      "domain": "zipzirim.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard maintainers explicitly added unqualified ||zipzirim.com^ in BaseFilter/sections/adservers.txt for ad blocking; separately present as a literal at the pinned HaGeZi Pro snapshot. Limit the local addition to this exact domain, without extending to descendants.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/0e76fe04b9e2fa89a3651bd61e04bd9cd5bfd8c6"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 242958,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 31
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -302,5 +404,20 @@
     "supersedes_prior_apex_only_exception": true,
     "removed_suffix": "elections.google",
     "removed_redundant_apex_exception": "elections.google"
+  },
+  "weekly_adguard_overlap_validation": {
+    "base_release": "weekly Prebid exact additions plus elections.google removal",
+    "exact_additions": [
+      "afhovwatn.in",
+      "amazingfork.com",
+      "fujckovr.in",
+      "namebrain.org",
+      "saqtuwrryaft.in",
+      "zipzirim.com"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "fd7c900ad7ac40c15949be9a7501de59f5e8e20542c3680f1467a11203107fe8",
+    "device_validation": false
   }
 }
