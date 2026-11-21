@@ -1,5 +1,7 @@
-# 海外代理补充；游戏分类含完整CN条目，EA包含Origin。
+# 海外代理补充：世纪互联 Microsoft 365 后缀及海外游戏平台。
 payload:
+- DOMAIN-SUFFIX,partner.microsoftonline-m-i.net.cn
+- DOMAIN-SUFFIX,partner.microsoftonline-m.net.cn
 - GEOSITE,steam
 - GEOSITE,ubisoft
 - GEOSITE,ea

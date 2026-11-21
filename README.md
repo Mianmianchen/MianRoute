@@ -44,7 +44,7 @@ MianRoute 希望把这些问题拆开处理：
 | [`apple-direct.yaml`](mihomo/rules/apple-direct.yaml) | `classical` | 明确的大陆区域入口等直连例外，放在苹果代理规则之前 |
 | [`apple-proxy.yaml`](mihomo/rules/apple-proxy.yaml) | `classical` | 苹果代理补充，含 APNs 与相关服务规则 |
 | [`cn-direct.yaml`](mihomo/rules/cn-direct.yaml) | `classical` | 国内直连补充、部分 Steam 下载 CDN 等例外 |
-| [`foreign-proxy.yaml`](mihomo/rules/foreign-proxy.yaml) | `classical` | Steam、Ubisoft、EA、PlayStation、Nintendo、Epic Games 的 GEOSITE 分类引用 |
+| [`foreign-proxy.yaml`](mihomo/rules/foreign-proxy.yaml) | `classical` | 世纪互联 Microsoft 365 的两个域名后缀，以及 Steam、Ubisoft、EA、PlayStation、Nintendo、Epic Games 的 GEOSITE 分类引用 |
 | [`ads.yaml`](mihomo/rules/ads.yaml) | `domain` | 合并后的广告、追踪及部分安全威胁域名规则 |
 | [`ads-exceptions.yaml`](mihomo/rules/ads-exceptions.yaml) | `classical` | 广告规则的域名例外，**必须与 ads 配套使用** |
 | [`ads-custom.yaml`](mihomo/rules/ads-custom.yaml) | `classical` | 已核实的少量定制广告规则；内容已并入 ads，无需重复加载 |
