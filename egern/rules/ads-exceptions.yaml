@@ -205,6 +205,9 @@ domain_set:
 - help-advertisers.adsterra.com
 - ftp.bmp.ovh
 - statcounter.com
+- fae.yazio-analytics.com
+- proxyrack.com
+- www.proxyrack.com
 domain_regex_set:
 - (?:^|\.)cdn\.us.*\.exponea\.com$
 - (?:^|\.)data\-.*\.herz\-fuer\-tiere\.de$
