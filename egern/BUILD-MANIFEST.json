@@ -22,7 +22,7 @@
     },
     "ads": {
       "domain_suffix_set": 329111,
-      "domain_set": 2824
+      "domain_set": 2833
     },
     "proxy-priority": {
       "domain_suffix_set": 2104,
@@ -55,7 +55,7 @@
   "validation": "Static checks only, not Egern core/device validation",
   "source_files": {
     "ads-custom.yaml": "f1f907268a90ec0df384cfe339f2643f6a1fb9f32000cc7ee47dea9ed2afd698",
-    "ads.yaml": "a65e8e979672b3dd422e2bc60c231e41729e85ed9df3090179cc54dc71cdf6f9",
+    "ads.yaml": "03f4f5168b1a53bf692ee18abd978f10c3e590cdb29e7423554ff7ed11ba7df6",
     "foreign-proxy.yaml": "ab3a79d565e085df8d728688465a31a70f1fe9c648702a77d9a740bc032bbf07",
     "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075",
     "apple-direct.yaml": "5d99b70658fdedb423af0d94bd5dc39404c218dad325a9a715837da30c5ae0a8",
@@ -65,7 +65,7 @@
   "output_sha256": {
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
     "cn-general.yaml": "88f39d52ae4d0d35b9e80a9ec65d09e4f6eeed219bd2775172bbc315c00b1e69",
-    "ads.yaml": "fb8ec62b96f4211bc3252879bd17873760116f53cabab1866de3a1a2a87591be",
+    "ads.yaml": "ede02db5d3c217bcf44a74052d7e79705e36af80240fdc4eda4febfdd246c175",
     "foreign-proxy.yaml": "9f52585f83cad649347b959a8eb9c0c6d8e49c8587ec61f84ebfb0949c2448bd",
     "ads-exceptions.yaml": "041b91608aca2ce49a2bcd063823ea0a6bc40d7c37a6f975d1cb3abfc4c16dd2",
     "apple-direct.yaml": "a960a2a46c38b6b6ff9de076efc5d347ec4ddaf98da4a8b5c9b93f8e2bc36a91",
