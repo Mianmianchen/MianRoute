@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "92107003fe5539e602074ebcdaf0d51349ff92e5a5d61779732fe64b3b6e2704",
+    "ads.yaml": "1cd38a2e12750ebb6bd1674254cd22fb2dcf9e6613eac35db7a265dae4cb1950",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -67,6 +67,15 @@
       "primary_sources": [
         "https://publicpolicy.google/elections/",
         "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt"
+      ]
+    },
+    {
+      "domain": "sport-base.eu",
+      "reason": "Remove historical HaGeZi suffix following upstream false-positive correction. This legitimate race registration, timing and results platform remains active; no current pinned HaGeZi or AdGuard unconditional suffix or child entry was found. Resume ordinary routing without adding an exception.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12374",
+        "https://sport-base.eu/en/for-organizers/race-timing",
+        "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt"
       ]
     }
   ],
@@ -1012,6 +1021,22 @@
         "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
         "adguard_line": 175146
       }
+    },
+    {
+      "domain": "bidder.viously.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Pinned Prebid.js Viously adapter sends display and video advertising bids by POST to this host's /bid endpoint. Scope only to this literal bidder host; do not widen to Viously's video product/CDNs, the parent domain, or descendants.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/viouslyBidAdapter.js#L10-L23",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/viouslyBidAdapter.js#L174-L181",
+        "https://docs.prebid.org/dev-docs/bidders/viously.html"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 99128
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -1165,6 +1190,18 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "f97f6197db7b9cb82bcb269450f52f5152444a5bb9ac0e3617bdce81cd67a0ee",
+    "device_validation": false
+  },
+  "weekly_viously_sport_validation": {
+    "base_mihomo_ads_sha256": "92107003fe5539e602074ebcdaf0d51349ff92e5a5d61779732fe64b3b6e2704",
+    "exact_additions": [
+      "bidder.viously.com"
+    ],
+    "suffix_removals": [
+      "sport-base.eu"
+    ],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "a508988680a1ee0c60c6321a9111950f3947e6cd5ba6ab50f6fb4afbb41811f8",
     "device_validation": false
   }
 }
