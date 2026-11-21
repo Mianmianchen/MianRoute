@@ -329115,5 +329115,6 @@ domain_suffix_set:
 - zzzoraclecloudsupportp07e10-img-enh-cdn.eloquademos.com
 domain_set:
 - stats.proxypurity.com
+- telemetry.strandsagents.com
 - v4.mypublicipnow.com
 - v6.mypublicipnow.com
