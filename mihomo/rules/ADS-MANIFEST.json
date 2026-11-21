@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "1b4a21506d8dbe1debf304b09e88c9225d48e72bc40d601dd9513eeaadb87ed7",
+    "ads.yaml": "a65e8e979672b3dd422e2bc60c231e41729e85ed9df3090179cc54dc71cdf6f9",
     "ads-exceptions.yaml": "4e69d939a206d52d10cc100a08e76940e76d89150a2bcdc3e2b4e9b1766fbd42"
   },
   "notes": [
@@ -47785,6 +47785,1068 @@
         "line": 63797,
         "adapter_git_blob": "b46068fc06f870a34bd2d0d649ac32af001a77e2"
       }
+    },
+    {
+      "domain": "adx-eu.sparklexads.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "SparkleX OpenRTB ad-exchange host explicitly named, with an identifiable response from the ad-exchange family in the published seller-derived report. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L89659",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 89659
+      }
+    },
+    {
+      "domain": "adx-sg.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43319",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43319
+      }
+    },
+    {
+      "domain": "adx-sg.sparklexads.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "SparkleX OpenRTB ad-exchange host explicitly named, with an identifiable response from the ad-exchange family in the published seller-derived report. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L89660",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 89660
+      }
+    },
+    {
+      "domain": "adx-ue1.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43320",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43320
+      }
+    },
+    {
+      "domain": "adx-us.sparklexads.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "SparkleX OpenRTB ad-exchange host explicitly named, with an identifiable response from the ad-exchange family in the published seller-derived report. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L89661",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 89661
+      }
+    },
+    {
+      "domain": "adx.sparklexads.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "SparkleX OpenRTB ad-exchange host explicitly named, with an identifiable response from the ad-exchange family in the published seller-derived report. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L89658",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 89658
+      }
+    },
+    {
+      "domain": "apac-rtb-buzz.adelion.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adelion regional RTB auction host explicitly named, with the same no-content response documented for its other named ad-seller endpoints. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L6200",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://github.com/hagezi/dns-blocklists/issues/12361"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 6200
+      }
+    },
+    {
+      "domain": "direct-ads-adtelligent-com.uno-geo-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Explicitly named branded Adtelligent direct-ads infrastructure hostname, identified in the reported white-label supply-side infrastructure analysis. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97167",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97167
+      }
+    },
+    {
+      "domain": "dsp-service.netaddiction.tech",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Netaddiction DSP/SSP ad-market endpoint explicitly named; the seller-derived report gives the observed family API behavior, separate from publisher page hosts. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L65720",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 65720
+      }
+    },
+    {
+      "domain": "dsp-us.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43321",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43321
+      }
+    },
+    {
+      "domain": "dsp1.app.indicue.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "IndiCue demand-side advertising host explicitly named; the seller-derived report documents the same DSP protocol response as known related ad infrastructure. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L51470",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 51470
+      }
+    },
+    {
+      "domain": "dsp1.indicue.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "IndiCue demand-side advertising host explicitly named; the seller-derived report documents the same DSP protocol response as known related ad infrastructure. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L51475",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 51475
+      }
+    },
+    {
+      "domain": "dsp1.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent demand-side advertising node; report identifies each DSP host by name and documents its common ad-stack API response. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97125",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97125
+      }
+    },
+    {
+      "domain": "dsp111.app.indicue.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "IndiCue demand-side advertising host explicitly named; the seller-derived report documents the same DSP protocol response as known related ad infrastructure. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L51471",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 51471
+      }
+    },
+    {
+      "domain": "dsp112.app.indicue.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "IndiCue demand-side advertising host explicitly named; the seller-derived report documents the same DSP protocol response as known related ad infrastructure. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L51472",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 51472
+      }
+    },
+    {
+      "domain": "dsp2.app.indicue.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "IndiCue demand-side advertising host explicitly named; the seller-derived report documents the same DSP protocol response as known related ad infrastructure. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L51473",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 51473
+      }
+    },
+    {
+      "domain": "dsp2.indicue.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "IndiCue demand-side advertising host explicitly named; the seller-derived report documents the same DSP protocol response as known related ad infrastructure. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L51476",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 51476
+      }
+    },
+    {
+      "domain": "dsp2.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent demand-side advertising node; report identifies each DSP host by name and documents its common ad-stack API response. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97126",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97126
+      }
+    },
+    {
+      "domain": "ic1.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97129",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97129
+      }
+    },
+    {
+      "domain": "ic10.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97130",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97130
+      }
+    },
+    {
+      "domain": "ic11.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97131",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97131
+      }
+    },
+    {
+      "domain": "ic12.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97132",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97132
+      }
+    },
+    {
+      "domain": "ic13.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97133",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97133
+      }
+    },
+    {
+      "domain": "ic14.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97134",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97134
+      }
+    },
+    {
+      "domain": "ic15.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97135",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97135
+      }
+    },
+    {
+      "domain": "ic17.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97136",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97136
+      }
+    },
+    {
+      "domain": "ic18.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97137",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97137
+      }
+    },
+    {
+      "domain": "ic19.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97138",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97138
+      }
+    },
+    {
+      "domain": "ic20.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97139",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97139
+      }
+    },
+    {
+      "domain": "ic21.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97140",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97140
+      }
+    },
+    {
+      "domain": "ic22.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97141",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97141
+      }
+    },
+    {
+      "domain": "ic24.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97142",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97142
+      }
+    },
+    {
+      "domain": "ic25.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97143",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97143
+      }
+    },
+    {
+      "domain": "ic26.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97144",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97144
+      }
+    },
+    {
+      "domain": "ic28.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97145",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97145
+      }
+    },
+    {
+      "domain": "ic29.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97146",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97146
+      }
+    },
+    {
+      "domain": "ic3.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97147",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97147
+      }
+    },
+    {
+      "domain": "ic30.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97148",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97148
+      }
+    },
+    {
+      "domain": "ic31.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97149",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97149
+      }
+    },
+    {
+      "domain": "ic32.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97150",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97150
+      }
+    },
+    {
+      "domain": "ic33.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97151",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97151
+      }
+    },
+    {
+      "domain": "ic34.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97152",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97152
+      }
+    },
+    {
+      "domain": "ic35.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97153",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97153
+      }
+    },
+    {
+      "domain": "ic36.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97154",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97154
+      }
+    },
+    {
+      "domain": "ic4.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97155",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97155
+      }
+    },
+    {
+      "domain": "ic41.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97156",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97156
+      }
+    },
+    {
+      "domain": "ic42.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97157",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97157
+      }
+    },
+    {
+      "domain": "ic43.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97158",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97158
+      }
+    },
+    {
+      "domain": "ic5.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97159",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97159
+      }
+    },
+    {
+      "domain": "ic6.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97160",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97160
+      }
+    },
+    {
+      "domain": "ic8.uno-dns.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Adtelligent numbered ad-inventory node; report records same service response as the adsN.unoadsrv.com delivery nodes. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12373",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L97161",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337",
+        "https://support.adtelligent.com/251704-Adtelligent-White-Label-Solution"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 97161
+      }
+    },
+    {
+      "domain": "rtb-eui.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43322",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43322
+      }
+    },
+    {
+      "domain": "rtb-euo.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43323",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43323
+      }
+    },
+    {
+      "domain": "rtb-sg.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43324",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43324
+      }
+    },
+    {
+      "domain": "rtb-us.galaxyx-tech.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "GalaxyX exchange endpoint explicitly named and reported returning a matching ad-exchange API response as part of this published seller-derived cohort. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L43325",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 43325
+      }
+    },
+    {
+      "domain": "sink.pdst.fm",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "ART19 documents this exact host as a Podsights campaign measurement/advertising pixel. Normal podcast delivery prefixes, the pdst.fm parent and Spotify prefix stay untouched. Exact host only.",
+      "primary_sources": [
+        "https://art19.zendesk.com/hc/en-us/articles/360051179192-Setting-Up-3rd-Party-Measurement-Podsights",
+        "https://support.redcircle.com/articles/6155114893-how-to-add-a-third-party-prefix-to-your-podcast"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 77338
+      }
+    },
+    {
+      "domain": "ssp-service.netaddiction.tech",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Netaddiction DSP/SSP ad-market endpoint explicitly named; the seller-derived report gives the observed family API behavior, separate from publisher page hosts. HaGeZi accepted and released the report; this exact host is in the pinned PRO source. Do not widen beyond the listed hostname.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12377",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L65721",
+        "https://github.com/hagezi/dns-blocklists/releases/tag/37522026.318.86337"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 65721
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -50881,6 +51943,131 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "ec49be2fe6ab14dc14824bba065d5fa3c14212eb22f9476bf6b165634163e38c",
+    "device_validation": false
+  },
+  "weekly_adstack_57_validation": {
+    "base_commit": "d53cb4ddad6d81e5fdddca58e817d2dd7c4e9a15",
+    "exact_additions": [
+      "adx-eu.sparklexads.com",
+      "adx-sg.galaxyx-tech.com",
+      "adx-sg.sparklexads.com",
+      "adx-ue1.galaxyx-tech.com",
+      "adx-us.sparklexads.com",
+      "adx.sparklexads.com",
+      "apac-rtb-buzz.adelion.com",
+      "direct-ads-adtelligent-com.uno-geo-dns.com",
+      "dsp-service.netaddiction.tech",
+      "dsp-us.galaxyx-tech.com",
+      "dsp1.app.indicue.com",
+      "dsp1.indicue.com",
+      "dsp1.uno-dns.com",
+      "dsp111.app.indicue.com",
+      "dsp112.app.indicue.com",
+      "dsp2.app.indicue.com",
+      "dsp2.indicue.com",
+      "dsp2.uno-dns.com",
+      "ic1.uno-dns.com",
+      "ic10.uno-dns.com",
+      "ic11.uno-dns.com",
+      "ic12.uno-dns.com",
+      "ic13.uno-dns.com",
+      "ic14.uno-dns.com",
+      "ic15.uno-dns.com",
+      "ic17.uno-dns.com",
+      "ic18.uno-dns.com",
+      "ic19.uno-dns.com",
+      "ic20.uno-dns.com",
+      "ic21.uno-dns.com",
+      "ic22.uno-dns.com",
+      "ic24.uno-dns.com",
+      "ic25.uno-dns.com",
+      "ic26.uno-dns.com",
+      "ic28.uno-dns.com",
+      "ic29.uno-dns.com",
+      "ic3.uno-dns.com",
+      "ic30.uno-dns.com",
+      "ic31.uno-dns.com",
+      "ic32.uno-dns.com",
+      "ic33.uno-dns.com",
+      "ic34.uno-dns.com",
+      "ic35.uno-dns.com",
+      "ic36.uno-dns.com",
+      "ic4.uno-dns.com",
+      "ic41.uno-dns.com",
+      "ic42.uno-dns.com",
+      "ic43.uno-dns.com",
+      "ic5.uno-dns.com",
+      "ic6.uno-dns.com",
+      "ic8.uno-dns.com",
+      "rtb-eui.galaxyx-tech.com",
+      "rtb-euo.galaxyx-tech.com",
+      "rtb-sg.galaxyx-tech.com",
+      "rtb-us.galaxyx-tech.com",
+      "sink.pdst.fm",
+      "ssp-service.netaddiction.tech"
+    ],
+    "evidence_cohorts": {
+      "direct-ads-adtelligent-com.uno-geo-dns.com": "hagezi_protocol_evidence_12373",
+      "dsp1.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "dsp2.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic1.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic10.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic11.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic12.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic13.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic14.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic15.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic17.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic18.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic19.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic20.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic21.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic22.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic24.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic25.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic26.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic28.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic29.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic3.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic30.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic31.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic32.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic33.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic34.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic35.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic36.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic4.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic41.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic42.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic43.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic5.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic6.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "ic8.uno-dns.com": "hagezi_protocol_evidence_12373",
+      "adx-eu.sparklexads.com": "hagezi_protocol_evidence_12377",
+      "adx-sg.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "adx-sg.sparklexads.com": "hagezi_protocol_evidence_12377",
+      "adx-ue1.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "adx-us.sparklexads.com": "hagezi_protocol_evidence_12377",
+      "adx.sparklexads.com": "hagezi_protocol_evidence_12377",
+      "apac-rtb-buzz.adelion.com": "hagezi_protocol_evidence_12377",
+      "dsp-service.netaddiction.tech": "hagezi_protocol_evidence_12377",
+      "dsp-us.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "dsp1.app.indicue.com": "hagezi_protocol_evidence_12377",
+      "dsp1.indicue.com": "hagezi_protocol_evidence_12377",
+      "dsp111.app.indicue.com": "hagezi_protocol_evidence_12377",
+      "dsp112.app.indicue.com": "hagezi_protocol_evidence_12377",
+      "dsp2.app.indicue.com": "hagezi_protocol_evidence_12377",
+      "dsp2.indicue.com": "hagezi_protocol_evidence_12377",
+      "rtb-eui.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "rtb-euo.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "rtb-sg.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "rtb-us.galaxyx-tech.com": "hagezi_protocol_evidence_12377",
+      "ssp-service.netaddiction.tech": "hagezi_protocol_evidence_12377",
+      "sink.pdst.fm": "podcast_ad_measurement"
+    },
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "fb8ec62b96f4211bc3252879bd17873760116f53cabab1866de3a1a2a87591be",
     "device_validation": false
   }
 }
