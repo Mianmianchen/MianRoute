@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "e6738f0e7c0faa3d6fa549665d94989f2ff1bb742adfb59ee0d7af570fff1f1d",
+    "ads.yaml": "d4a7f245b4df2e4e9b30678f482e1ea7465d0b29c4d51edad5f4469cc43cd118",
     "ads-exceptions.yaml": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba"
   },
   "notes": [
@@ -128,6 +128,15 @@
         "https://www.npmjs.com/package/@strands-agents/cli",
         "https://strandsagents.com/docs/user-guide/box/getting-started/"
       ]
+    },
+    {
+      "domain": "pl.luckperms.net",
+      "match": "exact",
+      "reason": "LuckPermsWeb independently loads Plausible analytics with async/defer and an event queue fallback; download-link logic is separate. Host only, not prior analytics hostname or descendants.",
+      "primary_sources": [
+        "https://github.com/LuckPerms/LuckPermsWeb/blob/96c79d7f6d6524ada6e46e27ff48d1dbba9b8900/public/index.html#L23-L24",
+        "https://github.com/LuckPerms/LuckPermsWeb/blob/96c79d7f6d6524ada6e46e27ff48d1dbba9b8900/src/views/Download.vue#L377-L381"
+      ]
     }
   ],
   "latest_scoped_validation": {
@@ -177,6 +186,16 @@
     "scope": "ad gate only",
     "mihomo_output": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba",
     "egern_output": "b2bd4c0abb2752092be0318d7f3b3baafc9b412796148092c0a0230885a352d1",
+    "device_validation": false
+  },
+  "luckperms_scoped_validation": {
+    "base_commit": "5dc658",
+    "exact_additions": [
+      "pl.luckperms.net"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "e537da134b834d3e1c0693fcf8d6a455f46edf3ca2e3ac46e602bc53d1b1b926",
     "device_validation": false
   }
 }
