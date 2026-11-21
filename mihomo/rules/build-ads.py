@@ -33,6 +33,12 @@ for s in (A/'adguard.txt').read_text().splitlines():
  else:other.append(s)
 custom={'adukwai.com','adkwai.com','open.e.kuaishou.cn','open.e.kuaishou.com','open.kuaishouzt.com','open.kwaizt.com'}
 all_domains=base|ad|custom
+# Apply individually approved fixes to the union, never mutate source snapshots.
+for correction in manifest.get('reviewed_removals', []):
+ d=correction['domain']
+ if d not in all_domains:
+  raise SystemExit('Review removal no longer matches a pinned input: '+d)
+ all_domains.remove(d)
 def parents(d):
  t=d.split('.');return ['.'.join(t[i:]) for i in range(len(t)-1)]
 minimal={d for d in all_domains if not any(a in all_domains for a in parents(d)[1:])}

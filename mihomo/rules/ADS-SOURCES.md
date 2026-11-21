@@ -17,7 +17,7 @@ This generated ruleset combines domain-level rules from:
    https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
    - GPL-3.0 license copy in ADS-LICENSE-GPL-3.0.txt.
 
-The generated rules, license notice, build script (build-ads.py), and manifest (ADS-MANIFEST.json) are published in this directory. Exact retained input hashes are listed below; these identify captured bytes, not immutable download URLs. Fresh downloads may change and must not be silently accepted as the audited snapshot. Preserve these notices and source-license files when redistributing. No node, subscription, credential or private configuration is included.
+The generated rules, license notice, build script (build-ads.py), and manifest (ADS-MANIFEST.json) are published in this directory. The build manifest records immutable Git revisions and SHA-256 for both retained November 13 inputs. Verify fresh downloads against those hashes before building. Preserve these notices and source-license files when redistributing. No node, subscription, credential or private configuration is included.
 
 Loyalsoldier was used only as an old-list comparison input, not as a generation source. Source overlap or limited media-domain tests do not prove that every endpoint has been semantically audited. No guarantee of zero false positives, complete old-rule equivalence, or complete coverage of advertising.
 
@@ -32,5 +32,10 @@ Required routing expression: `AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions
 - HaGeZi retained input: `5c00cbf3cf228e53717ef51a16150b488487ec91e8266a14ca48ebbbe2135b15` (4,466,245 bytes).
 - AdGuard retained input: `3503aa3a16795a5856a921d829daf74c0d56a07ebed56446e19a961ede9f9144` (4,674,006 bytes).
 - Both retained input files match these SHA256 values. Rebuilding in a separate local directory with Python 3 and PyYAML 6.0.3 reproduces both published-rule output hashes.
-- No immutable upstream revision or public archive containing these exact input bytes has been verified. The original upstream URLs can change. If they no longer return the recorded hashes, the build must stop; updating hashes requires a new review rather than bypassing the check.
-- This establishes cached-input reproducibility, not guaranteed clean network reproducibility or complete semantic/compatibility verification of every rule.
+- Both immutable Git revisions in ADS-MANIFEST.json were retrieved and verified. If a pinned download fails or does not match its SHA-256, stop the build. Updating source pins and hashes requires a new review.
+- This establishes reproducibility when the immutable source objects are available, not complete semantic or device compatibility verification of every rule.
+
+
+## 2026-11-21 narrow false-positive backport
+
+Retains both verified 2026-11-13 immutable inputs in ADS-MANIFEST.json. The generator removes only `memcyco.com` from their union, following [AdGuard incorrect-block issue #246585](https://github.com/AdguardTeam/AdguardFilters/issues/246585) and its [upstream fix](https://github.com/AdguardTeam/AdGuardSDNSFilter/pull/2138/files). The domain no longer rejects at the ad gate; it follows the remaining routing rules. No exception changed and the full upstream delta was not imported.
