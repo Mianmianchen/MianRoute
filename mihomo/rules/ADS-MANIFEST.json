@@ -21,8 +21,8 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "5b82a493ecfc8acda9c2ba16d6b653eaea1a94bfb620354ec404a4e4d234cd96",
-    "ads-exceptions.yaml": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba"
+    "ads.yaml": "7687da95a2d064bea578148a1ecc07a2121784eb8466ec617a6eb9c75e8c8f55",
+    "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -60,6 +60,14 @@
       "issue": "https://github.com/AdguardTeam/AdguardFilters/issues/247040",
       "fix": "https://github.com/AdguardTeam/AdguardFilters/commit/19c30825085c1524699dffa6578f82accc11696e",
       "tracking_issue": "https://github.com/AdguardTeam/AdguardFilters/issues/214155"
+    },
+    {
+      "domain": "elections.google",
+      "reason": "Follow refreshed upstream which no longer blocks this suffix. Google public-policy redirect is legitimate and no separately proven ad-serving descendants were found. Remove the redundant apex exception as well.",
+      "primary_sources": [
+        "https://publicpolicy.google/elections/",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt"
+      ]
     }
   ],
   "historical_baseline_runtime_validation": {
@@ -145,6 +153,76 @@
       "primary_sources": [
         "https://github.com/usegalaxy-eu/infrastructure-playbook/blob/370e2cb08b68a1943dfee64ae839a764e522a26b/group_vars/gxconfig.yml"
       ]
+    },
+    {
+      "domain": "felixads-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Prebid Server lists this dedicated ad-auction hostname with /pbserver/; do not extend the rule to its descendants or to the vendor parent.",
+      "primary_sources": [
+        "https://github.com/prebid/prebid-server/blob/0f7916bfd975b82a185e9677d8196d94b2ea4dcc/static/bidder-info/felixads.yaml"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 15960
+      }
+    },
+    {
+      "domain": "jambojar-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Prebid Server lists this dedicated ad-auction hostname with /pbserver/; do not extend the rule to its descendants or to the vendor parent.",
+      "primary_sources": [
+        "https://github.com/prebid/prebid-server/blob/0f7916bfd975b82a185e9677d8196d94b2ea4dcc/static/bidder-info/jambojar.yaml"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 15962
+      }
+    },
+    {
+      "domain": "jdpmedia-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Prebid Server lists this dedicated ad-auction hostname with /pbserver/; do not extend the rule to its descendants or to the vendor parent.",
+      "primary_sources": [
+        "https://github.com/prebid/prebid-server/blob/0f7916bfd975b82a185e9677d8196d94b2ea4dcc/static/bidder-info/jdpmedia.yaml"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 15963
+      }
+    },
+    {
+      "domain": "markapp-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Prebid Server lists this dedicated ad-auction hostname with /pbserver/; do not extend the rule to its descendants or to the vendor parent.",
+      "primary_sources": [
+        "https://github.com/prebid/prebid-server/blob/0f7916bfd975b82a185e9677d8196d94b2ea4dcc/static/bidder-info/markapp.yaml"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 15965
+      }
+    },
+    {
+      "domain": "tredio-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Prebid Server lists this dedicated ad-auction hostname with /pbserver/; do not extend the rule to its descendants or to the vendor parent.",
+      "primary_sources": [
+        "https://github.com/prebid/prebid-server/blob/0f7916bfd975b82a185e9677d8196d94b2ea4dcc/static/bidder-info/tredio.yaml"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 15967
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -178,17 +256,7 @@
     "egern_ads_sha256": "bbc48e3f08f1c3b42362390ef55807898ded6ae60c91c178e7431c9207ef3603",
     "device_validation": false
   },
-  "reviewed_exact_exceptions": [
-    {
-      "domain": "elections.google",
-      "match": "exact",
-      "reason": "Google public-policy election information redirect, which is legitimate content and not an ad-serving endpoint. Bypass the ad gate only for the apex; descendants are not approved.",
-      "primary_sources": [
-        "https://elections.google/",
-        "https://publicpolicy.google/elections/"
-      ]
-    }
-  ],
+  "reviewed_exact_exceptions": [],
   "election_exception_validation": {
     "base": "463b398",
     "scope": "ad gate only",
@@ -215,5 +283,24 @@
     "exceptions_unchanged": true,
     "egern_ads_sha256": "e6bc1f38f22c7d010fab364dd2976411cb4c9426ea8a23b22cda2de62a5aa5a3",
     "device_validation": false
+  },
+  "weekly_additive_validation": {
+    "base_commit": "e9d66fe",
+    "exact_additions": [
+      "felixads-prebid.attekmi.co",
+      "jambojar-prebid.attekmi.co",
+      "jdpmedia-prebid.attekmi.co",
+      "markapp-prebid.attekmi.co",
+      "tredio-prebid.attekmi.co"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "c12a519410d1405faeaf91025e88d2ee471f30317c12c881ce1d3a48a65cdc6c",
+    "device_validation": false
+  },
+  "election_source_sync": {
+    "supersedes_prior_apex_only_exception": true,
+    "removed_suffix": "elections.google",
+    "removed_redundant_apex_exception": "elections.google"
   }
 }
