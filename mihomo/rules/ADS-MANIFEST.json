@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "5040922770b2e1528413888876fc3c91b6c63fbf7d916ff47d2ad2e6ca3f6638",
+    "ads.yaml": "53c764dd054de72943b0289bb6aafbc59c232c5e13eee365d7251e3663ccdc63",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -5793,6 +5793,60 @@
         "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
         "adguard_line": 171728
       }
+    },
+    {
+      "domain": "bianopixel.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "AdGuard's tracking-server maintainer patch adds an unconditional rule for this exact hostname, and Biano documents its optional Biano Pixel as remarketing and conversion measurement, not a payment endpoint. Restrict the local block to the exact hostname.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/commit/ac33fd2bf41b5b9a5b7d30fa39c799829d8f78a7",
+        "https://www.biano.cz/commercial/pixel"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 127446,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 19967
+      }
+    },
+    {
+      "domain": "event.prod.asgard.hullabalook.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyPrivacy's unconditional tracking rule implements a public report documenting an exact-host app-load analytics request. Do not block other Hullabalook service endpoints or descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylist/issues/26386",
+        "https://github.com/easylist/easylist/commit/33c5f643877de9e796fb7ff5fb0f5f6a8cefc74b"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 50183,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 185487
+      }
+    },
+    {
+      "domain": "pv-track.venatus.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyPrivacy maintains an unconditional tracking rule for this exact hostname, and Venatus describes collection of page-view and ad-data statistics. Do not block other Venatus endpoints or descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylist/commit/a498d26f270ec7c03a3d6ff370ae0b113a9ee112",
+        "https://www.venatus.com/privacy-policy"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 98177,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 185759
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -6263,6 +6317,18 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "a92789882d5c87cab9e866e711160aac35bb4f263728113c100a977d011a16da",
+    "device_validation": false
+  },
+  "weekly_privacy_vendor_validation": {
+    "base_commit": "de0af83249db2648afe9efe256ca0623ef236720",
+    "exact_additions": [
+      "bianopixel.com",
+      "event.prod.asgard.hullabalook.com",
+      "pv-track.venatus.com"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "6fc453251e11bc650f8217721cf2e6580c3f2b79ecc555ba08f756b0c304d594",
     "device_validation": false
   }
 }
