@@ -22,7 +22,7 @@
   ],
   "outputs": {
     "ads.yaml": "a65e8e979672b3dd422e2bc60c231e41729e85ed9df3090179cc54dc71cdf6f9",
-    "ads-exceptions.yaml": "4e69d939a206d52d10cc100a08e76940e76d89150a2bcdc3e2b4e9b1766fbd42"
+    "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -48925,6 +48925,69 @@
         "https://experienceleague.adobe.com/en/docs/advertising/dsp/sign-in",
         "https://experienceleague.adobe.com/en/docs/advertising/privacy/ccpa/ccpa-opt-out-of-sale"
       ]
+    },
+    {
+      "domain": "krusevo.gov.mk",
+      "match": "exact",
+      "reason": "The government-hosted official municipal site provides public services and information. Exempt only the verified apex and www website from the advertising gate; keep the historical suffix and other routing intact. Do not force DIRECT.",
+      "primary_sources": [
+        "https://krusevo.gov.mk/"
+      ]
+    },
+    {
+      "domain": "kwai.com",
+      "match": "exact",
+      "reason": "The official Kwai apex redirects to the www short-video service site and help center. Restore these two exact sites through the ad gate only; leave all other hosts and the existing ad/IP split intact. Do not force DIRECT or modify provider priority.",
+      "primary_sources": [
+        "https://kwai.com/",
+        "https://www.kwai.com/",
+        "https://www.kwai.com/support/app/how-to-use-kwai"
+      ]
+    },
+    {
+      "domain": "makstat.stat.gov.mk",
+      "match": "exact",
+      "reason": "The North Macedonia State Statistical Office uses these exact site and MakStat database hostnames for official data and API access. Exempt precisely the apex, www and MakStat host from the advertising gate; keep other routing, historical suffix and descendants intact. Do not force DIRECT.",
+      "primary_sources": [
+        "https://www.stat.gov.mk/OtvoreniPodatociApi_en.aspx",
+        "https://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/"
+      ]
+    },
+    {
+      "domain": "stat.gov.mk",
+      "match": "exact",
+      "reason": "The North Macedonia State Statistical Office uses these exact site and MakStat database hostnames for official data and API access. Exempt precisely the apex, www and MakStat host from the advertising gate; keep other routing, historical suffix and descendants intact. Do not force DIRECT.",
+      "primary_sources": [
+        "https://www.stat.gov.mk/OtvoreniPodatociApi_en.aspx",
+        "https://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/"
+      ]
+    },
+    {
+      "domain": "www.krusevo.gov.mk",
+      "match": "exact",
+      "reason": "The government-hosted official municipal site provides public services and information. Exempt only the verified apex and www website from the advertising gate; keep the historical suffix and other routing intact. Do not force DIRECT.",
+      "primary_sources": [
+        "https://krusevo.gov.mk/"
+      ]
+    },
+    {
+      "domain": "www.kwai.com",
+      "match": "exact",
+      "reason": "The official Kwai apex redirects to the www short-video service site and help center. Restore these two exact sites through the ad gate only; leave all other hosts and the existing ad/IP split intact. Do not force DIRECT or modify provider priority.",
+      "primary_sources": [
+        "https://kwai.com/",
+        "https://www.kwai.com/",
+        "https://www.kwai.com/support/app/how-to-use-kwai"
+      ]
+    },
+    {
+      "domain": "www.stat.gov.mk",
+      "match": "exact",
+      "reason": "The North Macedonia State Statistical Office uses these exact site and MakStat database hostnames for official data and API access. Exempt precisely the apex, www and MakStat host from the advertising gate; keep other routing, historical suffix and descendants intact. Do not force DIRECT.",
+      "primary_sources": [
+        "https://www.stat.gov.mk/OtvoreniPodatociApi_en.aspx",
+        "https://makstat.stat.gov.mk/PXWeb/pxweb/en/MakStat/"
+      ]
     }
   ],
   "election_exception_validation": {
@@ -52069,5 +52132,20 @@
     "exceptions_unchanged": true,
     "egern_ads_sha256": "fb8ec62b96f4211bc3252879bd17873760116f53cabab1866de3a1a2a87591be",
     "device_validation": false
+  },
+  "weekly_cn_mk_exact_restorations": {
+    "base_commit": "2fe1d9c7256f32240005d66fc0e09c63cb0d53eb",
+    "exact_exceptions_added": [
+      "krusevo.gov.mk",
+      "kwai.com",
+      "makstat.stat.gov.mk",
+      "stat.gov.mk",
+      "www.krusevo.gov.mk",
+      "www.kwai.com",
+      "www.stat.gov.mk"
+    ],
+    "blocklists_unchanged": true,
+    "device_validation": false,
+    "routing": "Fall through the existing advertising gate; do not force DIRECT."
   }
 }
