@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "d4a7f245b4df2e4e9b30678f482e1ea7465d0b29c4d51edad5f4469cc43cd118",
+    "ads.yaml": "5b82a493ecfc8acda9c2ba16d6b653eaea1a94bfb620354ec404a4e4d234cd96",
     "ads-exceptions.yaml": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba"
   },
   "notes": [
@@ -137,6 +137,14 @@
         "https://github.com/LuckPerms/LuckPermsWeb/blob/96c79d7f6d6524ada6e46e27ff48d1dbba9b8900/public/index.html#L23-L24",
         "https://github.com/LuckPerms/LuckPermsWeb/blob/96c79d7f6d6524ada6e46e27ff48d1dbba9b8900/src/views/Download.vue#L377-L381"
       ]
+    },
+    {
+      "domain": "plausible.galaxyproject.eu",
+      "match": "exact",
+      "reason": "European Galaxy infrastructure explicitly configures this host as the Plausible tracking server and usegalaxy.eu as the monitored application hostname. Apply only to this analytics host, not its descendants or the application.",
+      "primary_sources": [
+        "https://github.com/usegalaxy-eu/infrastructure-playbook/blob/370e2cb08b68a1943dfee64ae839a764e522a26b/group_vars/gxconfig.yml"
+      ]
     }
   ],
   "latest_scoped_validation": {
@@ -196,6 +204,16 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "e537da134b834d3e1c0693fcf8d6a455f46edf3ca2e3ac46e602bc53d1b1b926",
+    "device_validation": false
+  },
+  "galaxy_scoped_validation": {
+    "base_commit": "7468905",
+    "exact_additions": [
+      "plausible.galaxyproject.eu"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "e6bc1f38f22c7d010fab364dd2976411cb4c9426ea8a23b22cda2de62a5aa5a3",
     "device_validation": false
   }
 }
