@@ -22,7 +22,7 @@
   ],
   "outputs": {
     "ads.yaml": "6db021b1b4749a0c6610227a1f7c46cb8efddc17a2ca8ccf328233ae779a3928",
-    "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
+    "ads-exceptions.yaml": "ddfe24ab95e5ca71b7ea16630d1275d31c762bec6fadeabcd2f10b25223b300f"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -47505,7 +47505,33 @@
     "egern_ads_sha256": "bbc48e3f08f1c3b42362390ef55807898ded6ae60c91c178e7431c9207ef3603",
     "device_validation": false
   },
-  "reviewed_exact_exceptions": [],
+  "reviewed_exact_exceptions": [
+    {
+      "domain": "fae.yazio-analytics.com",
+      "match": "exact",
+      "reason": "AdGuard upstream report and fix identify this precise hostname as required for app operation. Exempt only this hostname from the advertising gate; keep parent and other tracking endpoints subject to existing rules. This rule does not force DIRECT.",
+      "primary_sources": [
+        "https://github.com/AdguardTeam/AdguardFilters/issues/247108",
+        "https://github.com/AdguardTeam/AdguardFilters/commit/ad190147acbd58845b2153e0ba9c3d6241f85619"
+      ]
+    },
+    {
+      "domain": "proxyrack.com",
+      "match": "exact",
+      "reason": "HaGeZi issue 12382 identifies the apex and www website as false positives. Exempt only these service website hostnames from the advertising gate; keep the historical suffix and all other routing intact. This rule does not force DIRECT.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12382"
+      ]
+    },
+    {
+      "domain": "www.proxyrack.com",
+      "match": "exact",
+      "reason": "HaGeZi issue 12382 identifies the apex and www website as false positives. Exempt only these service website hostnames from the advertising gate; keep the historical suffix and all other routing intact. This rule does not force DIRECT.",
+      "primary_sources": [
+        "https://github.com/hagezi/dns-blocklists/issues/12382"
+      ]
+    }
+  ],
   "election_exception_validation": {
     "base": "463b398",
     "scope": "ad gate only",
@@ -50448,5 +50474,16 @@
     "exceptions_unchanged": true,
     "egern_ads_sha256": "ac33a3ac92e57e37a5c5c0486f24d55933c17a3129db1056b2320dd1e630e09f",
     "device_validation": false
+  },
+  "weekly_exact_restorations": {
+    "base_commit": "2b48295eb14c3f865b5b3433e05386aeff4895fc",
+    "exact_exceptions_added": [
+      "fae.yazio-analytics.com",
+      "proxyrack.com",
+      "www.proxyrack.com"
+    ],
+    "blocklists_unchanged": true,
+    "device_validation": false,
+    "routing": "Fall through the existing advertising gate; do not force DIRECT."
   }
 }

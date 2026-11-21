@@ -215,3 +215,6 @@ payload:
 - DOMAIN-SUFFIX,track.rutarget.ru
 - DOMAIN-SUFFIX,5471782.fls.doubleclick.net
 - DOMAIN-SUFFIX,omniture.walmart.com
+- DOMAIN,fae.yazio-analytics.com
+- DOMAIN,proxyrack.com
+- DOMAIN,www.proxyrack.com
