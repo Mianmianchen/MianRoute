@@ -22,7 +22,7 @@
   ],
   "outputs": {
     "ads.yaml": "6db021b1b4749a0c6610227a1f7c46cb8efddc17a2ca8ccf328233ae779a3928",
-    "ads-exceptions.yaml": "ddfe24ab95e5ca71b7ea16630d1275d31c762bec6fadeabcd2f10b25223b300f"
+    "ads-exceptions.yaml": "02c9bcb279c64c2c1681acb22e644a403569082dc364a873a3dda6fdd22ab312"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -47530,6 +47530,17 @@
       "primary_sources": [
         "https://github.com/hagezi/dns-blocklists/issues/12382"
       ]
+    },
+    {
+      "domain": "slike.indiatimes.com",
+      "match": "exact",
+      "reason": "Maharashtra Times' current first-party live TV configuration sets a Slike playlist and its public client code constructs the playlist request on this host. An AdGuard maintainer explicitly removed the host rule to restore top-video playback. Apply only this exact host as an advertising-gate exception, with no forced DIRECT; keep children and unrelated rules intact. End-to-end streaming was not verified.",
+      "primary_sources": [
+        "https://maharashtratimes.com/",
+        "https://langstatic.indiatimes.com/mt/_next/static/chunks/6482-1ef392897e7835f2.js",
+        "https://langstatic.indiatimes.com/mt/_next/static/chunks/4449-d390bdafbb37cfa4.js",
+        "https://github.com/AdguardTeam/AdguardFilters/commit/5a8cf08bf9df325c86faebf008fc1f32c450233e"
+      ]
     }
   ],
   "election_exception_validation": {
@@ -50481,6 +50492,15 @@
       "fae.yazio-analytics.com",
       "proxyrack.com",
       "www.proxyrack.com"
+    ],
+    "blocklists_unchanged": true,
+    "device_validation": false,
+    "routing": "Fall through the existing advertising gate; do not force DIRECT."
+  },
+  "weekly_slike_playback_restoration": {
+    "base_commit": "7a765a7f163b97bfb60100082d3bd5cf630c9a2c",
+    "exact_exceptions_added": [
+      "slike.indiatimes.com"
     ],
     "blocklists_unchanged": true,
     "device_validation": false,
