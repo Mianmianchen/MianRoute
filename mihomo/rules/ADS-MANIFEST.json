@@ -21,8 +21,8 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "fd662caf8228b5349669f092d0ea5d01b64d9af9f3d5cac0e79f61eea3f915ec",
-    "ads-exceptions.yaml": "02c9bcb279c64c2c1681acb22e644a403569082dc364a873a3dda6fdd22ab312"
+    "ads.yaml": "4ca758a92c1392d5b066bc5fc2c33d59823ba391dcd192afac820275b2ab6381",
+    "ads-exceptions.yaml": "4e69d939a206d52d10cc100a08e76940e76d89150a2bcdc3e2b4e9b1766fbd42"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -47489,6 +47489,193 @@
         "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
         "line": 14430
       }
+    },
+    {
+      "domain": "e.relay.bid",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for Relay ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/relayBidAdapter.js#L9",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/relayBidAdapter.js#L29-L46"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 82897
+      }
+    },
+    {
+      "domain": "hb.justbidit2.xyz",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for Waardex ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/waardexBidAdapter.js#L6",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/waardexBidAdapter.js#L47-L63"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 54004
+      }
+    },
+    {
+      "domain": "jambojar-apac-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for SmartHub Jambojar APAC ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/smarthubBidAdapter.js#L72",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/smarthubBidAdapter.js#L160-L182"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 15961
+      }
+    },
+    {
+      "domain": "markapp-apac-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for SmartHub Markapp APAC ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/smarthubBidAdapter.js#L50",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/smarthubBidAdapter.js#L160-L182"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 15964
+      }
+    },
+    {
+      "domain": "pbidj.lemmamedia.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for LemmaDigital ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/lemmaDigitalBidAdapter.js#L18",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/lemmaDigitalBidAdapter.js#L70-L88"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 57047
+      }
+    },
+    {
+      "domain": "rtb.lane4.io",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for Lane4 banner ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/lane4BidAdapter.js#L14",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/lane4BidAdapter.js#L14-L30"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 56470
+      }
+    },
+    {
+      "domain": "rtb.pinelake.media",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for Pinelake banner ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/pinelakeBidAdapter.js#L14",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/pinelakeBidAdapter.js#L14-L30"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 78179
+      }
+    },
+    {
+      "domain": "rtb.relevate.health",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for Relevate Health banner ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/relevatehealthBidAdapter.js#L13",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/relevatehealthBidAdapter.js#L13-L29"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 82902
+      }
+    },
+    {
+      "domain": "ssp.adrelevantis.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for Adrelevantis ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/adrelevantisBidAdapter.js#L38",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/adrelevantisBidAdapter.js#L165-L193"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 10613
+      }
+    },
+    {
+      "domain": "ssp.astraone.io",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for AstraOne ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/astraoneBidAdapter.js#L13",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/astraoneBidAdapter.js#L110-L127"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 15608
+      }
+    },
+    {
+      "domain": "stackup-prebid.attekmi.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The immutable official Prebid.js adapter uses this exact hostname for SmartHub Stackup US East ad auction requests; present as a new literal in pinned HaGeZi Pro. Block only the exact hostname, not descendants or other vendor hosts.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/smarthubBidAdapter.js#L87",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/smarthubBidAdapter.js#L160-L182"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 15966
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -47557,6 +47744,15 @@
         "https://langstatic.indiatimes.com/mt/_next/static/chunks/6482-1ef392897e7835f2.js",
         "https://langstatic.indiatimes.com/mt/_next/static/chunks/4449-d390bdafbb37cfa4.js",
         "https://github.com/AdguardTeam/AdguardFilters/commit/5a8cf08bf9df325c86faebf008fc1f32c450233e"
+      ]
+    },
+    {
+      "domain": "advertising.adobe.com",
+      "match": "exact",
+      "reason": "Adobe documents this exact hostname as a legitimate Advertising DSP sign-in destination and part of the privacy opt-out workflow. Exempt this hostname only from the ad gate; do not force DIRECT or alter telemetry or descendant handling.",
+      "primary_sources": [
+        "https://experienceleague.adobe.com/en/docs/advertising/dsp/sign-in",
+        "https://experienceleague.adobe.com/en/docs/advertising/privacy/ccpa/ccpa-opt-out-of-sale"
       ]
     }
   ],
@@ -50531,6 +50727,28 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "af89bde12172b8f9fb3fb510296f1a4cc054eab2df89ef2e98b7afc10da9168d",
+    "device_validation": false
+  },
+  "weekly_prebidjs_followup_validation": {
+    "base_commit": "603183067e1471794a42eb37b478dfc3b4be948c",
+    "exact_additions": [
+      "e.relay.bid",
+      "hb.justbidit2.xyz",
+      "jambojar-apac-prebid.attekmi.co",
+      "markapp-apac-prebid.attekmi.co",
+      "pbidj.lemmamedia.com",
+      "rtb.lane4.io",
+      "rtb.pinelake.media",
+      "rtb.relevate.health",
+      "ssp.adrelevantis.com",
+      "ssp.astraone.io",
+      "stackup-prebid.attekmi.co"
+    ],
+    "suffix_delta": [],
+    "exact_exceptions_added": [
+      "advertising.adobe.com"
+    ],
+    "egern_ads_sha256": "460bc2b193ac327105a21d6611c20e4f2ae4fe58bd13894a8eca04c7852ceabe",
     "device_validation": false
   }
 }
