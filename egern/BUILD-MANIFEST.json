@@ -19,12 +19,12 @@
     },
     "ads-exceptions": {
       "domain_suffix_set": 184,
-      "domain_set": 21,
+      "domain_set": 20,
       "domain_regex_set": 11
     },
     "ads": {
-      "domain_suffix_set": 329113,
-      "domain_set": 6
+      "domain_suffix_set": 329112,
+      "domain_set": 11
     },
     "proxy-priority": {
       "domain_suffix_set": 2104,
@@ -57,9 +57,9 @@
   "validation": "Static checks only, not Egern core/device validation",
   "source_files": {
     "ads-custom.yaml": "f1f907268a90ec0df384cfe339f2643f6a1fb9f32000cc7ee47dea9ed2afd698",
-    "ads.yaml": "5b82a493ecfc8acda9c2ba16d6b653eaea1a94bfb620354ec404a4e4d234cd96",
+    "ads.yaml": "7687da95a2d064bea578148a1ecc07a2121784eb8466ec617a6eb9c75e8c8f55",
     "foreign-proxy.yaml": "ab3a79d565e085df8d728688465a31a70f1fe9c648702a77d9a740bc032bbf07",
-    "ads-exceptions.yaml": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba",
+    "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5",
     "apple-direct.yaml": "5d99b70658fdedb423af0d94bd5dc39404c218dad325a9a715837da30c5ae0a8",
     "apple-proxy.yaml": "eb6ed90fde7ea21b880b896ab5233652bac141c6107314c3ce37db8a406f937d",
     "cn-direct.yaml": "07e9e8c612ab7025912c4fb142d09c72b111cfaf64758886f34fa5816dbc9715"
@@ -67,9 +67,9 @@
   "output_sha256": {
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
     "cn-general.yaml": "88f39d52ae4d0d35b9e80a9ec65d09e4f6eeed219bd2775172bbc315c00b1e69",
-    "ads.yaml": "e6bc1f38f22c7d010fab364dd2976411cb4c9426ea8a23b22cda2de62a5aa5a3",
+    "ads.yaml": "b8d8d6c61140b6a0cd6c9a3749154b49cbbcc822d91ffc652fe6928c50bd483a",
     "foreign-proxy.yaml": "9f52585f83cad649347b959a8eb9c0c6d8e49c8587ec61f84ebfb0949c2448bd",
-    "ads-exceptions.yaml": "b2bd4c0abb2752092be0318d7f3b3baafc9b412796148092c0a0230885a352d1",
+    "ads-exceptions.yaml": "de4112dd3a52230b650ebd00fe6f866e550a9a5be22a00e622235a2d4bb6ad72",
     "apple-direct.yaml": "a960a2a46c38b6b6ff9de076efc5d347ec4ddaf98da4a8b5c9b93f8e2bc36a91",
     "foreign-general.yaml": "e7e236839b312487a11012e532360a84e410219c71eb7383294675824fd003ad",
     "apple-proxy.yaml": "df440f2ffe0249534e94a7b0b5bbd379978d572d40e20035eb29d60503148b7f",
