@@ -208,6 +208,7 @@ domain_set:
 - fae.yazio-analytics.com
 - proxyrack.com
 - www.proxyrack.com
+- slike.indiatimes.com
 domain_regex_set:
 - (?:^|\.)cdn\.us.*\.exponea\.com$
 - (?:^|\.)data\-.*\.herz\-fuer\-tiere\.de$
