@@ -32,7 +32,12 @@ for s in (A/'adguard.txt').read_text().splitlines():
   ex.append(dict(original=s,type=typ,value=v,regex=rg))
  else:other.append(s)
 custom={'adukwai.com','adkwai.com','open.e.kuaishou.cn','open.e.kuaishou.com','open.kuaishouzt.com','open.kwaizt.com'}
-all_domains=base|ad|custom
+reviewed_entries=manifest.get('reviewed_additions', [])
+assert all(e.get('match') in ('exact','suffix') for e in reviewed_entries)
+reviewed_exact={e['domain'] for e in reviewed_entries if e['match']=='exact'}
+reviewed_suffix={e['domain'] for e in reviewed_entries if e['match']=='suffix'}
+assert all(re.fullmatch(r'[a-z0-9-]+(?:\.[a-z0-9-]+)+', d) for d in reviewed_exact|reviewed_suffix)
+all_domains=base|ad|custom|reviewed_suffix
 # Apply individually approved fixes to the union, never mutate source snapshots.
 for correction in manifest.get('reviewed_removals', []):
  d=correction['domain']
@@ -43,5 +48,5 @@ def parents(d):
  t=d.split('.');return ['.'.join(t[i:]) for i in range(len(t)-1)]
 minimal={d for d in all_domains if not any(a in all_domains for a in parents(d)[1:])}
 for d in all_domains:assert any(a in minimal for a in parents(d))
-(B/'ads.yaml').write_text('# HaGeZi PRO + AdGuard DNS unconditional domain rules + verified Kuaishou domains.\n# Must be used with ads-exceptions.yaml using AND / NOT; see ADS-SOURCES.md.\n# Fixed-source snapshot, GPL-3.0 source notices in ADS-SOURCES.md and ADS-LICENSE-GPL-3.0.txt.\n'+yaml.safe_dump({'payload':['+.'+d for d in sorted(minimal)]},sort_keys=False))
+(B/'ads.yaml').write_text('# HaGeZi PRO + AdGuard DNS unconditional domain rules + verified Kuaishou domains.\n# Must be used with ads-exceptions.yaml using AND / NOT; see ADS-SOURCES.md.\n# Fixed-source snapshot, GPL-3.0 source notices in ADS-SOURCES.md and ADS-LICENSE-GPL-3.0.txt.\n'+yaml.safe_dump({'payload':['+.'+d for d in sorted(minimal)] + sorted(reviewed_exact)},sort_keys=False))
 (B/'ads-exceptions.yaml').write_text('# AdGuard DNS domain exceptions; bypass advertising rule only, not force DIRECT.\n'+yaml.safe_dump({'payload':[e['type']+','+e['value'] for e in ex]},sort_keys=False))

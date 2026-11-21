@@ -212009,6 +212009,7 @@ domain_suffix_set:
 - pureglowde.com
 - puregripper.com
 - pureherbnutri.com
+- pureip.io
 - purekaffee.com
 - purekicks.de
 - purelymatches.com
@@ -329113,3 +329114,7 @@ domain_suffix_set:
 - zzzoraclecloudsupportp01e10-img-enh-cdn.eloquademos.com
 - zzzoraclecloudsupportp02e10-app-hs.eloquademos.com
 - zzzoraclecloudsupportp07e10-img-enh-cdn.eloquademos.com
+domain_set:
+- stats.proxypurity.com
+- v4.mypublicipnow.com
+- v6.mypublicipnow.com
