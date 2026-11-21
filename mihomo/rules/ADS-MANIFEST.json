@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "01a71d0a89b40206b7660f1e020d75b4c397aee9fc8a62bf83d7ff6168b09407",
+    "ads.yaml": "a545346243cc3a427cbab53e7c227df36f31a9cc4544d6deb6f39dd9d317d3d1",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -29,9 +29,10 @@
     "HaGeZi includes privacy/security categories.",
     "No guarantee of no false positives or exact old coverage.",
     "Use blacklist AND NOT exceptions, never force exceptions DIRECT.",
-    "Only the reviewed memcyco.com rule was removed; the November 21 full-list refresh was not imported."
+    "Only the reviewed memcyco.com rule was removed; the November 21 full-list refresh was not imported.",
+    "User-requested PureIP service block, with no change to either pinned ad-list input."
   ],
-  "build_script_sha256": "b6734936f5444cfd66d8a52a9b52b99e2e42c693d5da2cbdbc7634a85ecf0917",
+  "build_script_sha256": "0071d43064adbdcece9dea3e2fea42e4e29ba5a494452af9e9c756a4021af523",
   "reproducibility": {
     "cached_inputs_verified": true,
     "rebuild_outputs_match": true,
@@ -68,5 +69,69 @@
     "added_effective_suffixes": [],
     "exceptions_unchanged": true,
     "runtime": "Baseline test results retained separately. Static differential on the new backport; no device checks."
+  },
+  "reviewed_additions": [
+    {
+      "domain": "stats.proxypurity.com",
+      "review_date_utc": "2026-11-21",
+      "reason": "PureIP loads a separate script from this analytics host. The script sends page-view, outbound-link and file-download events; PureIP's main site bundle is hosted separately. No device or application runtime validation.",
+      "primary_sources": [
+        "https://pureip.io/",
+        "https://stats.proxypurity.com/script.js"
+      ],
+      "source_revisions": {
+        "hagezi": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "adguard": "58932f5c9acd722be5c2f80c78af6c3096e753c5"
+      },
+      "match": "exact"
+    },
+    {
+      "domain": "pureip.io",
+      "match": "suffix",
+      "review_date_utc": "2026-11-21",
+      "reason": "User requests blocking PureIP service. Main site, API and service assets use this suffix.",
+      "primary_sources": [
+        "https://pureip.io/"
+      ]
+    },
+    {
+      "domain": "v4.mypublicipnow.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "PureIP application bundle uses this specific hostname as its IPv4 detection endpoint.",
+      "primary_sources": [
+        "https://pureip.io/"
+      ]
+    },
+    {
+      "domain": "v6.mypublicipnow.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "PureIP application bundle uses this specific hostname as its IPv6 detection endpoint.",
+      "primary_sources": [
+        "https://pureip.io/"
+      ]
+    }
+  ],
+  "latest_scoped_validation": {
+    "additions": [
+      {
+        "domain": "stats.proxypurity.com",
+        "match": "exact"
+      },
+      {
+        "domain": "pureip.io",
+        "match": "suffix"
+      },
+      {
+        "domain": "v4.mypublicipnow.com",
+        "match": "exact"
+      },
+      {
+        "domain": "v6.mypublicipnow.com",
+        "match": "exact"
+      }
+    ],
+    "device_validation": false
   }
 }

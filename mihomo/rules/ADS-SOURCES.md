@@ -39,3 +39,7 @@ Required routing expression: `AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions
 ## 2026-11-21 narrow false-positive backport
 
 Retains both verified 2026-11-13 immutable inputs in ADS-MANIFEST.json. The generator removes only `memcyco.com` from their union, following [AdGuard incorrect-block issue #246585](https://github.com/AdguardTeam/AdguardFilters/issues/246585) and its [upstream fix](https://github.com/AdguardTeam/AdGuardSDNSFilter/pull/2138/files). The domain no longer rejects at the ad gate; it follows the remaining routing rules. No exception changed and the full upstream delta was not imported.
+
+### 2026-11-21 user-requested PureIP service block
+
+Blocks `pureip.io` and its subdomains, plus exact hosts `stats.proxypurity.com`, `v4.mypublicipnow.com` and `v6.mypublicipnow.com`. The [PureIP site](https://pureip.io/) links the application bundle that names both probe hosts and the separate [analytics script](https://stats.proxypurity.com/script.js). No parent-wide block of the two other domains and no shared CDN or unrelated IP-diagnostic services added. Pinned ad-list and exception inputs are unchanged.

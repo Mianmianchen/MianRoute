@@ -21,7 +21,8 @@
       "domain_regex_set": 11
     },
     "ads": {
-      "domain_suffix_set": 329113
+      "domain_suffix_set": 329114,
+      "domain_set": 3
     },
     "proxy-priority": {
       "domain_suffix_set": 2104,
@@ -49,5 +50,29 @@
       "domain_regex_set": 1,
       "ip_cidr_set": 8
     }
-  }
+  },
+  "format": "Egern native rule set",
+  "validation": "Static checks only, not Egern core/device validation",
+  "source_files": {
+    "ads-custom.yaml": "f1f907268a90ec0df384cfe339f2643f6a1fb9f32000cc7ee47dea9ed2afd698",
+    "ads.yaml": "a545346243cc3a427cbab53e7c227df36f31a9cc4544d6deb6f39dd9d317d3d1",
+    "foreign-proxy.yaml": "ab3a79d565e085df8d728688465a31a70f1fe9c648702a77d9a740bc032bbf07",
+    "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5",
+    "apple-direct.yaml": "5d99b70658fdedb423af0d94bd5dc39404c218dad325a9a715837da30c5ae0a8",
+    "apple-proxy.yaml": "eb6ed90fde7ea21b880b896ab5233652bac141c6107314c3ce37db8a406f937d",
+    "cn-direct.yaml": "6b086812b3b9c8f8f4765a2702c3b2bb005766570da26057cbee8f1906f46bf3"
+  },
+  "output_sha256": {
+    "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
+    "cn-general.yaml": "88f39d52ae4d0d35b9e80a9ec65d09e4f6eeed219bd2775172bbc315c00b1e69",
+    "ads.yaml": "7318de74ab6719d5decd85c90c598195ff040e9ca1d1d2ffb722c3a1423ae278",
+    "foreign-proxy.yaml": "9f52585f83cad649347b959a8eb9c0c6d8e49c8587ec61f84ebfb0949c2448bd",
+    "ads-exceptions.yaml": "de4112dd3a52230b650ebd00fe6f866e550a9a5be22a00e622235a2d4bb6ad72",
+    "apple-direct.yaml": "a960a2a46c38b6b6ff9de076efc5d347ec4ddaf98da4a8b5c9b93f8e2bc36a91",
+    "foreign-general.yaml": "e7e236839b312487a11012e532360a84e410219c71eb7383294675824fd003ad",
+    "apple-proxy.yaml": "df440f2ffe0249534e94a7b0b5bbd379978d572d40e20035eb29d60503148b7f",
+    "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
+    "cn-direct.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be"
+  },
+  "apns_note": "Six TCP/port/IP conditions retained as top-level AND rules in private profile, not in native apple-proxy domain set."
 }
