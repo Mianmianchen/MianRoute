@@ -22,7 +22,7 @@
   ],
   "outputs": {
     "ads.yaml": "e6738f0e7c0faa3d6fa549665d94989f2ff1bb742adfb59ee0d7af570fff1f1d",
-    "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
+    "ads-exceptions.yaml": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -32,7 +32,7 @@
     "User-requested PureIP service block, with no change to either pinned ad-list input.",
     "Pinned November 13 sources retain existing baseline plus independently reviewed changes; the full November 21 refresh was not imported."
   ],
-  "build_script_sha256": "0071d43064adbdcece9dea3e2fea42e4e29ba5a494452af9e9c756a4021af523",
+  "build_script_sha256": "5b0f1451b1f837a466c811ada6ae80010f4d38f31e46232ae64c53c01602188f",
   "reproducibility": {
     "cached_inputs_verified": true,
     "rebuild_outputs_match": true,
@@ -159,6 +159,24 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "bbc48e3f08f1c3b42362390ef55807898ded6ae60c91c178e7431c9207ef3603",
+    "device_validation": false
+  },
+  "reviewed_exact_exceptions": [
+    {
+      "domain": "elections.google",
+      "match": "exact",
+      "reason": "Google public-policy election information redirect, which is legitimate content and not an ad-serving endpoint. Bypass the ad gate only for the apex; descendants are not approved.",
+      "primary_sources": [
+        "https://elections.google/",
+        "https://publicpolicy.google/elections/"
+      ]
+    }
+  ],
+  "election_exception_validation": {
+    "base": "463b398",
+    "scope": "ad gate only",
+    "mihomo_output": "7fc17edd639d914db9681b47e0b770a9f1dfc3f964e742751a82f2c97792aaba",
+    "egern_output": "b2bd4c0abb2752092be0318d7f3b3baafc9b412796148092c0a0230885a352d1",
     "device_validation": false
   }
 }
