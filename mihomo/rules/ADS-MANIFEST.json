@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "1646e0631d628afcaff1642ef8ab8552e9f89b329ac0f96a6b0b3a62e3212476",
+    "ads.yaml": "e6738f0e7c0faa3d6fa549665d94989f2ff1bb742adfb59ee0d7af570fff1f1d",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -119,6 +119,15 @@
       "primary_sources": [
         "https://pureip.io/"
       ]
+    },
+    {
+      "domain": "telemetry.strandsagents.com",
+      "match": "exact",
+      "reason": "Optional fire-and-forget anonymous CLI usage ping documented by publisher; do not widen to subdomains or base product host.",
+      "primary_sources": [
+        "https://www.npmjs.com/package/@strands-agents/cli",
+        "https://strandsagents.com/docs/user-guide/box/getting-started/"
+      ]
     }
   ],
   "latest_scoped_validation": {
@@ -140,6 +149,16 @@
         "match": "exact"
       }
     ],
+    "device_validation": false
+  },
+  "strands_scoped_validation": {
+    "base_commit": "cbf8f6a5ba5e858f055a7c5d3977fac7c12a0c35",
+    "exact_additions": [
+      "telemetry.strandsagents.com"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "bbc48e3f08f1c3b42362390ef55807898ded6ae60c91c178e7431c9207ef3603",
     "device_validation": false
   }
 }
