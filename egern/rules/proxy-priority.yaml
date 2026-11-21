@@ -2097,6 +2097,8 @@ domain_suffix_set:
 - paypal.cn
 - microsoft.cn
 - azclient.cn
+- partner.microsoftonline-m-i.net.cn
+- partner.microsoftonline-m.net.cn
 - amazon.cn
 - z.cn
 - amazonbusiness.cn

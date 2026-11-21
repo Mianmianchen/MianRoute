@@ -60,7 +60,9 @@ for name,tags in [('proxy-priority',['paypal','microsoft','ebay','linkedin','goo
  d={}
  for tag in tags:geos(d,tag)
  if name=='proxy-priority':
-  for s in ['paypal.cn','paypal.com.cn','microsoft.cn','azclient.cn','amazon.cn','z.cn','amazonbusiness.cn','amazonbusiness.com.cn','aboutamazon.cn']:add(d,{'domain_suffix':{'match':s}})
+  # Mainland sovereign Microsoft 365 endpoints (Microsoft 21Vianet, Common/Office Online ID 7).
+  # https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges-21vianet?view=o365-worldwide#microsoft-365-common-and-office-online
+  for s in ['paypal.cn','paypal.com.cn','microsoft.cn','azclient.cn','partner.microsoftonline-m-i.net.cn','partner.microsoftonline-m.net.cn','amazon.cn','z.cn','amazonbusiness.cn','amazonbusiness.com.cn','aboutamazon.cn']:add(d,{'domain_suffix':{'match':s}})
  if name=='lan':
   for s in ['127.0.0.0/8','10.0.0.0/8','172.16.0.0/12','192.168.0.0/16','169.254.0.0/16','100.64.0.0/10','224.0.0.0/4','255.255.255.255/32']:add(d,{'ip_cidr':{'match':s}})
  manifest['files'][name]=write(name,d)

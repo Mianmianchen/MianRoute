@@ -26,7 +26,7 @@
       "domain_suffix_set": 329114
     },
     "proxy-priority": {
-      "domain_suffix_set": 2102,
+      "domain_suffix_set": 2104,
       "domain_set": 202,
       "domain_regex_set": 2
     },
@@ -64,7 +64,7 @@
     "cn-direct.yaml": "07e9e8c612ab7025912c4fb142d09c72b111cfaf64758886f34fa5816dbc9715"
   },
   "output_sha256": {
-    "proxy-priority.yaml": "9ee4d3ffe3955e17a305bf625c1a7bf5b22a6fe0fcb03c674d6147a5817d40eb",
+    "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
     "cn-general.yaml": "88f39d52ae4d0d35b9e80a9ec65d09e4f6eeed219bd2775172bbc315c00b1e69",
     "ads.yaml": "738c1bf8c1096f91b755a17f6ebcfdff369f9671c969395f1a1d7ef7aff16fbb",
     "foreign-proxy.yaml": "9f52585f83cad649347b959a8eb9c0c6d8e49c8587ec61f84ebfb0949c2448bd",
