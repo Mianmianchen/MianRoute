@@ -48,5 +48,13 @@ def parents(d):
  t=d.split('.');return ['.'.join(t[i:]) for i in range(len(t)-1)]
 minimal={d for d in all_domains if not any(a in all_domains for a in parents(d)[1:])}
 for d in all_domains:assert any(a in minimal for a in parents(d))
+# Reviewed exceptions skip the ad gate only and must match a single hostname.
+for correction in manifest.get('reviewed_exact_exceptions', []):
+ d=correction['domain']
+ if (correction.get('match')!='exact' or not re.fullmatch(r'[a-z0-9-]+(?:\.[a-z0-9-]+)+',d)
+     or not any(a in minimal for a in parents(d)) and d not in reviewed_exact
+     or any(e['type']=='DOMAIN' and e['value']==d for e in ex)):
+  raise SystemExit('Invalid, uncovered, or duplicate exact ad exception: '+d)
+ ex.append(dict(type='DOMAIN',value=d))
 (B/'ads.yaml').write_text('# HaGeZi PRO + AdGuard DNS unconditional domain rules + verified Kuaishou domains.\n# Must be used with ads-exceptions.yaml using AND / NOT; see ADS-SOURCES.md.\n# Fixed-source snapshot, GPL-3.0 source notices in ADS-SOURCES.md and ADS-LICENSE-GPL-3.0.txt.\n'+yaml.safe_dump({'payload':['+.'+d for d in sorted(minimal)] + sorted(reviewed_exact)},sort_keys=False))
 (B/'ads-exceptions.yaml').write_text('# AdGuard DNS domain exceptions; bypass advertising rule only, not force DIRECT.\n'+yaml.safe_dump({'payload':[e['type']+','+e['value'] for e in ex]},sort_keys=False))
