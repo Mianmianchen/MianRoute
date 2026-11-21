@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "42fd8be6a14b88af9b9d23087436efd772412ffec9f3780e8fbdb525362cf145",
+    "ads.yaml": "92107003fe5539e602074ebcdaf0d51349ff92e5a5d61779732fe64b3b6e2704",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -451,6 +451,567 @@
         "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
         "line": 47391
       }
+    },
+    {
+      "domain": "01wgskp9y3.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||01wgskp9y3.com^ rule in its network-ad block for a report tied to a page on www.lakyworld.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/94f3b25b1090b314a8234b053288070133e21f79"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 106845,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175143
+      }
+    },
+    {
+      "domain": "0x2jt61f3l.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||0x2jt61f3l.com^ rule in its network-ad block for a report tied to a page on www.zzbiquge.cc; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ff50467f7c97fa0a1d6d0643aa8b17de4a53aad6"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 107834,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175128
+      }
+    },
+    {
+      "domain": "1bdy5sl4fc.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||1bdy5sl4fc.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f1bed6551e1511755f0a6c774a674dd3a30cad97"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 109908,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175145
+      }
+    },
+    {
+      "domain": "1uei2j0mz0.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||1uei2j0mz0.com^ rule in its network-ad block for a report tied to a page on www.qishuge.co; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/297ba1e483a2d1162f403fd72ac0deacf35daeca"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 110237,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175125
+      }
+    },
+    {
+      "domain": "52cg5n8jjd.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||52cg5n8jjd.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f1bed6551e1511755f0a6c774a674dd3a30cad97"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 112225,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175147
+      }
+    },
+    {
+      "domain": "681znub3xp.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||681znub3xp.com^ rule in its network-ad block for a report tied to a page on www.kbook8.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f8fbcaed2e2844d3319be557d480b3f4d8b349fe"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 112686,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175141
+      }
+    },
+    {
+      "domain": "6uw4lcf0qu.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||6uw4lcf0qu.com^ rule in its network-ad block for a report tied to a page on m.xddxsw.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/2201f48787b03b4edaa8c2bc4eaed849a02ef19c"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 112860,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175104
+      }
+    },
+    {
+      "domain": "7xjdieyglr.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||7xjdieyglr.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f1bed6551e1511755f0a6c774a674dd3a30cad97"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 113224,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175149
+      }
+    },
+    {
+      "domain": "ac0vjhnpp.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||ac0vjhnpp.com^ rule in its network-ad block for a report tied to a page on m.xddxsw.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/238f95c86f7bf15b21ee4e69efec1b2fd8bd2b1f"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 114598,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175114
+      }
+    },
+    {
+      "domain": "chxzsq0cu1.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||chxzsq0cu1.com^ rule in its network-ad block for a report tied to a page on m.piaotianxiaoshuo.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/1b24c410ddba3cef5db88a83ad896d99b2c09dfd"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 135398,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175105
+      }
+    },
+    {
+      "domain": "crzzbyrea5.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||crzzbyrea5.com^ rule in its network-ad block for a report tied to a page on m.dingdian911.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/d1103acc3b874a15398f9a990214c9796dfe83d2"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 139797,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175126
+      }
+    },
+    {
+      "domain": "divisible26.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||divisible26.com^ rule in its network-ad block for a report tied to a page on m.23wxvv.cc; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/996dfd762df02154225cf9b81ac990ad5433164a"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 144221,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175140
+      }
+    },
+    {
+      "domain": "enar18ahs1.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||enar18ahs1.com^ rule in its network-ad block for a report tied to a page on m.shuhaige.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/42767198e433d73c77adb556f1ee9702362b9eaf"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 149091,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175119
+      }
+    },
+    {
+      "domain": "eu4as22g0c.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||eu4as22g0c.com^ rule in its network-ad block for a report tied to a page on www.qishuge.co; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/4202da8225476c273062958b00714b3e283afe6d"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 150405,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175127
+      }
+    },
+    {
+      "domain": "grmxqjo.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||grmxqjo.com^ rule in its network-ad block for a report tied to a page on www.lakyworld.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/94f3b25b1090b314a8234b053288070133e21f79"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 161293,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175144
+      }
+    },
+    {
+      "domain": "hy851xvexj.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||hy851xvexj.com^ rule in its network-ad block for a report tied to a page on m.xddxsw.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ffde97a4480c1ffe087f6ebda18290ba219efba6"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 166626,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175121
+      }
+    },
+    {
+      "domain": "i20k3b5yi.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||i20k3b5yi.com^ rule in its network-ad block for a report tied to a page on www.qishuge.co; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/11e097f4ff305f492a54d2fe1bf0aaee1ae665b0"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 166874,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175130
+      }
+    },
+    {
+      "domain": "i5dtd6dfl.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||i5dtd6dfl.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/7ad3426f07ceafc5d7b1b6e4a874308f32299040"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 166916,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175131
+      }
+    },
+    {
+      "domain": "jhpt4yvqu4.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||jhpt4yvqu4.com^ rule in its network-ad block for a report tied to a page on m.quanbiqu.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ba18601dfcddab5bedf56babf491da5e976b68e8"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 171819,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175110
+      }
+    },
+    {
+      "domain": "k04y9ezfjw.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||k04y9ezfjw.com^ rule in its network-ad block for a report tied to a page on m.quanbiqu.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ba18601dfcddab5bedf56babf491da5e976b68e8"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 173486,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175111
+      }
+    },
+    {
+      "domain": "ll4d0puaa2.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||ll4d0puaa2.com^ rule in its network-ad block for a report tied to a page on www.lakyworld.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/94f3b25b1090b314a8234b053288070133e21f79"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 179697,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175142
+      }
+    },
+    {
+      "domain": "m4820qu4n.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||m4820qu4n.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/7ad3426f07ceafc5d7b1b6e4a874308f32299040"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 181667,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175132
+      }
+    },
+    {
+      "domain": "msg3zn5w9.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||msg3zn5w9.com^ rule in its network-ad block for a report tied to a page on m.xddxsw.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/db7c08797df504ff860d553717b2ccba37264f8a"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 187003,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175117
+      }
+    },
+    {
+      "domain": "p3bqgc0pi.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||p3bqgc0pi.com^ rule in its network-ad block for a report tied to a page on www.diyibanzi.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/2afc4cda94eaa1b3b35599ae3b36cd6b4a8fbbb4"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 196159,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175118
+      }
+    },
+    {
+      "domain": "pfac2u4n5.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||pfac2u4n5.com^ rule in its network-ad block for a report tied to a page on m.shuhaige.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/812ad1d85166391ca3eb6d3b241563b32ba14d6f"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 198157,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175115
+      }
+    },
+    {
+      "domain": "pzjgxlbejmhrli.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||pzjgxlbejmhrli.com^ rule in its network-ad block for a report tied to a page on m.quanbiqu.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ba18601dfcddab5bedf56babf491da5e976b68e8"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 203635,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175109
+      }
+    },
+    {
+      "domain": "szhtkldy4.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||szhtkldy4.com^ rule in its network-ad block for a report tied to a page on m.shuhaige.net; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/227f3a0eb170abfa5089a180659897f341ef7017"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 220841,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175116
+      }
+    },
+    {
+      "domain": "tlomdebs.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||tlomdebs.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f1bed6551e1511755f0a6c774a674dd3a30cad97"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 224286,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175148
+      }
+    },
+    {
+      "domain": "tmn70vp2u.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||tmn70vp2u.com^ rule in its network-ad block for a report tied to a page on www.qishuge.co; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/11e097f4ff305f492a54d2fe1bf0aaee1ae665b0"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 224368,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175129
+      }
+    },
+    {
+      "domain": "trapezoid76.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||trapezoid76.com^ rule in its network-ad block for a report tied to a page on m.23wxvv.cc; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/65092c31bb2d888a191c74c6bffafe9f76b76197"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 225930,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175113
+      }
+    },
+    {
+      "domain": "variance36.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||variance36.com^ rule in its network-ad block for a report tied to a page on m.23wxvv.cc; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/4488e431a367244adcda8e4609e6ed0a485c45bd"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 230692,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175120
+      }
+    },
+    {
+      "domain": "xsdnb.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||xsdnb.com^ rule in its network-ad block for a report tied to a page on wap.yushuwu.cloud; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/609aac20c4b97dc4bd3ffbfa30582a1b68fddd33"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 239598,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175138
+      }
+    },
+    {
+      "domain": "y756n8wwt8.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The EasyList China maintainer added the unconditional ||y756n8wwt8.com^ rule in its network-ad block for a report tied to a page on m.taobiquge.com; the same domain is present in both pinned candidate snapshots. Block only the exact hostname, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f1bed6551e1511755f0a6c774a674dd3a30cad97"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 240148,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175146
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -562,6 +1123,48 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "084dfb913c26b3ebfbfbeb350abbdb0862dee34b8344ebdfdd6fe999c6bfed36",
+    "device_validation": false
+  },
+  "weekly_easylistchina_validation": {
+    "base_commit": "4f7bd2adbb2b10811e9035b5a513d66d56fdf622",
+    "exact_additions": [
+      "01wgskp9y3.com",
+      "0x2jt61f3l.com",
+      "1bdy5sl4fc.com",
+      "1uei2j0mz0.com",
+      "52cg5n8jjd.com",
+      "681znub3xp.com",
+      "6uw4lcf0qu.com",
+      "7xjdieyglr.com",
+      "ac0vjhnpp.com",
+      "chxzsq0cu1.com",
+      "crzzbyrea5.com",
+      "divisible26.com",
+      "enar18ahs1.com",
+      "eu4as22g0c.com",
+      "grmxqjo.com",
+      "hy851xvexj.com",
+      "i20k3b5yi.com",
+      "i5dtd6dfl.com",
+      "jhpt4yvqu4.com",
+      "k04y9ezfjw.com",
+      "ll4d0puaa2.com",
+      "m4820qu4n.com",
+      "msg3zn5w9.com",
+      "p3bqgc0pi.com",
+      "pfac2u4n5.com",
+      "pzjgxlbejmhrli.com",
+      "szhtkldy4.com",
+      "tlomdebs.com",
+      "tmn70vp2u.com",
+      "trapezoid76.com",
+      "variance36.com",
+      "xsdnb.com",
+      "y756n8wwt8.com"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "f97f6197db7b9cb82bcb269450f52f5152444a5bb9ac0e3617bdce81cd67a0ee",
     "device_validation": false
   }
 }
