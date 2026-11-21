@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "4ca758a92c1392d5b066bc5fc2c33d59823ba391dcd192afac820275b2ab6381",
+    "ads.yaml": "1b4a21506d8dbe1debf304b09e88c9225d48e72bc40d601dd9513eeaadb87ed7",
     "ads-exceptions.yaml": "4e69d939a206d52d10cc100a08e76940e76d89150a2bcdc3e2b4e9b1766fbd42"
   },
   "notes": [
@@ -47676,6 +47676,115 @@
         "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
         "line": 15966
       }
+    },
+    {
+      "domain": "hb-dot-valuad.appspot.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The pinned official Prebid.js adapter uses this exact host to trigger an auction-win notification pixel; leave the shared Appspot parent untouched. The exact host is a new HaGeZi Pro literal. Do not match descendants or add broader vendor suffixes.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/valuadBidAdapter.js#L20",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/valuadBidAdapter.js#L219-L225"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 14898,
+        "adapter_git_blob": "b06fe7902f37e88fd1146d4857b5cd60319216b5"
+      }
+    },
+    {
+      "domain": "reachgeneric.co.uk",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "Exact generic ad-server rule in fixed canonical EasyList and both November 21 input sources, with no URL or context modifier. co.uk is the public suffix, so this is a registrable apex, not a nested host. Keep exact local scope, no descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylist/blob/f1d440862990514a5c60414814d7e8100b356c9a/easylist/easylist_adservers.txt#L30041",
+        "https://github.com/hagezi/dns-blocklists/blob/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt#L28490",
+        "https://publicsuffix.org/"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "adguard",
+        "commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "rule": "||reachgeneric.co.uk^",
+        "line": 159473,
+        "sha256": "87e41d5c5ccb397d8073e14f02df45f72572e7d988d80d1fdef9c26481fbb0eb"
+      }
+    },
+    {
+      "domain": "ssp-cookie.logan.ai",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The pinned official Prebid.js adapter uses this exact host to construct optional bidder user-sync requests. The exact host is a new HaGeZi Pro literal. Do not match descendants or add broader vendor suffixes.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/loganBidAdapter.js#L9",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/loganBidAdapter.js#L84-L85"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 58274,
+        "adapter_git_blob": "dd092813eb1b80810eaa2b20832e2ee23f4c7d36"
+      }
+    },
+    {
+      "domain": "sync.revantage.io",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The pinned official Prebid.js adapter uses this exact host to construct optional bidder user-sync iframe or pixel requests. The exact host is a new HaGeZi Pro literal. Do not match descendants or add broader vendor suffixes.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/revantageBidAdapter.js#L7",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/revantageBidAdapter.js#L135-L169"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 83252,
+        "adapter_git_blob": "caac10a84294abd4238674589739893a668642db"
+      }
+    },
+    {
+      "domain": "syncbf.bidfuse.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The pinned official Prebid.js adapter uses this exact host to configure optional bidder user-sync requests. The exact host is a new HaGeZi Pro literal. Do not match descendants or add broader vendor suffixes.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/bidfuseBidAdapter.js#L8",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/bidfuseBidAdapter.js#L8-L18"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 18847,
+        "adapter_git_blob": "ea194689366a245c6269d392fa56b934a3cac48d"
+      }
+    },
+    {
+      "domain": "usersync.mycodemedia.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "The pinned official Prebid.js adapter uses this exact host to configure optional bidder user-sync requests. The exact host is a new HaGeZi Pro literal. Do not match descendants or add broader vendor suffixes.",
+      "primary_sources": [
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/mcodemediaBidAdapter.js#L12",
+        "https://github.com/prebid/Prebid.js/blob/1d846f3248bbd17ed1b0559387088076c1303dca/modules/mcodemediaBidAdapter.js#L12-L22"
+      ],
+      "candidate_snapshot_evidence": {
+        "source": "hagezi",
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "sha256": "bb5960712e950454fdc7fba6b3a4e2a856dcbb8ed359de7c5b0f6435dd619efd",
+        "line": 63797,
+        "adapter_git_blob": "b46068fc06f870a34bd2d0d649ac32af001a77e2"
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -50749,6 +50858,29 @@
       "advertising.adobe.com"
     ],
     "egern_ads_sha256": "460bc2b193ac327105a21d6611c20e4f2ae4fe58bd13894a8eca04c7852ceabe",
+    "device_validation": false
+  },
+  "weekly_pixel_sync_validation": {
+    "base_release": "weekly-prebidjs-followup",
+    "exact_additions": [
+      "hb-dot-valuad.appspot.com",
+      "reachgeneric.co.uk",
+      "ssp-cookie.logan.ai",
+      "sync.revantage.io",
+      "syncbf.bidfuse.com",
+      "usersync.mycodemedia.com"
+    ],
+    "evidence_cohorts": {
+      "hb-dot-valuad.appspot.com": "optional_prebid_ad_measurement",
+      "ssp-cookie.logan.ai": "optional_prebid_ad_measurement",
+      "sync.revantage.io": "optional_prebid_ad_measurement",
+      "syncbf.bidfuse.com": "optional_prebid_ad_measurement",
+      "usersync.mycodemedia.com": "optional_prebid_ad_measurement",
+      "reachgeneric.co.uk": "canonical_generic_legal_apex"
+    },
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "ec49be2fe6ab14dc14824bba065d5fa3c14212eb22f9476bf6b165634163e38c",
     "device_validation": false
   }
 }
