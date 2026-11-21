@@ -209,6 +209,7 @@ domain_set:
 - proxyrack.com
 - www.proxyrack.com
 - slike.indiatimes.com
+- advertising.adobe.com
 domain_regex_set:
 - (?:^|\.)cdn\.us.*\.exponea\.com$
 - (?:^|\.)data\-.*\.herz\-fuer\-tiere\.de$
