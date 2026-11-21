@@ -21,7 +21,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "a1e73cf4fb7333448dd0d168556a966671d92027b8b5dd04f448a2129864b361",
+    "ads.yaml": "48cabbfd01eb8818af4d3a6c4ae193054026472fc28e96170dcbc36c3da8a273",
     "ads-exceptions.yaml": "613c5e358d5437b81c3655474670fcd51b3f2afd180a7f22a55f5651241f7ab5"
   },
   "notes": [
@@ -1253,6 +1253,330 @@
         "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
         "adguard_line": 175156
       }
+    },
+    {
+      "domain": "0vtqrw86o.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||0vtqrw86o.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/a262609bf5443fcb83f86d4e3be88185e1a8dda4",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1369"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 107820,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175155
+      }
+    },
+    {
+      "domain": "1nqv0i1kk.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||1nqv0i1kk.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/f29e7429cf1287f939bd70a8e43a0b972cb06b0c",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1351"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 110110,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175137
+      }
+    },
+    {
+      "domain": "7nwt5qq78.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||7nwt5qq78.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/e5762fb98e1b2158e51aba34360b59712b4527d5",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1373"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 113173,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175159
+      }
+    },
+    {
+      "domain": "bmznrj7oi.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||bmznrj7oi.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/4760df7d64fafa4d4be3514e354cad9cbaeec22b",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1347"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 129075,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175133
+      }
+    },
+    {
+      "domain": "complement88.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||complement88.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/3292ecba16c27724461d456b7d3ac6f0d1ad100b",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1350"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 137555,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175136
+      }
+    },
+    {
+      "domain": "enjihdh0t.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||enjihdh0t.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/3292ecba16c27724461d456b7d3ac6f0d1ad100b",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1348"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 149304,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175134
+      }
+    },
+    {
+      "domain": "fpz4gr87mq.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||fpz4gr87mq.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/a45d3103ee08ee2c217145a0f56c49cf71163cb0",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1378"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 155549,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175164
+      }
+    },
+    {
+      "domain": "ii4mju7bta.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||ii4mju7bta.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/390105f446e9b4ffb1a88621b1317b852e9c2c7e",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1336"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 167670,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175122
+      }
+    },
+    {
+      "domain": "jnno9y1a9.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||jnno9y1a9.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/7917dbe4a6325f6006fdc596fe38a38007dc0b95",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1371"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 172209,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175157
+      }
+    },
+    {
+      "domain": "jsdikro5nj.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||jsdikro5nj.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/390105f446e9b4ffb1a88621b1317b852e9c2c7e",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1337"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 172835,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175123
+      }
+    },
+    {
+      "domain": "ked61ojxow.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||ked61ojxow.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/390105f446e9b4ffb1a88621b1317b852e9c2c7e",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1338"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 174293,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175124
+      }
+    },
+    {
+      "domain": "ntpyrbdgxzpjxy.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||ntpyrbdgxzpjxy.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/a45d3103ee08ee2c217145a0f56c49cf71163cb0",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1377"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 191678,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175163
+      }
+    },
+    {
+      "domain": "pa4u6c6lqv.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||pa4u6c6lqv.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ce86a2f1386225306b7d1900f7293cbcfdafd0bd",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1320"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 196191,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175106
+      }
+    },
+    {
+      "domain": "r45jho6ug.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||r45jho6ug.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/a262609bf5443fcb83f86d4e3be88185e1a8dda4",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1368"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 205351,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175154
+      }
+    },
+    {
+      "domain": "sga2frwjjh.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||sga2frwjjh.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/026c7674cc55a1906d51ecc278f8d45c4ed01270",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1322"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 213284,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175108
+      }
+    },
+    {
+      "domain": "vx5l3i9l18.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||vx5l3i9l18.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/ce86a2f1386225306b7d1900f7293cbcfdafd0bd",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1321"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 233686,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175107
+      }
+    },
+    {
+      "domain": "z3vkcnj9f.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||z3vkcnj9f.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/7917dbe4a6325f6006fdc596fe38a38007dc0b95",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1372"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 241932,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175158
+      }
+    },
+    {
+      "domain": "zs68h9vow.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-21",
+      "reason": "EasyList China maintainers added the unconditional ||zs68h9vow.com^ to the Ads-Union section in a dedicated network-ad list update. The same literal is present in both pinned candidate snapshots; no per-host exception or modifier occurs in the pinned original or AdGuard DNS aggregate. Match this exact hostname only, not descendants.",
+      "primary_sources": [
+        "https://github.com/easylist/easylistchina/commit/3292ecba16c27724461d456b7d3ac6f0d1ad100b",
+        "https://github.com/easylist/easylistchina/blob/baa2730008a2178e0669a49f9e539f09cbd63804/easylistchina.txt#L1349"
+      ],
+      "candidate_snapshot_evidence": {
+        "commit": "6033fe872ee360ff34da5a9e826558030938fc7e",
+        "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/6033fe872ee360ff34da5a9e826558030938fc7e/wildcard/pro-onlydomains.txt",
+        "line": 243590,
+        "adguard_commit": "58932f5c9acd722be5c2f80c78af6c3096e753c5",
+        "adguard_url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/58932f5c9acd722be5c2f80c78af6c3096e753c5/Filters/filter.txt",
+        "adguard_line": 175135
+      }
     }
   ],
   "latest_scoped_validation": {
@@ -1439,6 +1763,33 @@
     "suffix_delta": [],
     "exceptions_unchanged": true,
     "egern_ads_sha256": "bbd977ebad870042b12ae8487775d6cda81912e27fa9e227e249a29be898adab",
+    "device_validation": false
+  },
+  "weekly_easylistchina_canonical_validation": {
+    "base_commit": "46589a003faa059bd056a33ef90848fcc3b7189f",
+    "exact_additions": [
+      "0vtqrw86o.com",
+      "1nqv0i1kk.com",
+      "7nwt5qq78.com",
+      "bmznrj7oi.com",
+      "complement88.com",
+      "enjihdh0t.com",
+      "fpz4gr87mq.com",
+      "ii4mju7bta.com",
+      "jnno9y1a9.com",
+      "jsdikro5nj.com",
+      "ked61ojxow.com",
+      "ntpyrbdgxzpjxy.com",
+      "pa4u6c6lqv.com",
+      "r45jho6ug.com",
+      "sga2frwjjh.com",
+      "vx5l3i9l18.com",
+      "z3vkcnj9f.com",
+      "zs68h9vow.com"
+    ],
+    "suffix_delta": [],
+    "exceptions_unchanged": true,
+    "egern_ads_sha256": "556ec37840d28033f475a6d408d620226c1c6ec226af44c226108de7d4cbed9f",
     "device_validation": false
   }
 }
