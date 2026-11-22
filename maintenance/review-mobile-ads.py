@@ -108,6 +108,21 @@ for host, section in sorted(section_by_host.items()):
     })
     added.append(host)
 
+# Two exact uncovered Chinese advertising hosts added in the same upstream case.
+easylist_revision = "63761376e60234c6323169cea8877d8e7dbebea5"
+easylist_url = f"https://raw.githubusercontent.com/easylist/easylistchina/{easylist_revision}/easylistchina.txt"
+easylist = set(read_source(easylist_url))
+for host in ("93cwt9hr8s.com", "dw3wytlo38.com"):
+    assert f"||{host}^" in easylist
+    assert host not in restored and not any(rule.search(host) for rule in exceptions)
+    if not any(row["domain"] == host for row in manifest["reviewed_additions"]):
+        manifest["reviewed_additions"].append({
+            "domain":host, "match":"exact", "review_date_utc":REVIEW,
+            "primary_sources":[easylist_url, f"https://github.com/easylist/easylistchina/commit/{easylist_revision}"],
+            "reason":"Exact DNS host in the upstream Ads-Union change for a documented Chinese reading page; keep descendant behavior.",
+        })
+        added.append(host)
+
 def save():
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 
@@ -130,7 +145,7 @@ for host in ["courier.push.apple.com", "apps.apple.com", "chatgpt.com", "api.ope
              "gemini.google.com", "apple-pay-gateway.apple.com", "paypal.com", "dl.steam.clngaa.com"]:
     if not blocked(host, old_ads) and blocked(host, new_ads):
         raise ValueError("New block on functional host: " + host)
-if baseline != {k: hashlib.sha256((RULES / k).read_bytes()).hexdigest() for k in baseline}:
+if "refresh_20261122" not in manifest and baseline != {k: hashlib.sha256((RULES / k).read_bytes()).hexdigest() for k in baseline}:
     manifest["refresh_20261122"] = {
         "previous_outputs": baseline, "source_revisions": [x["commit"] for x in manifest["sources"]],
         "blocking_rows_added": len(new_ads - old_ads), "blocking_rows_removed": len(old_ads - new_ads),

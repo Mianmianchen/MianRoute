@@ -1,10 +1,10 @@
-name: Refresh Egern geographic domain sets
+name: Sync official XTLS geodata and Egern geographic domain sets
 on:
   schedule:
     - cron: '27 */2 * * *'
   workflow_dispatch:
   push:
-    branches: [maintain/subscription-sources-20261122]
+    branches: [main, maintain/subscription-sources-20261122]
     paths: ['.github/workflows/refresh-egern-geosite.yml']
 permissions:
   contents: read
@@ -26,6 +26,20 @@ jobs:
           gh api repos/XTLS/Xray-rules-dat/releases/latest > "$RUNNER_TEMP/release.json"
           jq -er '.assets[] | select(.name=="geosite.dat") | .browser_download_url' "$RUNNER_TEMP/release.json" > "$RUNNER_TEMP/url"
           jq -er '.assets[] | select(.name=="geosite.dat") | .digest | select(test("^sha256:[0-9a-f]{64}$")) | split(":")[1]' "$RUNNER_TEMP/release.json" > "$RUNNER_TEMP/sha"
+          jq -er '.tag_name | select(test("^[0-9]{14}$"))' "$RUNNER_TEMP/release.json" > "$RUNNER_TEMP/upstream-tag"
+          python - "$RUNNER_TEMP" <<'PY'
+          import json, pathlib, sys
+          p=pathlib.Path(sys.argv[1])
+          release=json.loads((p/"release.json").read_bytes())
+          hashes={a["name"]:a["digest"].removeprefix("sha256:") for a in release["assets"] if a["name"] in {"geoip-full.dat","geosite.dat"}}
+          assert len(hashes)==2 and all(len(value)==64 and set(value)<=set("0123456789abcdef") for value in hashes.values())
+          (p/"upstream-sums").write_text("".join(f"{v}  {n}\n" for n,v in sorted(hashes.items())))
+          PY
+          own="xtls-$(cat "$RUNNER_TEMP/upstream-tag")"
+          current=$(gh release view --json tagName --jq .tagName || true)
+          if [[ "$GITHUB_REF_NAME" != "${{ github.event.repository.default_branch }}" || "$current" != "$own" ]]; then
+            echo "mirror=yes" >> "$GITHUB_OUTPUT"
+          fi
           if test "$(cat "$RUNNER_TEMP/sha")" != "$(jq -r .geosite_sha256 egern/BUILD-MANIFEST.json)" || test "$GITHUB_EVENT_NAME" = push; then
             echo "changed=yes" >> "$GITHUB_OUTPUT"
           fi
@@ -70,3 +84,44 @@ jobs:
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Sync Egern geographic domain sets with XTLS"
             git push origin HEAD:"${GITHUB_REF#refs/heads/}"
           fi
+      - name: Verify both original XTLS release assets
+        if: steps.release.outputs.mirror == 'yes'
+        run: |
+          set -euo pipefail
+          tag=$(cat "$RUNNER_TEMP/upstream-tag")
+          mkdir -p "$RUNNER_TEMP/mirror"
+          cd "$RUNNER_TEMP/mirror"
+          cp "$RUNNER_TEMP/upstream-sums" SHA256SUMS
+          for n in geoip-full.dat geosite.dat; do
+            curl -fsSL --retry 3 "https://github.com/XTLS/Xray-rules-dat/releases/download/$tag/$n" -o "$n"
+          done
+          sha256sum -c SHA256SUMS
+          for n in LICENSE LICENSE-GeoSite LICENSE-GeoSite-inherit README.md; do
+            curl -fsSL --retry 3 "https://raw.githubusercontent.com/XTLS/Xray-rules-dat/$tag/$n" -o "$n"
+          done
+      - name: Promote fully verified release on the default branch
+        if: steps.release.outputs.mirror == 'yes' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/mirror"
+          source_tag=$(cat "$RUNNER_TEMP/upstream-tag")
+          tag="xtls-$source_tag"
+          if ! gh release view "$tag" --json isDraft > "$RUNNER_TEMP/state"; then
+            gh release create "$tag" --target "$GITHUB_SHA" --draft --title "XTLS routing data $source_tag" --notes "Unmodified [XTLS/Xray-rules-dat](https://github.com/XTLS/Xray-rules-dat/releases/tag/$source_tag) release assets. Contains IPinfo Lite and v2fly data. Source and license notices are attached."
+            echo '{"isDraft":true}' > "$RUNNER_TEMP/state"
+          fi
+          if jq -e .isDraft "$RUNNER_TEMP/state"; then
+            gh release upload "$tag" geoip-full.dat geosite.dat SHA256SUMS LICENSE LICENSE-GeoSite LICENSE-GeoSite-inherit README.md --clobber
+          fi
+          # Check the uploaded bytes even on retries before changing the client's latest pointer.
+          gh release view "$tag" --json assets > "$RUNNER_TEMP/mirror-assets"
+          python - "$RUNNER_TEMP/mirror-assets" <<'PY'
+          import hashlib,json,pathlib,sys
+          assets={a["name"]:a["digest"] for a in json.loads(pathlib.Path(sys.argv[1]).read_text())["assets"]}
+          for item in pathlib.Path.cwd().iterdir():
+              assert assets.get(item.name) == "sha256:"+hashlib.sha256(item.read_bytes()).hexdigest(), item.name
+          PY
+          gh release edit "$tag" --draft=false --latest
