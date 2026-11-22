@@ -1,0 +1,121 @@
+# Nikki（OpenWrt / Mihomo）分流模板。下载后在本地编辑。
+# 将本地节点写入 proxies，把 PROXY 组内的 REJECT 替换为节点名称。
+# 使用节点订阅时，可在本地另建 proxy-providers，并用 PROXY 组的 use 引用。
+# 空模板会拒绝需要代理的连接。DNS、入站监听和透明代理接管由 Nikki 混入设置管理。
+mode: rule
+ipv6: false
+dns:
+  ipv6: false
+
+# 地域数据使用 XTLS 官方发布文件。更新间隔单位为小时。
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: https://github.com/XTLS/Xray-rules-dat/releases/latest/download/geoip-full.dat
+  geosite: https://github.com/XTLS/Xray-rules-dat/releases/latest/download/geosite.dat
+
+proxies: []
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies: [REJECT]
+  - name: 广告
+    type: select
+    proxies: [REJECT, DIRECT, PROXY]
+  - name: 国外网站
+    type: select
+    proxies: [PROXY, DIRECT, REJECT]
+  - name: 中国大陆
+    type: select
+    proxies: [DIRECT, PROXY, REJECT]
+  - name: 兜底
+    type: select
+    proxies: [PROXY, DIRECT, REJECT]
+  - name: Apple代理
+    type: select
+    proxies: [PROXY, DIRECT, REJECT]
+  - name: Apple直连
+    type: select
+    proxies: [DIRECT, PROXY, REJECT]
+
+# 规则每 24 小时从本项目检查更新。每个订阅有独立的缓存路径。
+rule-providers:
+  ads:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/ads.yaml
+    path: ./ruleset/mianroute-ads.yaml
+    interval: 86400
+  ads-exceptions:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/ads-exceptions.yaml
+    path: ./ruleset/mianroute-ads-exceptions.yaml
+    interval: 86400
+  apple-direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/apple-direct.yaml
+    path: ./ruleset/mianroute-apple-direct.yaml
+    interval: 86400
+  apple-proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/apple-proxy.yaml
+    path: ./ruleset/mianroute-apple-proxy.yaml
+    interval: 86400
+  cn-direct:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/cn-direct.yaml
+    path: ./ruleset/mianroute-cn-direct.yaml
+    interval: 86400
+  foreign-proxy:
+    type: http
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/foreign-proxy.yaml
+    path: ./ruleset/mianroute-foreign-proxy.yaml
+    interval: 86400
+
+# 自上而下匹配；首条命中决定策略。广告例外继续走后续规则。
+rules:
+  - AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions)))),广告
+  - GEOSITE,private,DIRECT
+  - GEOIP,private,DIRECT,no-resolve
+
+  # 这些海外服务优先走代理，包括其大陆域名。
+  - GEOSITE,paypal,PROXY
+  - GEOSITE,microsoft,PROXY
+  - GEOSITE,ebay,PROXY
+  - GEOSITE,linkedin,PROXY
+  - GEOSITE,google,PROXY
+  - DOMAIN-SUFFIX,paypal.cn,PROXY
+  - DOMAIN-SUFFIX,paypal.com.cn,PROXY
+  - DOMAIN-SUFFIX,microsoft.cn,PROXY
+  - DOMAIN-SUFFIX,azclient.cn,PROXY
+  - DOMAIN-SUFFIX,amazon.cn,PROXY
+  - DOMAIN-SUFFIX,z.cn,PROXY
+  - DOMAIN-SUFFIX,amazonbusiness.cn,PROXY
+  - DOMAIN-SUFFIX,amazonbusiness.com.cn,PROXY
+  - DOMAIN-SUFFIX,aboutamazon.cn,PROXY
+
+  # 先匹配指定直连与 Steam 下载，再匹配游戏平台；Apple 大陆例外优先于 Apple 全量规则。
+  - RULE-SET,cn-direct,中国大陆
+  - RULE-SET,foreign-proxy,PROXY
+  - RULE-SET,apple-direct,Apple直连
+  - RULE-SET,apple-proxy,Apple代理
+
+  # .tw 走国外网站；无域名命中时再按 GeoIP 判断，最后使用兜底组。
+  - DOMAIN-SUFFIX,cn,中国大陆
+  - DOMAIN-SUFFIX,tw,国外网站
+  - GEOSITE,geolocation-!cn,国外网站
+  - GEOSITE,cn,中国大陆
+  - GEOIP,CN,中国大陆
+  - MATCH,兜底

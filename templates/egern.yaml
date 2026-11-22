@@ -1,0 +1,126 @@
+# Egern 分流模板。下载后在本地编辑，或导入后在 App 中添加节点。
+# 将节点名称加入 PROXY 的 policies 并选中；使用节点订阅时可在该组本地填写 urls。
+# PROXY 暂以 REJECT 占位，未配置节点时，需要代理的连接会被拒绝。
+ipv6: false
+allow_external_connections: false
+# 将系统推送纳入隧道，使下面的 APNs 策略可匹配推送连接。
+include_all_networks: true
+include_apns: true
+# GeoIP 需要 MMDB，只使用国家/地区查询。本模板没有 ASN 规则。
+geoip_db_url: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+
+proxies: []
+policy_groups:
+  - select:
+      name: PROXY
+      policies: [REJECT]
+  - select:
+      name: 广告
+      policies: [REJECT, DIRECT, PROXY]
+  - select:
+      name: 国外网站
+      policies: [PROXY, DIRECT, REJECT]
+  - select:
+      name: 中国大陆
+      policies: [DIRECT, PROXY, REJECT]
+  - select:
+      name: 兜底
+      policies: [PROXY, DIRECT, REJECT]
+  - select:
+      name: Apple代理
+      policies: [PROXY, DIRECT, REJECT]
+  - select:
+      name: Apple直连
+      policies: [DIRECT, PROXY, REJECT]
+
+# 自上而下匹配。每个远程规则集每 24 小时检查更新。
+rules:
+  # 同时命中广告和例外时，继续判断后面的分流规则。
+  - and:
+      match:
+        - rule_set:
+            match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/ads.yaml
+            update_interval: 86400
+        - not:
+            match:
+              rule_set:
+                match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/ads-exceptions.yaml
+                update_interval: 86400
+      policy: 广告
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/lan.yaml
+      update_interval: 86400
+      policy: DIRECT
+
+  # 海外厂商的大陆入口优先代理；其后才判断指定直连和游戏平台。
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/proxy-priority.yaml
+      update_interval: 86400
+      policy: PROXY
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/cn-direct.yaml
+      update_interval: 86400
+      policy: 中国大陆
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/foreign-proxy.yaml
+      update_interval: 86400
+      policy: PROXY
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/apple-direct.yaml
+      update_interval: 86400
+      policy: Apple直连
+
+  # Apple 推送的地址范围仅在指定 TCP 端口匹配。普通 Apple 域名在后面的规则集中处理。
+  - and:
+      match:
+        - protocol: {match: tcp}
+        - dest_port: {match: '5223'}
+        - ip_cidr: {match: 17.0.0.0/8}
+      policy: Apple代理
+  - and:
+      match:
+        - protocol: {match: tcp}
+        - dest_port: {match: '443'}
+        - ip_cidr: {match: 17.249.0.0/16}
+      policy: Apple代理
+  - and:
+      match:
+        - protocol: {match: tcp}
+        - dest_port: {match: '443'}
+        - ip_cidr: {match: 17.252.0.0/16}
+      policy: Apple代理
+  - and:
+      match:
+        - protocol: {match: tcp}
+        - dest_port: {match: '443'}
+        - ip_cidr: {match: 17.57.144.0/22}
+      policy: Apple代理
+  - and:
+      match:
+        - protocol: {match: tcp}
+        - dest_port: {match: '443'}
+        - ip_cidr: {match: 17.188.128.0/18}
+      policy: Apple代理
+  - and:
+      match:
+        - protocol: {match: tcp}
+        - dest_port: {match: '443'}
+        - ip_cidr: {match: 17.188.20.0/23}
+      policy: Apple代理
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/apple-proxy.yaml
+      update_interval: 86400
+      policy: Apple代理
+
+  - domain_suffix: {match: cn, policy: 中国大陆}
+  - domain_suffix: {match: tw, policy: 国外网站}
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/foreign-general.yaml
+      update_interval: 86400
+      policy: 国外网站
+  - rule_set:
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/cn-general.yaml
+      update_interval: 86400
+      policy: 中国大陆
+  - geoip: {match: CN, policy: 中国大陆}
+  - default: {policy: 兜底}
