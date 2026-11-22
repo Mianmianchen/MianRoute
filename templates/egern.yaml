@@ -1,13 +1,13 @@
-# Egern 分流模板。下载后在本地编辑，或导入后在 App 中添加节点。
-# 将节点名称加入 PROXY 的 policies 并选中；使用节点订阅时可在该组本地填写 urls。
-# PROXY 暂以 REJECT 占位，未配置节点时，需要代理的连接会被拒绝。
+# Egern。下载到本地，在 App 中添加节点，并在 PROXY 组内选中。
+# 使用订阅时可在本地为 PROXY 组填写 urls 并选中订阅中的节点。
+# REJECT 是空模板的初始选择。没有节点时，需要代理的请求会被拒绝。
 ipv6: false
 allow_external_connections: false
 # 将系统推送纳入隧道，使下面的 APNs 策略可匹配推送连接。
 include_all_networks: true
 include_apns: true
-# GeoIP 需要 MMDB，只使用国家/地区查询。本模板没有 ASN 规则。
-geoip_db_url: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+# 仅当启用末尾的可选 GeoIP 规则时，才需要取消下一行注释。
+# geoip_db_url: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
 
 proxies: []
 policy_groups:
@@ -52,13 +52,25 @@ rules:
       update_interval: 86400
       policy: DIRECT
 
-  # 海外厂商的大陆入口优先代理；其后才判断指定直连和游戏平台。
+  # 个人直连例外可在本地插入这里。示例仅匹配指定域名：
+  # - domain: {match: example.org, policy: DIRECT}
+
+  # OpenAI 与 Gemini 共用 PROXY。
+  - domain_suffix: {match: openai.com, policy: PROXY}
+  - domain_suffix: {match: chatgpt.com, policy: PROXY}
+  - domain_suffix: {match: oaistatic.com, policy: PROXY}
+  - domain_suffix: {match: oaiusercontent.com, policy: PROXY}
+  - domain: {match: gemini.google.com, policy: PROXY}
+  - domain: {match: aistudio.google.com, policy: PROXY}
+  - domain: {match: generativelanguage.googleapis.com, policy: PROXY}
+
+  # 海外厂商的大陆入口优先代理，再判断大陆服务和游戏平台。
   - rule_set:
       match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/proxy-priority.yaml
       update_interval: 86400
       policy: PROXY
   - rule_set:
-      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/cn-direct.yaml
+      match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/cn-services.yaml
       update_interval: 86400
       policy: 中国大陆
   - rule_set:
@@ -75,37 +87,37 @@ rules:
       match:
         - protocol: {match: tcp}
         - dest_port: {match: '5223'}
-        - ip_cidr: {match: 17.0.0.0/8}
+        - ip_cidr: {match: 17.0.0.0/8, no_resolve: true}
       policy: Apple代理
   - and:
       match:
         - protocol: {match: tcp}
         - dest_port: {match: '443'}
-        - ip_cidr: {match: 17.249.0.0/16}
+        - ip_cidr: {match: 17.249.0.0/16, no_resolve: true}
       policy: Apple代理
   - and:
       match:
         - protocol: {match: tcp}
         - dest_port: {match: '443'}
-        - ip_cidr: {match: 17.252.0.0/16}
+        - ip_cidr: {match: 17.252.0.0/16, no_resolve: true}
       policy: Apple代理
   - and:
       match:
         - protocol: {match: tcp}
         - dest_port: {match: '443'}
-        - ip_cidr: {match: 17.57.144.0/22}
+        - ip_cidr: {match: 17.57.144.0/22, no_resolve: true}
       policy: Apple代理
   - and:
       match:
         - protocol: {match: tcp}
         - dest_port: {match: '443'}
-        - ip_cidr: {match: 17.188.128.0/18}
+        - ip_cidr: {match: 17.188.128.0/18, no_resolve: true}
       policy: Apple代理
   - and:
       match:
         - protocol: {match: tcp}
         - dest_port: {match: '443'}
-        - ip_cidr: {match: 17.188.20.0/23}
+        - ip_cidr: {match: 17.188.20.0/23, no_resolve: true}
       policy: Apple代理
   - rule_set:
       match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/apple-proxy.yaml
@@ -122,5 +134,6 @@ rules:
       match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/cn-general.yaml
       update_interval: 86400
       policy: 中国大陆
-  - geoip: {match: CN, policy: 中国大陆}
+  # 若希望已知 IP 按大陆归属直连，同时启用文件顶部的 MMDB 地址和下一行。
+  # - geoip: {match: CN, policy: 中国大陆, no_resolve: true}
   - default: {policy: 兜底}

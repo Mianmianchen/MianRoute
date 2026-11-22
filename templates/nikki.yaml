@@ -1,7 +1,7 @@
-# Nikki（OpenWrt / Mihomo）分流模板。下载后在本地编辑。
-# 将本地节点写入 proxies，把 PROXY 组内的 REJECT 替换为节点名称。
-# 使用节点订阅时，可在本地另建 proxy-providers，并用 PROXY 组的 use 引用。
-# 空模板会拒绝需要代理的连接。DNS、入站监听和透明代理接管由 Nikki 混入设置管理。
+# Nikki / Mihomo。下载副本，在本地添加节点后再启用。
+# 单节点：填入 proxies，将 PROXY 组里的 REJECT 换成节点名。
+# 订阅：在本地配置 proxy-providers，在 PROXY 组中删除 proxies 并改用 use: [订阅名]。
+# 首次配置前，需要代理的请求会被拒绝。监听、DNS 上游和透明代理接管在 Nikki 混入中设置。
 mode: rule
 ipv6: false
 dns:
@@ -69,12 +69,12 @@ rule-providers:
     url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/apple-proxy.yaml
     path: ./ruleset/mianroute-apple-proxy.yaml
     interval: 86400
-  cn-direct:
+  cn-services:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/cn-direct.yaml
-    path: ./ruleset/mianroute-cn-direct.yaml
+    url: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/mihomo/rules/cn-services.yaml
+    path: ./ruleset/mianroute-cn-services.yaml
     interval: 86400
   foreign-proxy:
     type: http
@@ -89,6 +89,18 @@ rules:
   - AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions)))),广告
   - GEOSITE,private,DIRECT
   - GEOIP,private,DIRECT,no-resolve
+
+  # 个人直连例外可在本地插入这里。示例仅匹配指定域名：
+  # - DOMAIN,example.org,DIRECT
+
+  # OpenAI 与 Gemini 走同一个 PROXY，包括登录、静态资源和 API 入口。
+  - DOMAIN-SUFFIX,openai.com,PROXY
+  - DOMAIN-SUFFIX,chatgpt.com,PROXY
+  - DOMAIN-SUFFIX,oaistatic.com,PROXY
+  - DOMAIN-SUFFIX,oaiusercontent.com,PROXY
+  - DOMAIN,gemini.google.com,PROXY
+  - DOMAIN,aistudio.google.com,PROXY
+  - DOMAIN,generativelanguage.googleapis.com,PROXY
 
   # 这些海外服务优先走代理，包括其大陆域名。
   - GEOSITE,paypal,PROXY
@@ -107,15 +119,16 @@ rules:
   - DOMAIN-SUFFIX,aboutamazon.cn,PROXY
 
   # 先匹配指定直连与 Steam 下载，再匹配游戏平台；Apple 大陆例外优先于 Apple 全量规则。
-  - RULE-SET,cn-direct,中国大陆
+  - RULE-SET,cn-services,中国大陆
   - RULE-SET,foreign-proxy,PROXY
   - RULE-SET,apple-direct,Apple直连
-  - RULE-SET,apple-proxy,Apple代理
+  - RULE-SET,apple-proxy,Apple代理,no-resolve
 
-  # .tw 走国外网站；无域名命中时再按 GeoIP 判断，最后使用兜底组。
+  # 明确的大陆域名直连。未分类的域名和公网 IP 默认使用兜底组。
   - DOMAIN-SUFFIX,cn,中国大陆
   - DOMAIN-SUFFIX,tw,国外网站
   - GEOSITE,geolocation-!cn,国外网站
   - GEOSITE,cn,中国大陆
-  - GEOIP,CN,中国大陆
+  # 若还希望已知 IP 按大陆归属直连，可取消下一行注释。
+  # - GEOIP,CN,中国大陆,no-resolve
   - MATCH,兜底

@@ -49,6 +49,10 @@
       "domain_set": 14,
       "domain_regex_set": 1,
       "ip_cidr_set": 8
+    },
+    "cn-services": {
+      "domain_suffix_set": 678,
+      "domain_set": 9
     }
   },
   "format": "Egern native rule set",
@@ -60,7 +64,8 @@
     "ads-exceptions.yaml": "24411ab64b477c3d2266b43888e83a1d446c9704b06ff9b9b1dfa0e5fc7db9e6",
     "apple-direct.yaml": "5d99b70658fdedb423af0d94bd5dc39404c218dad325a9a715837da30c5ae0a8",
     "apple-proxy.yaml": "eb6ed90fde7ea21b880b896ab5233652bac141c6107314c3ce37db8a406f937d",
-    "cn-direct.yaml": "6b086812b3b9c8f8f4765a2702c3b2bb005766570da26057cbee8f1906f46bf3"
+    "cn-direct.yaml": "6b086812b3b9c8f8f4765a2702c3b2bb005766570da26057cbee8f1906f46bf3",
+    "cn-services.yaml": "6b086812b3b9c8f8f4765a2702c3b2bb005766570da26057cbee8f1906f46bf3"
   },
   "output_sha256": {
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
@@ -72,7 +77,8 @@
     "foreign-general.yaml": "30d3830d06435317522123810aaaa6b75a48391dc8c2a61e992f7cd9d8c724cc",
     "apple-proxy.yaml": "df440f2ffe0249534e94a7b0b5bbd379978d572d40e20035eb29d60503148b7f",
     "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
-    "cn-direct.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be"
+    "cn-direct.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be",
+    "cn-services.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be"
   },
-  "apns_note": "Six TCP/port/IP conditions retained as top-level AND rules in private profile, not in native apple-proxy domain set."
+  "apns_note": "Six TCP/port/IP conditions are defined in templates/egern.yaml; apple-proxy.yaml contains the domain rules."
 }
