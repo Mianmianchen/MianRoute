@@ -23,7 +23,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "95af246b5a3a8ae016f2548a297c026b13d4892ef6512340745436e85ba7586f",
+    "ads.yaml": "07ded101e5fdca2bb54d46b5536d4b5ac187f4830760b0d2bbf518dc8be7f9c7",
     "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
   },
   "notes": [
@@ -36,7 +36,7 @@
     "Generic ad-server rule evidence attributed to The EasyList authors (https://easylist.to/); GPL-3.0-or-later option selected under https://easylist.to/pages/licence.html. Existing HaGeZi and AdGuard notices remain unchanged.",
     "This reviewed China Ads-Union supplement uses primary EasyList China maintainer evidence credited to EasyList China contributors. AdGuard imports the same source; comparison is not independent. Keep exact host scope."
   ],
-  "build_script_sha256": "5249df251ec654cbd9f055019232d72be30ba6b97939703ef882a0e4ace59417",
+  "build_script_sha256": "0c535ae9260abbb8d9108a9e4c8272c349c8fcf925f0718e113aafc0e3993ebf",
   "reproducibility": {
     "cached_inputs_verified": true,
     "rebuild_outputs_match": true,
@@ -49050,6 +49050,414 @@
         "https://github.com/easylist/easylistchina/commit/63761376e60234c6323169cea8877d8e7dbebea5"
       ],
       "reason": "Exact DNS host in the upstream Ads-Union change for a documented Chinese reading page; keep descendant behavior."
+    },
+    {
+      "domain": "a.videoreach.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/videoreachBidAdapter.js#L4"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ad.adopx.net",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/biddoBidAdapter.js#L11"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ad.invamia.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/invamiaBidAdapter.js#L11"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ad.suimad.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/suimBidAdapter.js#L17"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ad.ventesavenues.in",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/ventesBidAdapter.js#L9"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "adn-srv.reckoner-api.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/wipesBidAdapter.js#L8"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ads-sg.momagic.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/truereachBidAdapter.js#L7"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ads.biddertmz.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/themoneytizerBidAdapter.js#L6"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ads.btwnx.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/betweenBidAdapter.js#L17"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ads.theagenticx.ai",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/agenticxBidAdapter.js#L12"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "api.prebid.int.us-east-1.bluems.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/bmsBidAdapter.js#L22"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "bid.essrtb.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/koblerBidAdapter.js#L28"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "bid.realry.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/realryBidAdapter.js#L19"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "bid.revantage.io",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/revantageBidAdapter.js#L6"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "bidder-us-east-1.getblue.io",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/blueBidAdapter.js#L22"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "bidder.qwarry.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/qwarryBidAdapter.js#L8"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "exchange.alkimi-onboarding.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/alkimiBidAdapter.js#L12"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "hb.hyperbrainz.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/hyperbrainzBidAdapter.js#L35"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "hb.incrementxserv.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/incrementxBidAdapter.js#L14"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "hb.jsrdn.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/distroscaleBidAdapter.js#L10"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "pbjs.iqzonertb.live",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/iqxBidAdapter.js#L7"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "pbjs.kiviads.live",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/lm_kiviadsBidAdapter.js#L6"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "pbjs.league-m.media",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/leagueMBidAdapter.js#L6"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "pbjs.xe.works",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/xeBidAdapter.js#L7"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.anyclip.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/anyclipBidAdapter.js#L12"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.cht.hinet.net",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/chtnwBidAdapter.js#L13"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.eu-central-1.bidder.mediakeys.io",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/mediakeysBidAdapter.js#L27"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.ioadx.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/interactiveOffersBidAdapter.js#L6"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.mes.glomex.cloud",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/glomexBidAdapter.js#L4"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.rtb.allegro.pl",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/allegroBidAdapter.js#L15"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "prebid.searchplan.co",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/srchbidBidAdapter.js#L8"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "rtb.dexerto.media",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/dexertoBidAdapter.js#L12"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "rtb.nexverse.ai",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/nexverseBidAdapter.js#L16"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "rtb.upremium.asia",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/mediaeyesBidAdapter.js#L10"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "rtb.vuukle.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/vuukleBidAdapter.js#L15"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "s.oa.opera.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/operaadsBidAdapter.js#L32"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "s2s.sportslocalmedia.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/akceloBidAdapter.js#L19"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "service.gnetrtb.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/gnetBidAdapter.js#L15"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "ssp.disqus.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/zeta_global_sspBidAdapter.js#L19"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "web-rtb.anyrtb.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/toponBidAdapter.js#L10"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "x.padsquad.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/padsquadBidAdapter.js#L5"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "y.one.impact-ad.jp",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/yieldoneBidAdapter.js#L22"
+      ],
+      "reason": "Exact browser bidding host verified in the adapter's request construction."
+    },
+    {
+      "domain": "adsebs.ximalaya.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/109",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt"
+      ],
+      "reason": "Reported in the Ximalaya mobile client splash and widget advertising flow."
+    },
+    {
+      "domain": "ad.player.baidu.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt",
+        "https://github.com/jdlingyu/ad-wars/blob/e52547153aa2b541f09c4c354aa64fb0d8d914a3/sha_ad_hosts"
+      ],
+      "reason": "Listed as a Baidu advertising service in ad-wars and as an exact advertising host in AWAvenue."
+    },
+    {
+      "domain": "adx.appsdk.com.cn",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt",
+        "https://github.com/jdlingyu/ad-wars/blob/e52547153aa2b541f09c4c354aa64fb0d8d914a3/hosts"
+      ],
+      "reason": "Ad exchange hostname listed in the AWAvenue advertising set and ad-wars hosts."
     }
   ],
   "latest_scoped_validation": {
