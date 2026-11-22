@@ -23,7 +23,7 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "128c12bffd735e94275ac506f00fd48ece3153a34e575b05505ac49226a9dd17",
+    "ads.yaml": "95af246b5a3a8ae016f2548a297c026b13d4892ef6512340745436e85ba7586f",
     "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
   },
   "notes": [
@@ -49030,6 +49030,26 @@
         "aggregate_line": 175276,
         "shared_provenance": true
       }
+    },
+    {
+      "domain": "93cwt9hr8s.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://raw.githubusercontent.com/easylist/easylistchina/63761376e60234c6323169cea8877d8e7dbebea5/easylistchina.txt",
+        "https://github.com/easylist/easylistchina/commit/63761376e60234c6323169cea8877d8e7dbebea5"
+      ],
+      "reason": "Exact DNS host in the upstream Ads-Union change for a documented Chinese reading page; keep descendant behavior."
+    },
+    {
+      "domain": "dw3wytlo38.com",
+      "match": "exact",
+      "review_date_utc": "2026-11-22",
+      "primary_sources": [
+        "https://raw.githubusercontent.com/easylist/easylistchina/63761376e60234c6323169cea8877d8e7dbebea5/easylistchina.txt",
+        "https://github.com/easylist/easylistchina/commit/63761376e60234c6323169cea8877d8e7dbebea5"
+      ],
+      "reason": "Exact DNS host in the upstream Ads-Union change for a documented Chinese reading page; keep descendant behavior."
     }
   ],
   "latest_scoped_validation": {
