@@ -43,3 +43,7 @@ Retains both verified 2026-11-13 immutable inputs in ADS-MANIFEST.json. The gene
 ### 2026-11-21 user-requested PureIP service block
 
 Blocks `pureip.io` and its subdomains, plus exact hosts `stats.proxypurity.com`, `v4.mypublicipnow.com` and `v6.mypublicipnow.com`. The [PureIP site](https://pureip.io/) links the application bundle that names both probe hosts and the separate [analytics script](https://stats.proxypurity.com/script.js). No parent-wide block of the two other domains and no shared CDN or unrelated IP-diagnostic services added. Pinned ad-list and exception inputs are unchanged.
+
+## 2026-11-22 upstream refresh
+
+The current source revisions, Git blob IDs and SHA-256 hashes are in ADS-MANIFEST.json. Earlier dated sections describe their original snapshots. The review compares both HaGeZi Multi PRO and AdGuard DNS with the prior release, checks all curated blocks, restorations and exact exceptions, and cross-checks the AdGuard Chinese and Mobile advertising sections for additional exact hosts. Browser-only path and third-party conditions stay out of the domain rules. AdGuard filter section provenance: https://github.com/AdguardTeam/AdguardFilters/tree/5a5cbd637c00de45b6b7792ebc4363177bf03326 (AdGuard and contributors). The implementation is in maintenance/review-mobile-ads.py.

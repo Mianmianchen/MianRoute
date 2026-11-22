@@ -39,6 +39,25 @@ def dataset(path):
 manifest = json.loads(MANIFEST.read_text())
 old_ads = dataset(RULES / "ads.yaml")
 old_exceptions = dataset(RULES / "ads-exceptions.yaml")
+baseline = dict(manifest["outputs"])
+for filename, expected in baseline.items():
+    if hashlib.sha256((RULES / filename).read_bytes()).hexdigest() != expected:
+        raise ValueError("Published hash mismatch: " + filename)
+# Check independently resolved Git blobs before adopting the two upstream releases.
+pins = [(HAGEZI, "52f60be1d077bc3b3199ccaf36409e44b57ad88e"), (DNS, "5094df3850a4e7f1d40b34f701e5e37082828e15")]
+for src, (url, expected_blob) in zip(manifest["sources"], pins, strict=True):
+    with urlopen(url, timeout=90) as response:
+        content = response.read()
+    git_header = ("blob %d\0" % len(content)).encode()
+    if hashlib.sha1(git_header + content).hexdigest() != expected_blob:
+        raise ValueError("Upstream Git blob mismatch")
+    cache = RULES / ".ads-source-cache" / src["snapshot_cache_name"]
+    cache.parent.mkdir(exist_ok=True)
+    cache.write_bytes(content)
+    src.update(url=url, commit=url.split("/")[5], sha256=hashlib.sha256(content).hexdigest(),
+               snapshot_size_bytes=len(content), git_blob=expected_blob)
+manifest["snapshot_date_utc"] = REVIEW
+manifest["build_script_sha256"] = hashlib.sha256((RULES / "build-ads.py").read_bytes()).hexdigest()
 dns_lines = read_source(DNS)
 dns_blocks = {match[1] for line in dns_lines if (match := AD.fullmatch(line))}
 pro = set(read_source(HAGEZI))
@@ -95,15 +114,37 @@ def save():
 save()
 subprocess.run([sys.executable, str(RULES / "build-ads.py")], check=True)
 new_ads = dataset(RULES / "ads.yaml")
-if new_ads - old_ads != set(added) or old_ads - new_ads or dataset(RULES / "ads-exceptions.yaml") != old_exceptions:
-    raise RuntimeError("Unrelated ad rules or exceptions changed")
+new_exceptions = dataset(RULES / "ads-exceptions.yaml")
+def blocked(host, rules):
+    return host in rules or any("+." + name in rules for name in parents(host))
+for row in manifest["reviewed_additions"]:
+    if not blocked(row["domain"], new_ads):
+        raise ValueError("Lost curated block: " + row["domain"])
+for row in manifest["reviewed_exact_exceptions"]:
+    if "DOMAIN," + row["domain"] not in new_exceptions:
+        raise ValueError("Lost curated exception: " + row["domain"])
+for host in restored:
+    if blocked(host, new_ads):
+        raise ValueError("Restored domain re-blocked: " + host)
+for host in ["courier.push.apple.com", "apps.apple.com", "chatgpt.com", "api.openai.com",
+             "gemini.google.com", "apple-pay-gateway.apple.com", "paypal.com", "dl.steam.clngaa.com"]:
+    if not blocked(host, old_ads) and blocked(host, new_ads):
+        raise ValueError("New block on functional host: " + host)
+if baseline != {k: hashlib.sha256((RULES / k).read_bytes()).hexdigest() for k in baseline}:
+    manifest["refresh_20261122"] = {
+        "previous_outputs": baseline, "source_revisions": [x["commit"] for x in manifest["sources"]],
+        "blocking_rows_added": len(new_ads - old_ads), "blocking_rows_removed": len(old_ads - new_ads),
+        "exception_rows_added": len(new_exceptions - old_exceptions),
+        "exception_rows_removed": len(old_exceptions - new_exceptions),
+        "note": "Row counts include upstream suffix compaction. All curated additions, removals and exact exceptions were checked.",
+    }
 for name in manifest["outputs"]:
     manifest["outputs"][name] = hashlib.sha256((RULES / name).read_bytes()).hexdigest()
 manifest["mobile_cn_review_20261122"] = {
     "sources": [ADGUARD + name for name in SECTIONS] + [DNS, HAGEZI],
     "exact_hosts": sorted({row["domain"] for row in manifest["reviewed_additions"]
                            if row.get("review_date_utc") == REVIEW and DNS in row.get("primary_sources", [])}),
-    "base_domains_removed": 0, "device_validation": False,
+    "device_validation": False,
 }
 save()
 print("New exact advertising hosts:", len(added))
