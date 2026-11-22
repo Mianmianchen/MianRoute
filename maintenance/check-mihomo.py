@@ -49,8 +49,8 @@ with tempfile.TemporaryDirectory() as folder:
                     raise RuntimeError(logfile.read_text()[-3500:])
                 try:
                     with urllib.request.urlopen("http://127.0.0.1:19090/providers/rules", timeout=1) as response:
-                        loaded = json.load(response)["providers"]
-                    if all(loaded.get(p, {}).get("ruleCount", 0) > 0 for p in providers):
+                        loaded = json.load(response).get("providers") or {}
+                    if all((loaded.get(p) or {}).get("ruleCount", 0) > 0 for p in providers):
                         break
                 except OSError:
                     pass

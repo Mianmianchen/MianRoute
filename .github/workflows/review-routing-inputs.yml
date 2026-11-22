@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [maintain/subscription-sources-20261122]
-    paths: ['maintenance/review-mobile-ads.py', '.github/workflows/review-routing-inputs.yml']
+    paths: ['maintenance/review-mobile-ads.py', 'maintenance/check-mihomo.py', '.github/workflows/review-routing-inputs.yml']
 permissions:
   contents: write
 jobs:
