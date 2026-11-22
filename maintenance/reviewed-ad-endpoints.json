@@ -1,0 +1,198 @@
+{
+  "browser_bidding": [
+    {
+      "host": "a.videoreach.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/videoreachBidAdapter.js#L4"
+    },
+    {
+      "host": "ad.adopx.net",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/biddoBidAdapter.js#L11"
+    },
+    {
+      "host": "ad.invamia.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/invamiaBidAdapter.js#L11"
+    },
+    {
+      "host": "ad.suimad.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/suimBidAdapter.js#L17"
+    },
+    {
+      "host": "ad.ventesavenues.in",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/ventesBidAdapter.js#L9"
+    },
+    {
+      "host": "adn-srv.reckoner-api.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/wipesBidAdapter.js#L8"
+    },
+    {
+      "host": "ads-sg.momagic.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/truereachBidAdapter.js#L7"
+    },
+    {
+      "host": "ads.biddertmz.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/themoneytizerBidAdapter.js#L6"
+    },
+    {
+      "host": "ads.btwnx.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/betweenBidAdapter.js#L17"
+    },
+    {
+      "host": "ads.theagenticx.ai",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/agenticxBidAdapter.js#L12"
+    },
+    {
+      "host": "api.prebid.int.us-east-1.bluems.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/bmsBidAdapter.js#L22"
+    },
+    {
+      "host": "bid.essrtb.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/koblerBidAdapter.js#L28"
+    },
+    {
+      "host": "bid.realry.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/realryBidAdapter.js#L19"
+    },
+    {
+      "host": "bid.revantage.io",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/revantageBidAdapter.js#L6"
+    },
+    {
+      "host": "bidder-us-east-1.getblue.io",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/blueBidAdapter.js#L22"
+    },
+    {
+      "host": "bidder.qwarry.co",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/qwarryBidAdapter.js#L8"
+    },
+    {
+      "host": "exchange.alkimi-onboarding.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/alkimiBidAdapter.js#L12"
+    },
+    {
+      "host": "hb.hyperbrainz.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/hyperbrainzBidAdapter.js#L35"
+    },
+    {
+      "host": "hb.incrementxserv.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/incrementxBidAdapter.js#L14"
+    },
+    {
+      "host": "hb.jsrdn.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/distroscaleBidAdapter.js#L10"
+    },
+    {
+      "host": "pbjs.iqzonertb.live",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/iqxBidAdapter.js#L7"
+    },
+    {
+      "host": "pbjs.kiviads.live",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/lm_kiviadsBidAdapter.js#L6"
+    },
+    {
+      "host": "pbjs.league-m.media",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/leagueMBidAdapter.js#L6"
+    },
+    {
+      "host": "pbjs.xe.works",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/xeBidAdapter.js#L7"
+    },
+    {
+      "host": "prebid.anyclip.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/anyclipBidAdapter.js#L12"
+    },
+    {
+      "host": "prebid.cht.hinet.net",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/chtnwBidAdapter.js#L13"
+    },
+    {
+      "host": "prebid.eu-central-1.bidder.mediakeys.io",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/mediakeysBidAdapter.js#L27"
+    },
+    {
+      "host": "prebid.ioadx.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/interactiveOffersBidAdapter.js#L6"
+    },
+    {
+      "host": "prebid.mes.glomex.cloud",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/glomexBidAdapter.js#L4"
+    },
+    {
+      "host": "prebid.rtb.allegro.pl",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/allegroBidAdapter.js#L15"
+    },
+    {
+      "host": "prebid.searchplan.co",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/srchbidBidAdapter.js#L8"
+    },
+    {
+      "host": "rtb.dexerto.media",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/dexertoBidAdapter.js#L12"
+    },
+    {
+      "host": "rtb.nexverse.ai",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/nexverseBidAdapter.js#L16"
+    },
+    {
+      "host": "rtb.upremium.asia",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/mediaeyesBidAdapter.js#L10"
+    },
+    {
+      "host": "rtb.vuukle.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/vuukleBidAdapter.js#L15"
+    },
+    {
+      "host": "s.oa.opera.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/operaadsBidAdapter.js#L32"
+    },
+    {
+      "host": "s2s.sportslocalmedia.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/akceloBidAdapter.js#L19"
+    },
+    {
+      "host": "service.gnetrtb.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/gnetBidAdapter.js#L15"
+    },
+    {
+      "host": "ssp.disqus.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/zeta_global_sspBidAdapter.js#L19"
+    },
+    {
+      "host": "web-rtb.anyrtb.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/toponBidAdapter.js#L10"
+    },
+    {
+      "host": "x.padsquad.com",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/padsquadBidAdapter.js#L5"
+    },
+    {
+      "host": "y.one.impact-ad.jp",
+      "source": "https://github.com/Prebid/Prebid.js/blob/3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3/modules/yieldoneBidAdapter.js#L22"
+    }
+  ],
+  "mobile_advertising": [
+    {
+      "host": "adsebs.ximalaya.com",
+      "sources": [
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/109",
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt"
+      ],
+      "reason": "Reported in the Ximalaya mobile client splash and widget advertising flow."
+    },
+    {
+      "host": "ad.player.baidu.com",
+      "sources": [
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt",
+        "https://github.com/jdlingyu/ad-wars/blob/e52547153aa2b541f09c4c354aa64fb0d8d914a3/sha_ad_hosts"
+      ],
+      "reason": "Listed as a Baidu advertising service in ad-wars and as an exact advertising host in AWAvenue."
+    },
+    {
+      "host": "adx.appsdk.com.cn",
+      "sources": [
+        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt",
+        "https://github.com/jdlingyu/ad-wars/blob/e52547153aa2b541f09c4c354aa64fb0d8d914a3/hosts"
+      ],
+      "reason": "Ad exchange hostname listed in the AWAvenue advertising set and ad-wars hosts."
+    }
+  ]
+}

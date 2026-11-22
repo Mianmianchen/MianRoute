@@ -6,7 +6,7 @@ import ipaddress
 import re
 
 import yaml
-from endpoint_samples import NEW_SOURCES, CN_BIDDERS, browser_bidders
+from endpoint_samples import NEW_SOURCES, CN_BIDDERS, MOBILE_SDK_CASE, browser_bidders
 
 SOURCES = {
     "HaGeZi PRO": [
@@ -137,7 +137,7 @@ print("CURRENT",*(len(x) for x in base),sorted(base[-1]))
 misses={}
 bidders = browser_bidders()
 awa = parse("abp", fetch(NEW_SOURCES["AWAvenue Only.Ads"][1]))
-samples = {"browser-bidders": set(bidders), "cn-s2s": set(CN_BIDDERS), "awa-ads-reference": awa.suffix}
+samples = {"browser-bidders": set(bidders), "cn-s2s": set(CN_BIDDERS), "123pan-mobile-sdk": MOBILE_SDK_CASE, "awa-ads-reference": awa.suffix}
 print("ENDPOINT-SAMPLES", {k:len(v) for k,v in samples.items()})
 print("ENDPOINT-BASE", {k:sum(current.blocks(h) for h in v) for k,v in samples.items()})
 gaps = {h:[] for h in set(bidders) | awa.suffix if not current.blocks(h)}
@@ -167,3 +167,11 @@ for host, voters in sorted(gaps.items()):
         print("BROWSER-GAP", host, bidders[host], json.dumps(voters))
     if host in awa.suffix:
         print("AWA-GAP", host, json.dumps(voters))
+
+# Check shared functions using the effective advertising rule and its exceptions.
+# These two domains have specific upstream reports of breakage.
+for protected in ("bdad.123pan.cn", "vd6.l.qq.com", "a0.app.xiaomi.com"):
+    if current.blocks(protected):
+        raise ValueError("Functional host blocked: " + protected)
+if base[-1]:
+    raise ValueError("Functional control hosts blocked: " + str(sorted(base[-1])))

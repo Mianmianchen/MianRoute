@@ -15,6 +15,9 @@ import yaml
 providers = ["ads", "ads-exceptions", "cn-direct", "apple-direct", "apple-proxy"]
 cases = {
     "f7jxqt8z3.com": "ad-test",
+    "bidder.qwarry.co": "ad-test",
+    "prebid.cht.hinet.net": "ad-test",
+    "adsebs.ximalaya.com": "ad-test",
     "www.kwai.com": "cn-test",
     "apps.apple.com": "apple-test",
     "courier.push.apple.com": "apple-test",

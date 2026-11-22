@@ -123,6 +123,38 @@ for host in ("93cwt9hr8s.com", "dw3wytlo38.com"):
         })
         added.append(host)
 
+# Import reviewed missing hosts. The bidder source reference identifies its exact
+# declaration in the upstream browser adapter. Mobile reports remain separate.
+from endpoint_samples import browser_bidders
+
+reviews = json.loads((ROOT / "maintenance/reviewed-ad-endpoints.json").read_text())
+bidder_sources = browser_bidders()
+mobile_source = "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt"
+mobile_ads = set(read_source(mobile_source))
+verified = []
+for row in reviews["browser_bidding"]:
+    host = row["host"]
+    if bidder_sources.get(host) != row["source"]:
+        raise ValueError("Browser bidder source mismatch: " + host)
+    verified.append((host, [row["source"]], "Exact browser bidding host verified in the adapter's request construction."))
+for row in reviews["mobile_advertising"]:
+    host = row["host"]
+    if host not in mobile_ads:
+        raise ValueError("Missing exact mobile advertising host: " + host)
+    verified.append((host, row["sources"], row["reason"]))
+
+known_hosts = {row["domain"] for row in manifest["reviewed_additions"]}
+for host, sources, reason in verified:
+    if restored.intersection(parents(host)) or any(pattern.search(host) for pattern in exceptions):
+        raise ValueError("Advertising endpoint conflicts with a previous restoration or exception: " + host)
+    if host not in known_hosts:
+        manifest["reviewed_additions"].append({
+            "domain": host, "match": "exact", "review_date_utc": REVIEW,
+            "primary_sources": sources, "reason": reason,
+        })
+        known_hosts.add(host)
+        added.append(host)
+
 def save():
     MANIFEST.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 

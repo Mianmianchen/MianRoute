@@ -43,3 +43,12 @@ def browser_bidders():
     if len(records) < 40:
         raise ValueError("Too few literal browser bidder endpoints; inspect the pinned source")
     return records
+
+# Customer-reported SDK traffic on the 123pan Android app. The report links
+# each host to its purpose; exclude a telemetry-only host and an SDK log host.
+# https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/216
+MOBILE_SDK_CASE = set("""
+sdk.adhuanxiao.com mpcfg.fancydsp.com jp.ad.gameley.com de.ad.gameley.com
+sdk.zhangyuyidong.cn adm.zhangyuyidong.cn api.shanghailingye.cn sdk.hzzfcm.com
+xadsmartget.adgain.cn adsmartget.datads.cn
+""".split())

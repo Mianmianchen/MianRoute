@@ -54,5 +54,5 @@ for correction in manifest.get('reviewed_exact_exceptions', []):
   raise SystemExit('Invalid exact ad exception: '+d)
  if not any(e['type']=='DOMAIN' and e['value']==d for e in ex):
   ex.append(dict(type='DOMAIN',value=d))
-(B/'ads.yaml').write_text('# HaGeZi PRO + AdGuard DNS unconditional domain rules + verified Kuaishou domains.\n# Must be used with ads-exceptions.yaml using AND / NOT; see ADS-SOURCES.md.\n# Fixed-source snapshot, GPL-3.0 source notices in ADS-SOURCES.md and ADS-LICENSE-GPL-3.0.txt.\n'+yaml.safe_dump({'payload':['+.'+d for d in sorted(minimal)] + sorted(reviewed_exact)},sort_keys=False))
+(B/'ads.yaml').write_text('# Domain rules and reviewed advertising hosts; see ADS-SOURCES.md and ADS-MANIFEST.json.\n# Must be used with ads-exceptions.yaml using AND / NOT; see ADS-SOURCES.md.\n# Fixed-source snapshot, GPL-3.0 source notices in ADS-SOURCES.md and ADS-LICENSE-GPL-3.0.txt.\n'+yaml.safe_dump({'payload':['+.'+d for d in sorted(minimal)] + sorted(reviewed_exact)},sort_keys=False))
 (B/'ads-exceptions.yaml').write_text('# AdGuard DNS domain exceptions; bypass advertising rule only, not force DIRECT.\n'+yaml.safe_dump({'payload':[e['type']+','+e['value'] for e in ex]},sort_keys=False))
