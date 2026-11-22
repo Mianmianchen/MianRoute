@@ -19,7 +19,7 @@ LOCK = ROOT / "maintenance/ad-sources.lock.json"
 # Each tuple is a file and the semantics we can preserve in both clients.
 INPUTS = {
     "hagezi/dns-blocklists": ("main", {"wildcard/pro-onlydomains.txt": "base"}),
-    "AdguardTeam/AdGuardSDNSFilter": ("master", {"Filters/filter.txt": "dns"}),
+    "AdguardTeam/AdGuardSDNSFilter": ("gh-pages", {"Filters/filter.txt": "dns"}),
     "easylist/easylist": ("master", {
         "easylist/easylist_adservers.txt": "abp", "easylist/easylist_adservers_popup.txt": "abp",
         "easyprivacy/easyprivacy_trackingservers.txt": "abp",
@@ -81,6 +81,7 @@ def inputs(refresh, old):
             if not re.fullmatch("[a-f0-9]{40}", pin):
                 raise ValueError("Invalid source revision: " + key)
             url = "https://raw.githubusercontent.com/" + repo + "/" + pin + "/" + quote(path)
+            print('Reading', key, pin, flush=True)
             data = fetch(url)
             sha = digest(data)
             if not refresh and previous["sha256"] != sha:
