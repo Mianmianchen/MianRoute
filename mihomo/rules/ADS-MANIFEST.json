@@ -1,28 +1,28 @@
 {
-  "snapshot_date_utc": "2026-11-13",
+  "snapshot_date_utc": "2026-11-22",
   "sources": [
     {
-      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/d5c596c551a536340eb724b024d66136980f4976/wildcard/pro-onlydomains.txt",
-      "sha256": "5c00cbf3cf228e53717ef51a16150b488487ec91e8266a14ca48ebbbe2135b15",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/c15030cf263d495b4a2fa2ace43937a59b4ce1d2/wildcard/pro-onlydomains.txt",
+      "sha256": "c33512e16b3086198eaec185ccbd5c27c533ea1d5ed0c277c77a36c014581c56",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "hagezi.txt",
-      "snapshot_size_bytes": 4466245,
-      "commit": "d5c596c551a536340eb724b024d66136980f4976"
+      "snapshot_size_bytes": 4948683,
+      "commit": "c15030cf263d495b4a2fa2ace43937a59b4ce1d2"
     },
     {
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/0f476f4e5eb75f9c31b98b8c1498b48e03374d78/Filters/filter.txt",
-      "sha256": "3503aa3a16795a5856a921d829daf74c0d56a07ebed56446e19a961ede9f9144",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/22e9b2294cd5387eb4a1dc38f3b639df27337455/Filters/filter.txt",
+      "sha256": "3ff00e8e25dd2fa9dd9dd9b3174b532182db114b9b6c9a0049d745bb4417bb84",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "adguard.txt",
-      "snapshot_size_bytes": 4674006,
-      "commit": "0f476f4e5eb75f9c31b98b8c1498b48e03374d78"
+      "snapshot_size_bytes": 4697742,
+      "commit": "22e9b2294cd5387eb4a1dc38f3b639df27337455"
     }
   ],
   "outputs": {
-    "ads.yaml": "03f4f5168b1a53bf692ee18abd978f10c3e590cdb29e7423554ff7ed11ba7df6",
-    "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
+    "ads.yaml": "27ccf1cc3c31d62e8bd8103191435daf9d0aaf5f532242ccc81934d846ff8fc3",
+    "ads-exceptions.yaml": "4298b92bcbfe5b1dfc8bb7dee5d39778997b8482a716a2092bd049888a4dd4c2"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -34,7 +34,7 @@
     "Generic ad-server rule evidence attributed to The EasyList authors (https://easylist.to/); GPL-3.0-or-later option selected under https://easylist.to/pages/licence.html. Existing HaGeZi and AdGuard notices remain unchanged.",
     "This reviewed China Ads-Union supplement uses primary EasyList China maintainer evidence credited to EasyList China contributors. AdGuard imports the same source; comparison is not independent. Keep exact host scope."
   ],
-  "build_script_sha256": "5b0f1451b1f837a466c811ada6ae80010f4d38f31e46232ae64c53c01602188f",
+  "build_script_sha256": "d58e2734d8aaa673a050066dff787606817f81bb5ab804ad168cad0f35c80a8f",
   "reproducibility": {
     "cached_inputs_verified": true,
     "rebuild_outputs_match": true,
