@@ -1,0 +1,46 @@
+name: Refresh advertising rules
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 2,14 * * *'
+  push:
+    branches: [main, maintain/ads-20261122]
+    paths:
+      - '.github/workflows/refresh-ad-rules.yml'
+      - 'maintenance/build_ads.py'
+      - 'maintenance/verify_ads.py'
+      - 'maintenance/ad-endpoints.json'
+      - 'mihomo/rules/build-ads.py'
+permissions:
+  contents: write
+concurrency:
+  group: refresh-ads-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/maintain/ads-20261122'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Build from immutable upstream snapshots
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -m pip install --disable-pip-version-check PyYAML==6.0.3
+          python maintenance/build_ads.py --refresh
+      - name: Check native exports and route the functional examples with Mihomo
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 https://github.com/MetaCubeX/mihomo/releases/download/v1.19.34/mihomo-linux-amd64-compatible-v1.19.34.gz -o "$RUNNER_TEMP/mihomo.gz"
+          echo "2763f5b414527f7baf6dc57e3f82f3ab561eedf34bfd7c2f2cde1f7e592efe06  $RUNNER_TEMP/mihomo.gz" | sha256sum -c -
+          gzip -dc "$RUNNER_TEMP/mihomo.gz" > "$RUNNER_TEMP/mihomo"
+          chmod 755 "$RUNNER_TEMP/mihomo"
+          python maintenance/verify_ads.py "$RUNNER_TEMP/mihomo"
+      - name: Publish the complete verified snapshot to the running branch
+        run: |
+          set -euo pipefail
+          git add -- maintenance/ad-sources.lock.json mihomo/rules/{ads.yaml,ads-exceptions.yaml,ADS-MANIFEST.json} egern/rules/{ads.yaml,ads-exceptions.yaml} egern/BUILD-MANIFEST.json
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh verified advertising and privacy domain rules'
+          git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"

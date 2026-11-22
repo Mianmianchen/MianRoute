@@ -1,45 +1,22 @@
-# Advertising rule sources
+# Advertising and privacy rules
 
-This generated ruleset combines domain-level rules from:
+Nikki/Mihomo uses `mihomo/rules/ads.yaml` with `mihomo/rules/ads-exceptions.yaml`. Egern uses the corresponding files in `egern/rules`. Both are generated from one domain policy. An exception skips the advertising rejection and continues ordinary routing. Existing clients can retain their rule-set URLs, groups and ordering.
 
-1. HaGeZi Multi PRO, captured input from the mutable upstream URL https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt
-   - Source project: https://github.com/hagezi/dns-blocklists
-   - Copyright/credit: HaGeZi and upstream contributors.
-   - Published under GPL-3.0; license copy in ADS-LICENSE-GPL-3.0.txt.
-   - Scope includes ads, tracking, telemetry and security threats. Not an advertising-only inventory.
-2. AdGuard DNS filter, captured input from the mutable upstream URL https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt
-   - Source project: https://github.com/AdguardTeam/AdGuardSDNSFilter
-   - Copyright/credit: AdGuard and upstream filter authors.
-   - Published under GPL-3.0; license copy in ADS-LICENSE-GPL-3.0.txt.
-   - Only unconditional domain blocking rules are converted. Domain exceptions are preserved as a separate classical provider.
-   - Regex/path/other blocking rules that cannot safely be represented at domain level are excluded and recorded in audit reports, not broadened to entire domains.
-3. Six Kuaishou domain custom rules, corroborated by AdGuard Mobile Ads source:
-   https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
-   - GPL-3.0 license copy in ADS-LICENSE-GPL-3.0.txt.
+## Inputs
 
-The generated rules, license notice, build script (build-ads.py), and manifest (ADS-MANIFEST.json) are published in this directory. The build manifest records immutable Git revisions and SHA-256 for both retained November 13 inputs. Verify fresh downloads against those hashes before building. Preserve these notices and source-license files when redistributing. No node, subscription, credential or private configuration is included.
+| Input | Use |
+| --- | --- |
+| [AdGuard DNS filter](https://github.com/AdguardTeam/AdGuardSDNSFilter) and the [current Multi PRO domain feed](https://github.com/hagezi/dns-blocklists) | Updated baseline, including unconditional DNS exceptions and the repository's existing reviewed restorations |
+| [AdGuard Chinese and Mobile filters](https://github.com/AdguardTeam/AdguardFilters) | Dedicated advertising hosts from the two regional/mobile ad-server sections |
+| [EasyList and EasyPrivacy](https://github.com/easylist/easylist) | Dedicated international advertising and tracking hosts, with allowlist checks |
+| [AdGuard CNAME trackers](https://github.com/AdguardTeam/cname-trackers) | Disguised advertising hostnames and purpose-specific analytics, telemetry and email open/pixel aliases |
+| [Reviewed endpoints](../../maintenance/ad-endpoints.json) | Exact browser auction and mobile advertising endpoints with their public source |
+| [Public Suffix List](https://publicsuffix.org/) | Guard against blocking a public suffix or shared hosting suffix |
 
-Loyalsoldier was used only as an old-list comparison input, not as a generation source. Source overlap or limited media-domain tests do not prove that every endpoint has been semantically audited. No guarantee of zero false positives, complete old-rule equivalence, or complete coverage of advertising.
+Supplemental entries match exact hostnames. Browser path restrictions and page element rules stay with the browser. Known exceptions, removed domains, and user-reviewed additions are recorded in ADS-MANIFEST.json. The 2020 ad-wars entries and the public Prebid.js adapter URLs identify previously reviewed hosts. The workflow downloads only public rule sources.
 
-## Exception behavior
+Source credits: AdGuard and its contributors, HaGeZi and contributors, EasyList and EasyPrivacy authors and contributors (GPL-3.0 option), and the maintainers named by the reviewed sources. See [GPL text](ADS-LICENSE-GPL-3.0.txt), [AdGuard CNAME MIT notice](ADS-LICENSE-CNAME-MIT.txt), and the [EasyList licensing page](https://easylist.to/pages/licence.html). The Public Suffix List is fetched for validation and remains available from its MPL-2.0 project.
 
-The main advertising rule must test blacklist AND NOT exception list. An exception skips only the advertising rejection decision and then continues normal route selection; it does not mean DIRECT.
+## Updates
 
-Required routing expression: `AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions)))),REJECT`. Provider `ads` uses behavior `domain`, `ads-exceptions` uses `classical`, both YAML.
-
-## Reproducibility status
-
-- HaGeZi retained input: `5c00cbf3cf228e53717ef51a16150b488487ec91e8266a14ca48ebbbe2135b15` (4,466,245 bytes).
-- AdGuard retained input: `3503aa3a16795a5856a921d829daf74c0d56a07ebed56446e19a961ede9f9144` (4,674,006 bytes).
-- Both retained input files match these SHA256 values. Rebuilding in a separate local directory with Python 3 and PyYAML 6.0.3 reproduces both published-rule output hashes.
-- Both immutable Git revisions in ADS-MANIFEST.json were retrieved and verified. If a pinned download fails or does not match its SHA-256, stop the build. Updating source pins and hashes requires a new review.
-- This establishes reproducibility when the immutable source objects are available, not complete semantic or device compatibility verification of every rule.
-
-
-## 2026-11-21 narrow false-positive backport
-
-Retains both verified 2026-11-13 immutable inputs in ADS-MANIFEST.json. The generator removes only `memcyco.com` from their union, following [AdGuard incorrect-block issue #246585](https://github.com/AdguardTeam/AdguardFilters/issues/246585) and its [upstream fix](https://github.com/AdguardTeam/AdGuardSDNSFilter/pull/2138/files). The domain no longer rejects at the ad gate; it follows the remaining routing rules. No exception changed and the full upstream delta was not imported.
-
-### 2026-11-21 user-requested PureIP service block
-
-Blocks `pureip.io` and its subdomains, plus exact hosts `stats.proxypurity.com`, `v4.mypublicipnow.com` and `v6.mypublicipnow.com`. The [PureIP site](https://pureip.io/) links the application bundle that names both probe hosts and the separate [analytics script](https://stats.proxypurity.com/script.js). No parent-wide block of the two other domains and no shared CDN or unrelated IP-diagnostic services added. Pinned ad-list and exception inputs are unchanged.
+After merge the workflow runs at 02:17 and 14:17 UTC. It resolves each upstream to an immutable Git commit, builds both exports and tests the advertising decision against the official Mihomo core. A failed download, unexpected source shrinkage, failed control case or conflicting branch update leaves the previous published snapshot in place. The source lock records the Git revisions, SHA-256 values and resulting counts. To reproduce the current snapshot, install PyYAML 6.0.3 and run `python maintenance/build_ads.py`; to resolve newer public inputs, add `--refresh`. Egern checks validate the native encoding and agreement with the tested domain policy.
