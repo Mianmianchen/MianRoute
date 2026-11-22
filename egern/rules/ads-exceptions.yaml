@@ -1,4 +1,4 @@
-# MianRoute Egern native rule set; generated, no credentials.
+# MianRoute public advertising rules. Generated from maintenance/ad-sources.lock.json.
 domain_suffix_set:
 - ad.10010.com
 - ad.abchina.com

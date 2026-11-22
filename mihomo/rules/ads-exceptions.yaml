@@ -1,4 +1,4 @@
-# AdGuard DNS domain exceptions; bypass advertising rule only, not force DIRECT.
+# MianRoute public advertising rules. Generated from maintenance/ad-sources.lock.json.
 payload:
 - DOMAIN-SUFFIX,ad.10010.com
 - DOMAIN-SUFFIX,ad.abchina.com
