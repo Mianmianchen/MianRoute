@@ -131,11 +131,7 @@ reviews = json.loads((ROOT / "maintenance/reviewed-ad-endpoints.json").read_text
 bidder_sources = browser_bidders()
 adwars = read_source("https://raw.githubusercontent.com/jdlingyu/ad-wars/ac079e9d3c4c4dd38d5756b821c8e6b1abd00ee2/sha_ad_hosts")
 anti_ad = set(read_source("https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/c1d0a1ddb1a5d048f104e2a7eac991b43c3cca8f/anti-ad-adguard.txt"))
-historical_hosts = set()
-for line in adwars:
-    fields = line.partition("#")[0].split()
-    if fields and fields[0] in {"0.0.0.0", "127.0.0.1"}:
-        historical_hosts.update(fields[1:])
+historical_hosts = {line.partition("#")[0].strip() for line in adwars}
 verified = []
 for row in reviews["browser_bidding"]:
     host = row["host"]
