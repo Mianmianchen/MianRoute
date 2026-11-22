@@ -26,15 +26,15 @@ SOURCES = {
     ],
     "217heidai DNS": [
         "abp",
-        "https://raw.githubusercontent.com/217heidai/adblockfilters/6f40fe7f5dc5ba1f724002202e072753c8aea4fd/rules/adblockdns.txt"
+        "https://raw.githubusercontent.com/217heidai/adblockfilters/f35f33ccc4c61bb7b23173926bd4a92f070cf445/adblockdns.txt"
     ],
     "oisd big": [
         "abp",
         "https://raw.githubusercontent.com/sjhgvr/oisd/4fb1e35646895c2c3d330db9f623fe58067135be/abp_big.txt"
     ],
-    "blackmatrix7 Advertising": [
+    "blackmatrix7 Advertising_All": [
         "clash",
-        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/0b6897dc17e0c513d25449c935a9694818e32f0c/rule/Clash/Advertising/Advertising.list"
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/0b6897dc17e0c513d25449c935a9694818e32f0c/rule/Surge/Advertising/Advertising_All.list"
     ]
 }
 EASYLIST = "https://raw.githubusercontent.com/easylist/easylistchina/63761376e60234c6323169cea8877d8e7dbebea5/easylistchina.txt"
@@ -85,7 +85,7 @@ def parse(kind, lines):
         if kind=="abp":
             allowed=line.startswith("@@")
             rule=line[2:] if allowed else line
-            m=SUFFIX.fullmatch(rule) or EXACT.fullmatch(rule)
+            m=SUFFIX.fullmatch(rule) or EXACT.fullmatch(rule.rstrip('|'))
             if m:
                 suffix=rule.startswith("||")
                 if allowed: r.exception("DOMAIN-SUFFIX" if suffix else "DOMAIN",m[1])
