@@ -49434,30 +49434,30 @@
       "match": "exact",
       "review_date_utc": "2026-11-22",
       "primary_sources": [
-        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/109",
-        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt"
+        "https://github.com/jdlingyu/ad-wars/blob/ac079e9d3c4c4dd38d5756b821c8e6b1abd00ee2/sha_ad_hosts#L454",
+        "https://github.com/privacy-protection-tools/anti-AD/blob/c1d0a1ddb1a5d048f104e2a7eac991b43c3cca8f/anti-ad-adguard.txt#L97407"
       ],
-      "reason": "Reported in the Ximalaya mobile client splash and widget advertising flow."
+      "reason": "Exact Ximalaya host recorded in the 2020 ad-wars hosts file and the current pinned anti-AD domain filter."
     },
     {
       "domain": "ad.player.baidu.com",
       "match": "exact",
       "review_date_utc": "2026-11-22",
       "primary_sources": [
-        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt",
-        "https://github.com/jdlingyu/ad-wars/blob/e52547153aa2b541f09c4c354aa64fb0d8d914a3/sha_ad_hosts"
+        "https://github.com/jdlingyu/ad-wars/blob/ac079e9d3c4c4dd38d5756b821c8e6b1abd00ee2/sha_ad_hosts#L1067",
+        "https://github.com/privacy-protection-tools/anti-AD/blob/c1d0a1ddb1a5d048f104e2a7eac991b43c3cca8f/anti-ad-adguard.txt#L11278"
       ],
-      "reason": "Listed as a Baidu advertising service in ad-wars and as an exact advertising host in AWAvenue."
+      "reason": "Exact player host in the Baidu advertising section of ad-wars and the current pinned anti-AD domain filter."
     },
     {
       "domain": "adx.appsdk.com.cn",
       "match": "exact",
       "review_date_utc": "2026-11-22",
       "primary_sources": [
-        "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/376c201ec74baa65b3b9f3f34f2705da89f440ac/rule/domain.txt",
-        "https://github.com/jdlingyu/ad-wars/blob/e52547153aa2b541f09c4c354aa64fb0d8d914a3/hosts"
+        "https://github.com/jdlingyu/ad-wars/blob/ac079e9d3c4c4dd38d5756b821c8e6b1abd00ee2/sha_ad_hosts#L768",
+        "https://github.com/privacy-protection-tools/anti-AD/blob/c1d0a1ddb1a5d048f104e2a7eac991b43c3cca8f/anti-ad-adguard.txt#L9025"
       ],
-      "reason": "Ad exchange hostname listed in the AWAvenue advertising set and ad-wars hosts."
+      "reason": "Exact ad exchange host recorded in the 2020 ad-wars hosts file and the current pinned anti-AD domain filter."
     }
   ],
   "latest_scoped_validation": {
