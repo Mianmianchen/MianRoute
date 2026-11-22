@@ -2,6 +2,7 @@
 from pathlib import Path
 from urllib.request import Request, urlopen
 import json
+import ipaddress
 import re
 
 import yaml
@@ -47,7 +48,7 @@ chatgpt.com api.openai.com auth.openai.com oaistatic.com files.oaiusercontent.co
 gemini.google.com generativelanguage.googleapis.com dl.steam.clngaa.com store.steampowered.com
 login.microsoftonline.com partner.microsoftonline-m.net.cn www.kwai.com kwai.com
 www.taobao.com trade.taobao.com login.taobao.com www.jd.com passport.jd.com
-api.bilibili.com www.douyin.com www.zhihu.com open.weixin.qq.com pay.weixin.qq.com
+bdad.123pan.cn api.bilibili.com www.douyin.com www.zhihu.com open.weixin.qq.com pay.weixin.qq.com
 """.split())
 HOST = r"[a-z0-9_-]+(?:\.[a-z0-9_-]+)+"
 SUFFIX = re.compile(r"\|\|(" + HOST + r")\^")
@@ -102,17 +103,39 @@ for entry in load("ads.yaml"):
     if entry.startswith("+."): current.suffix.add(entry[2:])
     else: current.exact.add(entry)
 for entry in load("ads-exceptions.yaml"): current.exception(*entry.split(",",1))
-china={m[1] for line in fetch(EASYLIST) if (m:=SUFFIX.fullmatch(line.strip().lower()))}
+def hostname(s):
+    if not re.fullmatch(HOST,s): return False
+    try: ipaddress.ip_address(s)
+    except ValueError: return True
+    return False
+
+china=set()
+section=False
+for line in fetch(EASYLIST):
+    if line.startswith("!----"):
+        section = "Ads-Union" in line
+    match=SUFFIX.fullmatch(line.strip().lower())
+    if section and match and hostname(match[1]): china.add(match[1])
+directory=json.loads("\n".join(fetch("https://raw.githubusercontent.com/disconnectme/disconnect-tracking-protection/7a9e2be53189b8273f6929977ec92e0f5ae993b6/services.json")))
+global_ads=set()
+for entity in directory["categories"]["Advertising"]:
+    for sites in entity.values():
+        for domains in sites.values():
+            if isinstance(domains,list):
+                global_ads.update(d for d in domains if isinstance(d,str) and hostname(d))
 assert len(china)>100
-cohorts=[china,PREBID,CONTROLS]
+cohorts=[china,global_ads,PREBID,CONTROLS]
 base=[{d for d in hosts if current.blocks(d)} for hosts in cohorts]
 print("COHORTS",*(len(x) for x in cohorts))
-print("CURRENT",*(len(x) for x in base),sorted(base[2]))
+print("CURRENT",*(len(x) for x in base),sorted(base[-1]))
 misses={}
 for name,(kind,url) in SOURCES.items():
     rules=parse(kind, fetch(url))
     results=[{d for d in hosts if rules.blocks(d)} for hosts in cohorts]
     extra=sorted(results[0]-base[0])
-    print("SOURCE",name,json.dumps([len(x) for x in results]),"EXTRA",len(extra),"CONTROL",sorted(results[2]),"EXAMPLES",extra[:8])
+    print("SOURCE",name,json.dumps([len(x) for x in results]),"EXTRA",len(extra),"CONTROL",sorted(results[-1]),"EXAMPLES",extra[:8])
     misses[name]=set(extra)
+    gextra=sorted(results[1]-base[1]); print("GLOBAL-EXTRA",name,len(gextra),gextra[:20])
+    misses["G:"+name]=set(gextra)
 print("CONSENSUS", sorted(misses["217heidai DNS"] & (misses["HaGeZi PRO++"] | misses["oisd big"] | misses["anti-AD"]))[:60])
+print("GLOBAL-AGREE", sorted(misses["G:217heidai DNS"] & (misses["G:HaGeZi PRO++"] | misses["G:oisd big"] | misses["G:anti-AD"]))[:80])

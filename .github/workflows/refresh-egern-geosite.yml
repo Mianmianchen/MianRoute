@@ -1,0 +1,72 @@
+name: Refresh Egern geographic domain sets
+on:
+  schedule:
+    - cron: '27 */2 * * *'
+  workflow_dispatch:
+  push:
+    branches: [maintain/subscription-sources-20261122]
+    paths: ['.github/workflows/refresh-egern-geosite.yml']
+permissions:
+  contents: read
+concurrency: refresh-egern-geosite
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve official XTLS release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api repos/XTLS/Xray-rules-dat/releases/latest > "$RUNNER_TEMP/release.json"
+          jq -er '.assets[] | select(.name=="geosite.dat") | .browser_download_url' "$RUNNER_TEMP/release.json" > "$RUNNER_TEMP/url"
+          jq -er '.assets[] | select(.name=="geosite.dat") | .digest | select(test("^sha256:[0-9a-f]{64}$")) | split(":")[1]' "$RUNNER_TEMP/release.json" > "$RUNNER_TEMP/sha"
+          if test "$(cat "$RUNNER_TEMP/sha")" != "$(jq -r .geosite_sha256 egern/BUILD-MANIFEST.json)" || test "$GITHUB_EVENT_NAME" = push; then
+            echo "changed=yes" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Rebuild geographic categories and verify policy samples
+        if: steps.release.outputs.changed == 'yes'
+        run: |
+          set -euo pipefail
+          python -m pip install PyYAML==6.0.3
+          url=$(cat "$RUNNER_TEMP/url")
+          [[ "$url" == https://github.com/XTLS/Xray-rules-dat/releases/download/*/geosite.dat ]]
+          curl -fsSL --retry 3 "$url" -o "$RUNNER_TEMP/geosite.dat"
+          echo "$(cat "$RUNNER_TEMP/sha")  $RUNNER_TEMP/geosite.dat" | sha256sum --check -
+          scratch="$RUNNER_TEMP/egern"
+          mkdir -p "$scratch"
+          python egern/build-rules.py --mihomo-dir mihomo/rules --geosite "$RUNNER_TEMP/geosite.dat" --geosite-url "$url" --output "$scratch/rules"
+          python - "$scratch" <<'PY'
+          import hashlib, json, pathlib, sys, yaml
+          src, out = pathlib.Path(sys.argv[1]), pathlib.Path("egern")
+          read = lambda p: json.loads(p.read_text())
+          old, new = read(out/"BUILD-MANIFEST.json"), read(src/"BUILD-MANIFEST.json")
+          categories = ["proxy-priority","foreign-proxy","foreign-general","cn-general","lan"]
+          for category, sample in [("proxy-priority","google.com"),("foreign-general","openai.com"),("cn-general","baidu.com")]:
+              data = yaml.safe_load((src/"rules"/(category+".yaml")).read_bytes())
+              assert sample in data.get("domain_set",[]) + data.get("domain_suffix_set",[]), category
+          for name in categories:
+              assert sum(new["files"][name].values()) > 0, name
+              filename = name + ".yaml"
+              content = (src/"rules"/filename).read_bytes()
+              (out/"rules"/filename).write_bytes(content)
+              old["files"][name] = new["files"][name]
+              old["output_sha256"][filename] = hashlib.sha256(content).hexdigest()
+          for key in ("geosite_source","geosite_sha256"):
+              old[key] = new[key]
+          (out/"BUILD-MANIFEST.json").write_text(json.dumps(old,indent=2,ensure_ascii=False)+"\n")
+          PY
+      - name: Publish updated rule content on the default branch
+        if: steps.release.outputs.changed == 'yes' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
+        run: |
+          set -euo pipefail
+          git add -- egern/BUILD-MANIFEST.json egern/rules/{proxy-priority,foreign-proxy,foreign-general,cn-general,lan}.yaml
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m "Sync Egern geographic domain sets with XTLS"
+            git push origin HEAD:"${GITHUB_REF#refs/heads/}"
+          fi
