@@ -136,13 +136,12 @@ print("CN-MISSES",sorted(china-base[0]))
 print("CURRENT",*(len(x) for x in base),sorted(base[-1]))
 misses={}
 bidders = browser_bidders()
-awa = parse("abp", fetch(NEW_SOURCES["AWAvenue Only.Ads"][1]))
-samples = {"browser-bidders": set(bidders), "cn-s2s": set(CN_BIDDERS), "123pan-mobile-sdk": MOBILE_SDK_CASE, "awa-ads-reference": awa.suffix}
+samples = {"browser-bidders": set(bidders), "cn-s2s": set(CN_BIDDERS), "123pan-mobile-sdk": MOBILE_SDK_CASE}
 print("ENDPOINT-SAMPLES", {k:len(v) for k,v in samples.items()})
 print("ENDPOINT-BASE", {k:sum(current.blocks(h) for h in v) for k,v in samples.items()})
-gaps = {h:[] for h in set(bidders) | awa.suffix if not current.blocks(h)}
+gaps = {h:[] for h in bidders if not current.blocks(h)}
 for name,(kind,url) in (SOURCES | NEW_SOURCES).items():
-    rules=awa if name == "AWAvenue Only.Ads" else parse(kind, fetch(url))
+    rules=parse(kind, fetch(url))
     print("ENDPOINT-TEST", name, {k:sum(rules.blocks(h) for h in v) for k,v in samples.items()})
     for host, voters in gaps.items():
         if rules.blocks(host):
@@ -163,13 +162,10 @@ print("CONSENSUS", sorted(misses["217heidai DNS"] & (misses["HaGeZi PRO++"] | mi
 print("GLOBAL-AGREE", sorted(misses["G:217heidai DNS"] & (misses["G:HaGeZi PRO++"] | misses["G:oisd big"] | misses["G:anti-AD"]))[:80])
 
 for host, voters in sorted(gaps.items()):
-    if host in bidders:
-        print("BROWSER-GAP", host, bidders[host], json.dumps(voters))
-    if host in awa.suffix:
-        print("AWA-GAP", host, json.dumps(voters))
+    print("BROWSER-GAP", host, bidders[host], json.dumps(voters))
 
 # Check shared functions using the effective advertising rule and its exceptions.
-# These two domains have specific upstream reports of breakage.
+# These domains have specific upstream reports of breakage.
 for protected in ("bdad.123pan.cn", "vd6.l.qq.com", "a0.app.xiaomi.com"):
     if current.blocks(protected):
         raise ValueError("Functional host blocked: " + protected)

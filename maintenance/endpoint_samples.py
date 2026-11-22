@@ -6,7 +6,6 @@ from urllib.request import urlopen
 RAW = "https://raw.githubusercontent.com/"
 PREBID_REV = "3b4911e0f41d39e6b7cca50dcc9c9988bc35c0f3"
 NEW_SOURCES = {
-    "AWAvenue Only.Ads": ("abp", RAW + "TG-Twilight/AWAvenue-Ads-Rule/3b96f6337ee05400d5be302f7e9bdd5188839b82/Filters/AWAvenue-Ads-Rule-Adblock-Only.Ads.txt"),
     "Cats-Team AdRules DNS": ("abp", RAW + "Cats-Team/AdRules/192049177992ba6d14cbc2e823bd15f7499a4590/dns.txt"),
     "1Hosts Xtra": ("abp", RAW + "badmojr/1Hosts/7a4588e87bcf7e86e0b8169d391b8422bd3c5d36/Xtra/adblock.txt"),
     "StevenBlack unified": ("hosts", RAW + "StevenBlack/hosts/ce25ce24d6dca08fa484612091a822bc93587086/hosts"),
