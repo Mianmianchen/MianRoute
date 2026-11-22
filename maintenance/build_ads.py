@@ -1,5 +1,6 @@
 """Rebuild MianRoute advertising rules for Mihomo and Egern from the same host sets."""
 import argparse
+from bisect import bisect_left
 import hashlib
 import json
 import os
@@ -43,6 +44,7 @@ HOST = re.compile(rf"{LABEL}(?:\.{LABEL})+")
 ABP = re.compile(r"\|\|([a-z0-9_.-]+)\^", re.I)
 LEGACY = {"adukwai.com","adkwai.com","open.e.kuaishou.cn","open.e.kuaishou.com","open.kuaishouzt.com","open.kwaizt.com"}
 PURPOSE = re.compile(r"^(?:analytics|telemetry|metrics|tracking|tracker|pixel|beacon|collect)(?:[0-9]*|[-_][a-z0-9_-]+)$")
+REPLACED_EXCEPTIONS = {"ad.10010.com", "www.googleadservices.com", "pagead.l.doubleclick.net"}
 MAIL = re.compile(r"^(?:opens?|pixels?|beacon)(?:[0-9]*|[-_][a-z0-9_-]+)$")
 
 def valid(host):
@@ -100,9 +102,35 @@ def dns_exception(line):
     anchor, pat = m.groups()
     pat = pat.lower()
     if "*" not in pat and anchor in ("||","|"):
-        return ("DOMAIN-SUFFIX" if anchor == "||" else "DOMAIN", pat)
+        return ("DOMAIN-SUFFIX" if anchor == "||" else "DOMAIN", pat), pat
     expression = ("(?:^|\\.)" if anchor == "||" else "^" if anchor else "") + re.escape(pat).replace(r"\*", ".*") + "$"
-    return "DOMAIN-REGEX", expression
+    return ("DOMAIN-REGEX", expression), pat
+
+def effective_exceptions(candidates, exact, suffix):
+    """Retain only rules whose domain sets intersect this build's blocklist."""
+    # A child's reversed name starts with its reversed parent and a label separator.
+    reversed_hosts = sorted(host[::-1] for host in exact | suffix)
+    active = []
+    for rule, pattern in candidates.items():
+        kind, value = rule
+        if kind == "DOMAIN-REGEX":
+            # dns_exception emits only end-anchored literal/glob patterns here.
+            # '*' spans dots. A matching name under a blocked suffix must end in
+            # both the glob's final literal and the blocked domain (at a label boundary).
+            tail = pattern.rsplit("*", 1)[-1]
+            intersects = any(host.endswith(tail) or tail.endswith("." + host) for host in suffix)
+            if not intersects:
+                matches = re.compile(value).search
+                intersects = any(matches(host) for host in exact)
+        else:
+            intersects = value in exact or any(parent in suffix for parent in suffixes(value))
+            if not intersects and kind == "DOMAIN-SUFFIX":
+                prefix = value[::-1] + "."
+                i = bisect_left(reversed_hosts, prefix)
+                intersects = i < len(reversed_hosts) and reversed_hosts[i].startswith(prefix)
+        if intersects:
+            active.append(rule)
+    return active
 
 def save_json(path, obj):
     path.write_text(json.dumps(obj, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
@@ -144,13 +172,15 @@ def main():
                 if line.startswith("@@"):
                     # A site- or path-scoped exception vetoes supplemental additions for that host.
                     # Only unconditional DNS exceptions become routing exceptions.
+                    exception = dns_exception(line) if kind == "dns" else None
+                    if exception:
+                        rule, pattern = exception
+                        if rule[0] in ("DOMAIN", "DOMAIN-SUFFIX") and rule[1] in REPLACED_EXCEPTIONS:
+                            continue  # This unconditional exception must not veto future supplemental blocks.
+                        allow[rule] = pattern
                     match = re.match(r"@@(?:\|\||\|?https?://)([a-z0-9_.-]+)(?=[/\^:$|]|$)", line)
                     if match and valid(match[1]):
                         veto.add(match[1])
-                    if kind == "dns":
-                        exception = dns_exception(line)
-                        if exception:
-                            allow[exception] = None
                 elif kind != "veto":
                     match = ABP.fullmatch(line)
                     if match and valid(match[1]):
@@ -173,6 +203,8 @@ def main():
     for item in manifest["reviewed_exact_exceptions"]:
         allow[("DOMAIN", item["domain"])] = None
 
+    allow[("DOMAIN", "m1.ad.10010.com")] = None
+
     def unsafe_scope(h):
         return h in public or (h not in psl_exceptions and h.partition(".")[2] in wild)
     suffix = {h for h in suffix if valid(h) and not unsafe_scope(h)}
@@ -192,6 +224,7 @@ def main():
     fixed = sorted(exact)
     if any((h in exact or any(p in suffix for p in suffixes(h))) for h in restored):
         raise ValueError("Previously restored hostname reblocked")
+    allow = effective_exceptions(allow, exact, suffix)
     stats.update(suffix=len(minimal), exact=len(fixed), exceptions=len(allow), supplemental_exact=len(exact - blocked_before))
     old_count = sum(previous.get("counts", {}).get(k, 0) for k in ("exact","suffix"))
     if old_count and not 0.80 * old_count <= len(fixed)+len(minimal) <= 1.25 * old_count:

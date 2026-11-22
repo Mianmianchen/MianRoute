@@ -18,9 +18,11 @@ BLOCK = set("""
 googleads.g.doubleclick.net pagead2.googlesyndication.com www.google-analytics.com
 ads.pubmatic.com adservice.sigmob.cn api-access.pangolin-sdk-toutiao.com
 mobads.baidu.com tracker.adform.net sdk.adhuanxiao.com
+www.googleadservices.com pagead.l.doubleclick.net
 """.split())
 BLOCK.update(json.loads((ROOT / "maintenance/ad-endpoints.json").read_text())["exact"])
 NORMAL = set("""
+m1.ad.10010.com
 apps.apple.com
 itunes.apple.com
 courier.push.apple.com
@@ -112,6 +114,11 @@ for row in load(m / "ads-exceptions.yaml")["payload"]:
     kind, value = row.split(",", 1)
     expected[mapping[kind]].add(value)
 assert {k:set(v) for k,v in ea.items()} == {k:v for k,v in expected.items() if v}
+# Verify the exception itself stays narrow even if the upstream stops blocking m1.
+unicom = "m1.ad.10010.com"
+assert "ad.10010.com" not in expected["domain_suffix_set"] and unicom not in expected["domain_suffix_set"]
+if unicom in domains or {unicom, "ad.10010.com", "10010.com"} & suffix:
+    assert unicom in expected["domain_set"]
 regex = [re.compile(p,re.I) for p in expected["domain_regex_set"]]
 def blocked(host):
     parts = host.split(".")

@@ -17,6 +17,10 @@ Supplemental entries match exact hostnames. Browser path restrictions and page e
 
 Source credits: AdGuard and its contributors, HaGeZi and contributors, EasyList and EasyPrivacy authors and contributors (GPL-3.0 option), and the maintainers named by the reviewed sources. See [GPL text](ADS-LICENSE-GPL-3.0.txt), [AdGuard CNAME MIT notice](ADS-LICENSE-CNAME-MIT.txt), and the [EasyList licensing page](https://easylist.to/pages/licence.html). The Public Suffix List is fetched for validation and remains available from its MPL-2.0 project.
 
+## Advertising exceptions
+
+The build publishes an exact, suffix or DNS wildcard exception only when it overlaps the current blocklist. Full upstream and locally reviewed exceptions are reconsidered at every build. The China Unicom exception is limited to the exact host `m1.ad.10010.com` for [app icons](https://github.com/TG-Twilight/AWAvenue-Ads-Rule/issues/201). The repository omits the exceptions for `www.googleadservices.com` and `pagead.l.doubleclick.net`. Blocking these hosts can prevent [Google sponsored links](https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/289) from opening.
+
 ## Updates
 
 After merge the workflow runs at 02:17 and 14:17 UTC. It resolves each upstream to an immutable Git commit, builds both exports and tests the advertising decision against the official Mihomo core. A failed download, unexpected source shrinkage, failed control case or conflicting branch update leaves the previous published snapshot in place. The source lock records the Git revisions, SHA-256 values and resulting counts. To reproduce the current snapshot, install PyYAML 6.0.3 and run `python maintenance/build_ads.py`; to resolve newer public inputs, add `--refresh`. Egern checks validate the native encoding and agreement with the tested domain policy.
