@@ -10,8 +10,10 @@
 | `apple-direct.yaml`、`apple-proxy.yaml` | 优先匹配大陆服务的直连例外。六条 APNs IP 与端口组合写在模板的 `and` 规则中，与域名规则配套使用。 |
 | `foreign-general.yaml`、`cn-general.yaml` | 从 XTLS GeoSite 快照展开的通用域名分类，放在专用规则之后。 |
 
-`cn-direct.yaml` 保留给使用旧订阅的配置。公共模板使用 `cn-services.yaml`，个人例外可写在本地副本中。
+`cn-direct.yaml` 是 `cn-services.yaml` 的兼容订阅，两份内容相同。公共模板使用 `cn-services.yaml`，个人例外可写在本地副本中。
 
 规则使用 Egern 原生格式。精确域名、后缀、关键词与正则分别保留各自的匹配方式。广告构建与 Mihomo 共用输入，验证两端导出一致。地域分类的快照哈希和导出信息见[构建清单](BUILD-MANIFEST.json)。
+
+重建到临时目录时，用 `python egern/build-rules.py --mihomo-dir mihomo/rules --geosite <GeoSite文件> --output <目录>/rules`。要记录新快照的出处，可同时传入 `--geosite-source <固定版本URL>`。
 
 [项目使用说明](../README.md) · [广告来源与许可](../mihomo/rules/ADS-SOURCES.md) · [Egern 规则语法](https://egernapp.com/docs/configuration/rules/)

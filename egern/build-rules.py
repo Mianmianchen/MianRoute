@@ -2,7 +2,7 @@
 # Public-input-only native format converter. Requires PyYAML.
 import yaml,json,hashlib,re,pathlib,collections
 import argparse
-a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);args=a.parse_args()
+a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);a.add_argument('--geosite-source',help='URL of the exact GeoSite release used');args=a.parse_args()
 R=pathlib.Path(args.mihomo_dir);OUT=pathlib.Path(args.output);OUT.mkdir(parents=True,exist_ok=True)
 GEO=pathlib.Path(args.geosite)
 def fields(b):
@@ -40,13 +40,27 @@ def geos(d,name):
 def write(name,d):
  for k,vs in d.items():
   seen=set(); d[k]=[v for v in vs if not (json.dumps(v,sort_keys=True) in seen or seen.add(json.dumps(v,sort_keys=True)))]
- (OUT/(name+'.yaml')).write_text('# MianRoute Egern native rule set; generated, no credentials.\n'+yaml.safe_dump(d,allow_unicode=True,sort_keys=False,width=150))
+ if name in ('ads','ads-exceptions'):
+  header = '# MianRoute public advertising rules. Generated from maintenance/ad-sources.lock.json.\n'
+  body = yaml.dump(d, Dumper=yaml.CSafeDumper, allow_unicode=True, sort_keys=False, width=150)
+ else:
+  header = '# MianRoute Egern native rule set; generated, no credentials.\n'
+  body = yaml.safe_dump(d, allow_unicode=True, sort_keys=False, width=150)
+ (OUT/(name+'.yaml')).write_bytes((header+body).encode('utf-8'))
  return {k:len(v) for k,v in d.items()}
-manifest={'geosite_sha256':hashlib.sha256(GEO.read_bytes()).hexdigest(),'geosite_source':'https://github.com/XTLS/Xray-rules-dat/releases/latest/download/geosite.dat','files':{}}
+manifest_path = OUT.parent / 'BUILD-MANIFEST.json'
+source_manifest = pathlib.Path(__file__).with_name('BUILD-MANIFEST.json')
+previous_path = manifest_path if manifest_path.exists() else source_manifest
+previous = json.loads(previous_path.read_text(encoding='utf-8')) if previous_path.exists() else {}
+geosite_hash = hashlib.sha256(GEO.read_bytes()).hexdigest()
+source = args.geosite_source or (previous.get('geosite_source') if previous.get('geosite_sha256') == geosite_hash else None)
+manifest = {'geosite_sha256': geosite_hash, 'files': {}}
+if source:
+ manifest['geosite_source'] = source
 for name in ['apple-direct','apple-proxy','cn-direct','cn-services','ads-exceptions']:
  d={}
- for s in yaml.safe_load((R/(name+'.yaml')).read_text())['payload']:
-  if name=='apple-proxy' and s.startswith('AND,'):continue # use documented top-level AND in private profile
+ for s in yaml.safe_load((R/(name+'.yaml')).read_text(encoding='utf-8'))['payload']:
+  if name=='apple-proxy' and s.startswith('AND,'):continue # use documented top-level AND in templates/egern.yaml
   add(d,rule(s))
  manifest['files'][name]=write(name,d)
 d={}
@@ -66,5 +80,13 @@ for name,tags in [('proxy-priority',['paypal','microsoft','ebay','linkedin','goo
  if name=='lan':
   for s in ['127.0.0.0/8','10.0.0.0/8','172.16.0.0/12','192.168.0.0/16','169.254.0.0/16','100.64.0.0/10','224.0.0.0/4','255.255.255.255/32']:add(d,{'ip_cidr':{'match':s}})
  manifest['files'][name]=write(name,d)
-(OUT.parent/'BUILD-MANIFEST.json').write_text(json.dumps(manifest,indent=2))
+def hash_file(path):
+ return hashlib.sha256(path.read_bytes()).hexdigest()
+manifest['format'] = 'Egern native rule set'
+manifest['validation'] = 'Static checks only, not Egern core/device validation'
+manifest['apns_note'] = 'Six TCP/port/IP conditions are defined in templates/egern.yaml; apple-proxy.yaml contains the domain rules.'
+source_names = ('ads', 'ads-custom', 'ads-exceptions', 'apple-direct', 'apple-proxy', 'cn-direct', 'cn-services', 'foreign-proxy')
+manifest['source_files'] = {name+'.yaml': hash_file(R/(name+'.yaml')) for name in source_names if (R/(name+'.yaml')).is_file()}
+manifest['output_sha256'] = {name+'.yaml': hash_file(OUT/(name+'.yaml')) for name in manifest['files']}
+manifest_path.write_bytes((json.dumps(manifest, indent=2)+'\n').encode('utf-8'))
 print(json.dumps(manifest['files'],indent=2))

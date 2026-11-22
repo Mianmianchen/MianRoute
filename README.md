@@ -21,11 +21,13 @@ MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提�
 | 游戏平台 | Steam 等游戏平台走代理，指定大陆下载主机优先直连。 |
 | 未命中域名规则的连接 | 按目标 IP 的 GeoIP 归属判断。大陆 IP 直连，其余走兜底代理。直接访问公网 IP 时也按此规则处理。 |
 
-个人域名和 IP 可加在模板标出的本地例外位置。Nikki 的设备白名单及专用 BT 下载设备的绕过在路由器的 LAN 访问控制中设置。模板关闭客户端 IPv6。要在全网停用 IPv6，还需在路由器核对 WAN6、RA 和 DHCPv6。DNS 上游由本地配置决定。
+个人域名和 IP 可加在模板标出的本地例外位置。Nikki 的设备白名单和专用 BT 下载设备的绕过在路由器的 LAN 访问控制中设置。同一设备混合使用浏览器与 BT 时，需要单独区分流量。模板关闭客户端 IPv6。要在全网停用 IPv6，还需在路由器核对 WAN6、RA 和 DHCPv6。DNS 上游由本地配置决定。
 
 ## 单独订阅规则
 
-已有配置可从 [Mihomo 目录](mihomo/rules/) 或 [Egern 目录](egern/rules/) 选取所需文件。公共直连补充使用 `cn-services.yaml`。广告拦截须配对使用 `ads.yaml` 和 `ads-exceptions.yaml`，组合写法见模板。规则按顺序匹配，Steam 下载和 Apple 大陆直连例外分别放在各自的代理规则前。
+已有配置可从 [Mihomo 目录](mihomo/rules/) 或 [Egern 目录](egern/rules/) 选取所需文件。公共直连补充使用 `cn-services.yaml`。旧订阅 `cn-direct.yaml` 内容相同，任选一份。广告拦截须配对使用 `ads.yaml` 和 `ads-exceptions.yaml`，组合写法见模板。规则按顺序匹配，Steam 下载和 Apple 大陆直连例外分别放在各自的代理规则前。
+
+广告表按域名拦截广告和追踪。与正常内容共用域名的广告、依赖网页路径或页面元素的广告，无法靠这份域名表完整区分。[上游与例外说明](mihomo/rules/ADS-SOURCES.md)
 
 模板每 24 小时检查规则订阅。Nikki 的地域库取自 [XTLS](https://github.com/XTLS/Xray-rules-dat/releases/latest)，Egern 的域名分类来自[构建清单](egern/BUILD-MANIFEST.json)记录的快照。广告与追踪规则的输入、许可和更新时间见[来源说明](mihomo/rules/ADS-SOURCES.md)和[构建记录](https://github.com/Mianmianchen/MianRoute/actions/workflows/refresh-ad-rules.yml)。
 
