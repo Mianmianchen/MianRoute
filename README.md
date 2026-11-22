@@ -1,6 +1,6 @@
 # MianRoute
 
-MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提供分流规则。公共模板拦截广告与追踪，让局域网和明确的大陆服务直连，其余流量默认走代理。
+MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提供分流规则。公共模板拦截广告与追踪，优先按域名分流。域名规则未命中时，大陆 IP 直连，其余流量默认走代理。
 
 ## 使用模板
 
@@ -18,8 +18,8 @@ MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提�
 | 广告与追踪 | 命中拦截表且未命中例外时拒绝。例外继续按下方规则分流。 |
 | 局域网、大陆服务 | 局域网、指定 Steam 下载主机、`.cn` 和大陆域名分类直连。PayPal、Microsoft 等指定厂商的大陆入口优先代理。 |
 | Apple | 明确的大陆服务例外直连。APNs、App Store 及其余命中 Apple 规则的连接走 Apple 代理组。Egern 已启用 APNs 接管。 |
-| AI 与游戏平台 | OpenAI、Gemini 的指定入口共用 `PROXY`。Steam 等游戏平台走代理，指定大陆下载主机优先直连。 |
-| 其他 | 未分类域名和公网 IP 默认走兜底代理。需要按大陆 IP 归属直连时，可启用模板末尾注释的 GeoIP 规则。 |
+| 游戏平台 | Steam 等游戏平台走代理，指定大陆下载主机优先直连。 |
+| 未命中域名规则的连接 | 按目标 IP 的 GeoIP 归属判断。大陆 IP 直连，其余走兜底代理。直接访问公网 IP 时也按此规则处理。 |
 
 个人域名和 IP 可加在模板标出的本地例外位置。Nikki 的设备白名单及专用 BT 下载设备的绕过在路由器的 LAN 访问控制中设置。模板关闭客户端 IPv6。要在全网停用 IPv6，还需在路由器核对 WAN6、RA 和 DHCPv6。DNS 上游由本地配置决定。
 

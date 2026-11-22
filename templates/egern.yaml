@@ -6,8 +6,8 @@ allow_external_connections: false
 # 将系统推送纳入隧道，使下面的 APNs 策略可匹配推送连接。
 include_all_networks: true
 include_apns: true
-# 仅当启用末尾的可选 GeoIP 规则时，才需要取消下一行注释。
-# geoip_db_url: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
+# 国家数据库供末尾的 GeoIP 规则判断目标 IP 归属。
+geoip_db_url: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country.mmdb
 
 proxies: []
 policy_groups:
@@ -54,15 +54,6 @@ rules:
 
   # 个人直连例外可在本地插入这里。示例仅匹配指定域名：
   # - domain: {match: example.org, policy: DIRECT}
-
-  # OpenAI 与 Gemini 共用 PROXY。
-  - domain_suffix: {match: openai.com, policy: PROXY}
-  - domain_suffix: {match: chatgpt.com, policy: PROXY}
-  - domain_suffix: {match: oaistatic.com, policy: PROXY}
-  - domain_suffix: {match: oaiusercontent.com, policy: PROXY}
-  - domain: {match: gemini.google.com, policy: PROXY}
-  - domain: {match: aistudio.google.com, policy: PROXY}
-  - domain: {match: generativelanguage.googleapis.com, policy: PROXY}
 
   # 海外厂商的大陆入口优先代理，再判断大陆服务和游戏平台。
   - rule_set:
@@ -134,6 +125,6 @@ rules:
       match: https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/egern/rules/cn-general.yaml
       update_interval: 86400
       policy: 中国大陆
-  # 若希望已知 IP 按大陆归属直连，同时启用文件顶部的 MMDB 地址和下一行。
-  # - geoip: {match: CN, policy: 中国大陆, no_resolve: true}
+  # 域名规则未命中时，按目标 IP 判断，大陆 IP 直连。
+  - geoip: {match: CN, policy: 中国大陆}
   - default: {policy: 兜底}

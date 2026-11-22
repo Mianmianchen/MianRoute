@@ -93,15 +93,6 @@ rules:
   # 个人直连例外可在本地插入这里。示例仅匹配指定域名：
   # - DOMAIN,example.org,DIRECT
 
-  # OpenAI 与 Gemini 走同一个 PROXY，包括登录、静态资源和 API 入口。
-  - DOMAIN-SUFFIX,openai.com,PROXY
-  - DOMAIN-SUFFIX,chatgpt.com,PROXY
-  - DOMAIN-SUFFIX,oaistatic.com,PROXY
-  - DOMAIN-SUFFIX,oaiusercontent.com,PROXY
-  - DOMAIN,gemini.google.com,PROXY
-  - DOMAIN,aistudio.google.com,PROXY
-  - DOMAIN,generativelanguage.googleapis.com,PROXY
-
   # 这些海外服务优先走代理，包括其大陆域名。
   - GEOSITE,paypal,PROXY
   - GEOSITE,microsoft,PROXY
@@ -124,11 +115,10 @@ rules:
   - RULE-SET,apple-direct,Apple直连
   - RULE-SET,apple-proxy,Apple代理,no-resolve
 
-  # 明确的大陆域名直连。未分类的域名和公网 IP 默认使用兜底组。
+  # 先按域名分类。未命中时按目标 IP 判断，大陆 IP 直连。
   - DOMAIN-SUFFIX,cn,中国大陆
   - DOMAIN-SUFFIX,tw,国外网站
   - GEOSITE,geolocation-!cn,国外网站
   - GEOSITE,cn,中国大陆
-  # 若还希望已知 IP 按大陆归属直连，可取消下一行注释。
-  # - GEOIP,CN,中国大陆,no-resolve
+  - GEOIP,CN,中国大陆
   - MATCH,兜底
