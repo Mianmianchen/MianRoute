@@ -6,6 +6,7 @@ import ipaddress
 import re
 
 import yaml
+from endpoint_samples import NEW_SOURCES, CN_BIDDERS, browser_bidders
 
 SOURCES = {
     "HaGeZi PRO": [
@@ -76,6 +77,10 @@ def parse(kind, lines):
     r = Rules()
     for line in lines:
         line=line.strip().lower()
+        if kind=="hosts":
+            parts = line.partition("#")[0].split()
+            if len(parts) >= 2 and parts[0] in {"0.0.0.0", "127.0.0.1"}:
+                r.exact.update(parts[1:])
         if kind=="suffix" and re.fullmatch(HOST,line): r.suffix.add(line)
         if kind=="clash" and line.startswith("domain"):
             key,_,val=line.partition(",")
@@ -130,8 +135,18 @@ print("COHORTS",*(len(x) for x in cohorts))
 print("CN-MISSES",sorted(china-base[0]))
 print("CURRENT",*(len(x) for x in base),sorted(base[-1]))
 misses={}
-for name,(kind,url) in SOURCES.items():
-    rules=parse(kind, fetch(url))
+bidders = browser_bidders()
+awa = parse("abp", fetch(NEW_SOURCES["AWAvenue Only.Ads"][1]))
+samples = {"browser-bidders": set(bidders), "cn-s2s": set(CN_BIDDERS), "awa-ads-reference": awa.suffix}
+print("ENDPOINT-SAMPLES", {k:len(v) for k,v in samples.items()})
+print("ENDPOINT-BASE", {k:sum(current.blocks(h) for h in v) for k,v in samples.items()})
+gaps = {h:[] for h in set(bidders) | awa.suffix if not current.blocks(h)}
+for name,(kind,url) in (SOURCES | NEW_SOURCES).items():
+    rules=awa if name == "AWAvenue Only.Ads" else parse(kind, fetch(url))
+    print("ENDPOINT-TEST", name, {k:sum(rules.blocks(h) for h in v) for k,v in samples.items()})
+    for host, voters in gaps.items():
+        if rules.blocks(host):
+            voters.append(name)
     results=[{d for d in hosts if rules.blocks(d)} for hosts in cohorts]
     extra=sorted(results[0]-base[0])
     print("SOURCE",name,json.dumps([len(x) for x in results]),"EXTRA",len(extra),"CONTROL",sorted(results[-1]),"EXAMPLES",extra[:8])
@@ -146,3 +161,9 @@ for name,(kind,url) in SOURCES.items():
     misses["G:"+name]=set(gextra)
 print("CONSENSUS", sorted(misses["217heidai DNS"] & (misses["HaGeZi PRO++"] | misses["oisd big"] | misses["anti-AD"]))[:60])
 print("GLOBAL-AGREE", sorted(misses["G:217heidai DNS"] & (misses["G:HaGeZi PRO++"] | misses["G:oisd big"] | misses["G:anti-AD"]))[:80])
+
+for host, voters in sorted(gaps.items()):
+    if host in bidders:
+        print("BROWSER-GAP", host, bidders[host], json.dumps(voters))
+    if host in awa.suffix:
+        print("AWA-GAP", host, json.dumps(voters))
