@@ -1,0 +1,10 @@
+# MianRoute Egern native rule set; generated, no credentials.
+domain_suffix_set:
+- openai.com
+- chatgpt.com
+- oaistatic.com
+- oaiusercontent.com
+domain_set:
+- gemini.google.com
+- aistudio.google.com
+- generativelanguage.googleapis.com

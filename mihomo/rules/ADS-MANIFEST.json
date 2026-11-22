@@ -52346,5 +52346,16 @@
     "exceptions_unchanged": true,
     "egern_ads_sha256": "ede02db5d3c217bcf44a74052d7e79705e36af80240fdc4eda4febfdd246c175",
     "device_validation": false
+  },
+  "mobile_cn_review_20261122": {
+    "sources": [
+      "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/5a5cbd637c00de45b6b7792ebc4363177bf03326/ChineseFilter/sections/adservers.txt",
+      "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/5a5cbd637c00de45b6b7792ebc4363177bf03326/MobileFilter/sections/adservers.txt",
+      "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/b2c6793a585132710ae3841c5c59cc6099ef8b7a/Filters/filter.txt",
+      "https://raw.githubusercontent.com/hagezi/dns-blocklists/c15030cf263d495b4a2fa2ace43937a59b4ce1d2/wildcard/pro-onlydomains.txt"
+    ],
+    "exact_hosts": [],
+    "base_domains_removed": 0,
+    "device_validation": false
   }
 }
