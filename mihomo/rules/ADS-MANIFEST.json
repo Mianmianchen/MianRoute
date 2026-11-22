@@ -1,27 +1,29 @@
 {
-  "snapshot_date_utc": "2026-11-13",
+  "snapshot_date_utc": "2026-11-22",
   "sources": [
     {
-      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/d5c596c551a536340eb724b024d66136980f4976/wildcard/pro-onlydomains.txt",
-      "sha256": "5c00cbf3cf228e53717ef51a16150b488487ec91e8266a14ca48ebbbe2135b15",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/c15030cf263d495b4a2fa2ace43937a59b4ce1d2/wildcard/pro-onlydomains.txt",
+      "sha256": "c33512e16b3086198eaec185ccbd5c27c533ea1d5ed0c277c77a36c014581c56",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "hagezi.txt",
-      "snapshot_size_bytes": 4466245,
-      "commit": "d5c596c551a536340eb724b024d66136980f4976"
+      "snapshot_size_bytes": 4948683,
+      "commit": "c15030cf263d495b4a2fa2ace43937a59b4ce1d2",
+      "git_blob": "52f60be1d077bc3b3199ccaf36409e44b57ad88e"
     },
     {
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/0f476f4e5eb75f9c31b98b8c1498b48e03374d78/Filters/filter.txt",
-      "sha256": "3503aa3a16795a5856a921d829daf74c0d56a07ebed56446e19a961ede9f9144",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/b2c6793a585132710ae3841c5c59cc6099ef8b7a/Filters/filter.txt",
+      "sha256": "e0129b317f91cbce9daf132b5b12f61ae4095687186ca52713697c7ffaabe60a",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "adguard.txt",
-      "snapshot_size_bytes": 4674006,
-      "commit": "0f476f4e5eb75f9c31b98b8c1498b48e03374d78"
+      "snapshot_size_bytes": 4697062,
+      "commit": "b2c6793a585132710ae3841c5c59cc6099ef8b7a",
+      "git_blob": "5094df3850a4e7f1d40b34f701e5e37082828e15"
     }
   ],
   "outputs": {
-    "ads.yaml": "03f4f5168b1a53bf692ee18abd978f10c3e590cdb29e7423554ff7ed11ba7df6",
+    "ads.yaml": "128c12bffd735e94275ac506f00fd48ece3153a34e575b05505ac49226a9dd17",
     "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
   },
   "notes": [
@@ -34,7 +36,7 @@
     "Generic ad-server rule evidence attributed to The EasyList authors (https://easylist.to/); GPL-3.0-or-later option selected under https://easylist.to/pages/licence.html. Existing HaGeZi and AdGuard notices remain unchanged.",
     "This reviewed China Ads-Union supplement uses primary EasyList China maintainer evidence credited to EasyList China contributors. AdGuard imports the same source; comparison is not independent. Keep exact host scope."
   ],
-  "build_script_sha256": "5b0f1451b1f837a466c811ada6ae80010f4d38f31e46232ae64c53c01602188f",
+  "build_script_sha256": "5249df251ec654cbd9f055019232d72be30ba6b97939703ef882a0e4ace59417",
   "reproducibility": {
     "cached_inputs_verified": true,
     "rebuild_outputs_match": true,
@@ -52355,7 +52357,21 @@
       "https://raw.githubusercontent.com/hagezi/dns-blocklists/c15030cf263d495b4a2fa2ace43937a59b4ce1d2/wildcard/pro-onlydomains.txt"
     ],
     "exact_hosts": [],
-    "base_domains_removed": 0,
     "device_validation": false
+  },
+  "refresh_20261122": {
+    "previous_outputs": {
+      "ads.yaml": "03f4f5168b1a53bf692ee18abd978f10c3e590cdb29e7423554ff7ed11ba7df6",
+      "ads-exceptions.yaml": "d47654db5bdbc43b2a9b7cf67e9506c352449fce2ca7024a5aba25e7ae64d075"
+    },
+    "source_revisions": [
+      "c15030cf263d495b4a2fa2ace43937a59b4ce1d2",
+      "b2c6793a585132710ae3841c5c59cc6099ef8b7a"
+    ],
+    "blocking_rows_added": 37933,
+    "blocking_rows_removed": 19867,
+    "exception_rows_added": 0,
+    "exception_rows_removed": 0,
+    "note": "Row counts include upstream suffix compaction. All curated additions, removals and exact exceptions were checked."
   }
 }
