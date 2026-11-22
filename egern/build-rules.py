@@ -2,7 +2,7 @@
 # Public-input-only native format converter. Requires PyYAML.
 import yaml,json,hashlib,re,pathlib,collections
 import argparse
-a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);args=a.parse_args()
+a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);a.add_argument('--geosite-url',default='https://github.com/XTLS/Xray-rules-dat/releases/latest/download/geosite.dat');args=a.parse_args()
 R=pathlib.Path(args.mihomo_dir);OUT=pathlib.Path(args.output);OUT.mkdir(parents=True,exist_ok=True)
 GEO=pathlib.Path(args.geosite)
 def fields(b):
@@ -42,8 +42,8 @@ def write(name,d):
   seen=set(); d[k]=[v for v in vs if not (json.dumps(v,sort_keys=True) in seen or seen.add(json.dumps(v,sort_keys=True)))]
  (OUT/(name+'.yaml')).write_text('# MianRoute Egern native rule set; generated, no credentials.\n'+yaml.safe_dump(d,allow_unicode=True,sort_keys=False,width=150))
  return {k:len(v) for k,v in d.items()}
-manifest={'geosite_sha256':hashlib.sha256(GEO.read_bytes()).hexdigest(),'geosite_source':'https://github.com/XTLS/Xray-rules-dat/releases/latest/download/geosite.dat','files':{}}
-for name in ['apple-direct','apple-proxy','cn-direct','ads-exceptions']:
+manifest={'geosite_sha256':hashlib.sha256(GEO.read_bytes()).hexdigest(),'geosite_source':args.geosite_url,'files':{}}
+for name in ['apple-direct','apple-proxy','cn-direct','ads-exceptions','ai-proxy']:
  d={}
  for s in yaml.safe_load((R/(name+'.yaml')).read_text())['payload']:
   if name=='apple-proxy' and s.startswith('AND,'):continue # use documented top-level AND in private profile
@@ -66,5 +66,11 @@ for name,tags in [('proxy-priority',['paypal','microsoft','ebay','linkedin','goo
  if name=='lan':
   for s in ['127.0.0.0/8','10.0.0.0/8','172.16.0.0/12','192.168.0.0/16','169.254.0.0/16','100.64.0.0/10','224.0.0.0/4','255.255.255.255/32']:add(d,{'ip_cidr':{'match':s}})
  manifest['files'][name]=write(name,d)
-(OUT.parent/'BUILD-MANIFEST.json').write_text(json.dumps(manifest,indent=2))
+previous_path = OUT.parent / 'BUILD-MANIFEST.json'
+previous = json.loads(previous_path.read_text()) if previous_path.exists() else {}
+for key in ('format', 'validation', 'apns_note'):
+ if key in previous: manifest[key] = previous[key]
+manifest['source_files'] = {p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(R.glob('*.yaml'))}
+manifest['output_sha256'] = {name+'.yaml':hashlib.sha256((OUT/(name+'.yaml')).read_bytes()).hexdigest() for name in manifest['files']}
+previous_path.write_text(json.dumps(manifest,indent=2,ensure_ascii=False)+'\n')
 print(json.dumps(manifest['files'],indent=2))

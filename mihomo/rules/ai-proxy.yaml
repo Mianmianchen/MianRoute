@@ -1,0 +1,11 @@
+# Service-owned domains from OpenAI network recommendations and Google Gemini API docs.
+# https://help.openai.com/en/articles/9247338
+# https://ai.google.dev/api  https://support.google.com/gemini/answer/13275745
+payload:
+- DOMAIN-SUFFIX,openai.com
+- DOMAIN-SUFFIX,chatgpt.com
+- DOMAIN-SUFFIX,oaistatic.com
+- DOMAIN-SUFFIX,oaiusercontent.com
+- DOMAIN,gemini.google.com
+- DOMAIN,aistudio.google.com
+- DOMAIN,generativelanguage.googleapis.com
