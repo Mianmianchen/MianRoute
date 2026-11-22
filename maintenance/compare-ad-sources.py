@@ -48,7 +48,7 @@ chatgpt.com api.openai.com auth.openai.com oaistatic.com files.oaiusercontent.co
 gemini.google.com generativelanguage.googleapis.com dl.steam.clngaa.com store.steampowered.com
 login.microsoftonline.com partner.microsoftonline-m.net.cn www.kwai.com kwai.com
 www.taobao.com trade.taobao.com login.taobao.com www.jd.com passport.jd.com
-bdad.123pan.cn api.bilibili.com www.douyin.com www.zhihu.com open.weixin.qq.com pay.weixin.qq.com
+a.klaviyo.com static.addtoany.com app.adjust.com bdad.123pan.cn api.bilibili.com www.douyin.com www.zhihu.com open.weixin.qq.com pay.weixin.qq.com
 """.split())
 HOST = r"[a-z0-9_-]+(?:\.[a-z0-9_-]+)+"
 SUFFIX = re.compile(r"\|\|(" + HOST + r")\^")
@@ -127,6 +127,7 @@ assert len(china)>100
 cohorts=[china,global_ads,PREBID,CONTROLS]
 base=[{d for d in hosts if current.blocks(d)} for hosts in cohorts]
 print("COHORTS",*(len(x) for x in cohorts))
+print("CN-MISSES",sorted(china-base[0]))
 print("CURRENT",*(len(x) for x in base),sorted(base[-1]))
 misses={}
 for name,(kind,url) in SOURCES.items():
@@ -134,6 +135,12 @@ for name,(kind,url) in SOURCES.items():
     results=[{d for d in hosts if rules.blocks(d)} for hosts in cohorts]
     extra=sorted(results[0]-base[0])
     print("SOURCE",name,json.dumps([len(x) for x in results]),"EXTRA",len(extra),"CONTROL",sorted(results[-1]),"EXAMPLES",extra[:8])
+    if name=="HaGeZi PRO++":
+        existing_allow=current.allow
+        def combined(host):
+            return current.blocks(host) or (rules.blocks(host) and not any(p.search(host) for p in existing_allow))
+        probe=[{d for d in hosts if combined(d)} for hosts in cohorts]
+        print("OVERLAY", [len(d) for d in probe], "CONTROL", sorted(probe[-1]))
     misses[name]=set(extra)
     gextra=sorted(results[1]-base[1]); print("GLOBAL-EXTRA",name,len(gextra),gextra[:20])
     misses["G:"+name]=set(gextra)
