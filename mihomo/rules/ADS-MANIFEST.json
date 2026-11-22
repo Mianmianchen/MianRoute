@@ -21,8 +21,8 @@
     }
   ],
   "outputs": {
-    "ads.yaml": "cda2642bb13563a1a7d4d63f60d4aa5329ffb126d8f2a281fbaea66c87c13204",
-    "ads-exceptions.yaml": "4298b92bcbfe5b1dfc8bb7dee5d39778997b8482a716a2092bd049888a4dd4c2"
+    "ads.yaml": "cccf68815cb4cdb3d9b5e04b3dd751c797efc9c06e0ee820db497a17a3d1d063",
+    "ads-exceptions.yaml": "24411ab64b477c3d2266b43888e83a1d446c9704b06ff9b9b1dfa0e5fc7db9e6"
   },
   "notes": [
     "No Loyalsoldier input used to generate rules; old list only compared.",
@@ -34,7 +34,7 @@
     "Generic ad-server rule evidence attributed to The EasyList authors (https://easylist.to/); GPL-3.0-or-later option selected under https://easylist.to/pages/licence.html. Existing HaGeZi and AdGuard notices remain unchanged.",
     "This reviewed China Ads-Union supplement uses primary EasyList China maintainer evidence credited to EasyList China contributors. AdGuard imports the same source; comparison is not independent. Keep exact host scope."
   ],
-  "build_script_sha256": "d58e2734d8aaa673a050066dff787606817f81bb5ab804ad168cad0f35c80a8f",
+  "build_script_sha256": "71a473d4c5e0618cd719022bdd3ef5206870659cf93ad510f665bd4f3651148e",
   "reproducibility": {
     "cached_inputs_verified": true,
     "rebuild_outputs_match": true,
