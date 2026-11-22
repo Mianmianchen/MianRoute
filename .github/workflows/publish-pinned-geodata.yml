@@ -1,0 +1,67 @@
+name: Publish pinned geodata
+on:
+  workflow_dispatch:
+  push:
+    branches: [maintain/subscription-sources-20261122]
+    paths: ['.github/workflows/publish-pinned-geodata.yml']
+permissions:
+  contents: write
+concurrency: publish-pinned-geodata
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      TAG: geodata-20261122
+    steps:
+      - name: Fetch and verify public datasets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir data
+          cd data
+          xtls=https://github.com/XTLS/Xray-rules-dat/releases/download/20261121225653
+          for asset in geoip-full.dat geosite.dat; do
+            curl --fail --location --retry 3 --output "$asset" "$xtls/$asset"
+          done
+          sha256sum --check <<'HASHES'
+          d2191fa425bbb9153dba43dd65976f04e7d72125234178f51fac323e003a938e  geoip-full.dat
+          738b4330f2d620a788d0754ee6978ad3a686da4ba4805b9b4adbf53da386fd5a  geosite.dat
+          HASHES
+          fetch_dbip() {
+            local kind="$1" digest="$2"
+            curl --fail --location --retry 3 --output "$kind.gz" "https://download.db-ip.com/free/dbip-$kind-lite-2026-11.mmdb.gz"
+            gzip -dc "$kind.gz" > "$kind.mmdb"
+            if [[ "$(sha1sum "$kind.gz" | cut -d' ' -f1)" != "$digest" ]]; then
+              printf '%s  %s\n' "$digest" "$kind.mmdb" | sha1sum --check
+            fi
+            rm -- "$kind.gz"
+          }
+          fetch_dbip country 09eea8433fe3eed71984fd6aac9d8ab3d9ca51f0
+          fetch_dbip asn b8f3693d20560dcd0ccee556833ad2d362dec951
+          sudo apt-get -qq update
+          sudo apt-get -qq install -y mmdb-bin
+          mmdblookup --file country.mmdb --ip 223.5.5.5 country iso_code | grep -q '"CN"'
+          mmdblookup --file asn.mmdb --ip 1.1.1.1 autonomous_system_number | grep -q '13335'
+          curl --fail --location --retry 3 --output XTLS-LICENSE.txt https://raw.githubusercontent.com/XTLS/Xray-rules-dat/20261121225653/LICENSE
+          curl --fail --location --retry 3 --output XTLS-README.md https://raw.githubusercontent.com/XTLS/Xray-rules-dat/20261121225653/README.md
+          sha256sum *.dat *.mmdb > SHA256SUMS
+      - name: Publish complete verified release
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd data
+          if gh release view "$TAG" --json isDraft --jq '.isDraft' > ../draft; then
+            if grep -qx false ../draft; then
+              mkdir ../existing
+              gh release download "$TAG" --dir ../existing
+              for asset in *.dat *.mmdb SHA256SUMS XTLS-LICENSE.txt XTLS-README.md; do cmp "$asset" "../existing/$asset"; done
+              exit 0
+            fi
+          else
+            gh release create "$TAG" --draft --target "$GITHUB_SHA" --title "Routing geodata 2026-11-22" --notes 'GeoIP and GeoSite by [XTLS/Xray-rules-dat](https://github.com/XTLS/Xray-rules-dat/releases/tag/20261121225653), including IPinfo Lite and v2fly/domain-list-community. See attached upstream notices. Country and ASN MMDB are unmodified November 2026 [DB-IP Lite](https://db-ip.com/db/lite.php) data by [DB-IP.com](https://db-ip.com), under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).'
+          fi
+          gh release upload "$TAG" *.dat *.mmdb SHA256SUMS XTLS-LICENSE.txt XTLS-README.md --clobber
+          gh release edit "$TAG" --draft=false --latest=false
