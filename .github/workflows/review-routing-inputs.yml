@@ -34,6 +34,12 @@ jobs:
           assert 'push.apple.com' in load('egern/rules/apple-proxy.yaml')['domain_suffix_set']
           assert 'chatgpt.com' in load('egern/rules/ai-proxy.yaml')['domain_suffix_set']
           PY
+          # Start the official core on loopback with synthetic policies and public rules only.
+          curl -fLsS --retry 3 https://github.com/MetaCubeX/mihomo/releases/download/v1.19.34/mihomo-linux-amd64-compatible-v1.19.34.gz -o "$RUNNER_TEMP/mihomo.gz"
+          echo "2763f5b414527f7baf6dc57e3f82f3ab561eedf34bfd7c2f2cde1f7e592efe06  $RUNNER_TEMP/mihomo.gz" | sha256sum -c -
+          gzip -dc "$RUNNER_TEMP/mihomo.gz" > "$RUNNER_TEMP/mihomo"
+          chmod 755 "$RUNNER_TEMP/mihomo"
+          python maintenance/check-mihomo.py "$RUNNER_TEMP/mihomo"
           git add -- mihomo/rules/ADS-MANIFEST.json mihomo/rules/ads.yaml mihomo/rules/ads-exceptions.yaml egern/BUILD-MANIFEST.json egern/rules
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Rebuild public rule sets from verified upstream snapshots'
