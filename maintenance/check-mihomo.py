@@ -12,19 +12,20 @@ import urllib.request
 import yaml
 
 
-providers = ["ads", "ads-exceptions", "ai-proxy", "cn-direct", "apple-direct", "apple-proxy"]
+providers = ["ads", "ads-exceptions", "cn-direct", "apple-direct", "apple-proxy"]
 cases = {
     "f7jxqt8z3.com": "ad-test",
     "www.kwai.com": "cn-test",
     "apps.apple.com": "apple-test",
     "courier.push.apple.com": "apple-test",
     "gs-loc-cn.apple.com": "region-test",
-    "api.openai.com": "ai-test",
-    "gemini.google.com": "ai-test",
+    "api.openai.com": "foreign-test",
+    "gemini.google.com": "google-test",
     "dl.steam.clngaa.com": "cn-test",
 }
 with tempfile.TemporaryDirectory() as folder:
     root = pathlib.Path(folder)
+    shutil.copyfile(sys.argv[2], root / "GeoSite.dat")
     for name in providers:
         shutil.copyfile("mihomo/rules/" + name + ".yaml", root / (name + ".yaml"))
     fixture = {
@@ -33,8 +34,8 @@ with tempfile.TemporaryDirectory() as folder:
         "rule-providers": {name: {"type": "file", "path": "./" + name + ".yaml", "format": "yaml",
                                   "behavior": "domain" if name == "ads" else "classical"} for name in providers},
         "proxy-groups": [{"name": name, "type": "select", "proxies": ["REJECT"]} for name in sorted(set(cases.values()))],
-        "rules": ["AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions)))),ad-test", "RULE-SET,ai-proxy,ai-test",
-                  "RULE-SET,cn-direct,cn-test", "RULE-SET,apple-direct,region-test", "RULE-SET,apple-proxy,apple-test", "MATCH,REJECT"],
+        "rules": ["AND,((RULE-SET,ads),(NOT,((RULE-SET,ads-exceptions)))),ad-test", "GEOSITE,google,google-test",
+                  "RULE-SET,cn-direct,cn-test", "RULE-SET,apple-direct,region-test", "RULE-SET,apple-proxy,apple-test", "GEOSITE,geolocation-!cn,foreign-test", "MATCH,REJECT"],
     }
     config = root / "fixture.yaml"
     config.write_text(yaml.safe_dump(fixture))

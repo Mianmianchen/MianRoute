@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [maintain/subscription-sources-20261122]
-    paths: ['maintenance/review-mobile-ads.py', 'maintenance/check-mihomo.py', '.github/workflows/review-routing-inputs.yml']
+    paths: ['maintenance/review-mobile-ads.py', 'maintenance/check-mihomo.py', 'maintenance/compare-ad-sources.py', '.github/workflows/review-routing-inputs.yml']
 permissions:
   contents: write
 jobs:
@@ -19,7 +19,7 @@ jobs:
           set -euo pipefail
           python -m pip install PyYAML==6.0.3
           python maintenance/review-mobile-ads.py
-          geo=https://github.com/Mianmianchen/MianRoute/releases/download/geodata-20261122/geosite.dat
+          geo=https://github.com/XTLS/Xray-rules-dat/releases/download/20261121225653/geosite.dat
           curl -fLsS --retry 3 "$geo" -o "$RUNNER_TEMP/geosite.dat"
           echo "738b4330f2d620a788d0754ee6978ad3a686da4ba4805b9b4adbf53da386fd5a  $RUNNER_TEMP/geosite.dat" | sha256sum -c -
           python egern/build-rules.py --mihomo-dir mihomo/rules --geosite "$RUNNER_TEMP/geosite.dat" --geosite-url "$geo" --output egern/rules
@@ -32,14 +32,14 @@ jobs:
           assert {s for s in public if not s.startswith('+.')} == set(native['domain_set'])
           assert 'www.kwai.com' in load('egern/rules/ads-exceptions.yaml')['domain_set']
           assert 'push.apple.com' in load('egern/rules/apple-proxy.yaml')['domain_suffix_set']
-          assert 'chatgpt.com' in load('egern/rules/ai-proxy.yaml')['domain_suffix_set']
           PY
           # Start the official core on loopback with synthetic policies and public rules only.
           curl -fLsS --retry 3 https://github.com/MetaCubeX/mihomo/releases/download/v1.19.34/mihomo-linux-amd64-compatible-v1.19.34.gz -o "$RUNNER_TEMP/mihomo.gz"
           echo "2763f5b414527f7baf6dc57e3f82f3ab561eedf34bfd7c2f2cde1f7e592efe06  $RUNNER_TEMP/mihomo.gz" | sha256sum -c -
           gzip -dc "$RUNNER_TEMP/mihomo.gz" > "$RUNNER_TEMP/mihomo"
           chmod 755 "$RUNNER_TEMP/mihomo"
-          python maintenance/check-mihomo.py "$RUNNER_TEMP/mihomo"
+          python maintenance/check-mihomo.py "$RUNNER_TEMP/mihomo" "$RUNNER_TEMP/geosite.dat"
+          python maintenance/compare-ad-sources.py
           git add -- mihomo/rules/ADS-MANIFEST.json mihomo/rules/ads.yaml mihomo/rules/ads-exceptions.yaml egern/BUILD-MANIFEST.json egern/rules
           if ! git diff --cached --quiet; then
             git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Rebuild public rule sets from verified upstream snapshots'

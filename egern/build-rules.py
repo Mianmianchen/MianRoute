@@ -43,7 +43,7 @@ def write(name,d):
  (OUT/(name+'.yaml')).write_text('# MianRoute Egern native rule set; generated, no credentials.\n'+yaml.safe_dump(d,allow_unicode=True,sort_keys=False,width=150))
  return {k:len(v) for k,v in d.items()}
 manifest={'geosite_sha256':hashlib.sha256(GEO.read_bytes()).hexdigest(),'geosite_source':args.geosite_url,'files':{}}
-for name in ['apple-direct','apple-proxy','cn-direct','ads-exceptions','ai-proxy']:
+for name in ['apple-direct','apple-proxy','cn-direct','ads-exceptions']:
  d={}
  for s in yaml.safe_load((R/(name+'.yaml')).read_text())['payload']:
   if name=='apple-proxy' and s.startswith('AND,'):continue # use documented top-level AND in private profile
