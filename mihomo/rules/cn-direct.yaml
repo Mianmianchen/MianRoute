@@ -1,4 +1,4 @@
-# 公共直连补充：大陆服务域名和 Steam 大陆下载主机。
+# 公共直连补充：大陆服务域名、Steam 大陆下载主机和企业 ASN。
 payload:
 - DOMAIN-SUFFIX,00y9334535.com
 - DOMAIN-SUFFIX,027g3nkf40.com
@@ -687,3 +687,40 @@ payload:
 - DOMAIN,lv.queniujq.cn
 - DOMAIN,xz.pphimalayanrt.com
 - DOMAIN,client-update.queniuqe.com
+
+# 仅在 Mihomo 未取得域名时按目的 ASN 分流。已识别的域名继续按原顺序匹配。
+# 阿里、淘宝
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,24429,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,37963,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,45102,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,134963,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,203513,no-resolve))
+# 腾讯、腾讯云、EdgeOne
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,45090,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,132203,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,133478,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,137876,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,139341,no-resolve))
+# 京东
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,131486,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,137753,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,137787,no-resolve))
+# 百度
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,38365,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,55967,no-resolve))
+# 美团、三快
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,59025,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,63619,no-resolve))
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,146781,no-resolve))
+# 滴滴
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,63648,no-resolve))
+# 新浪微博
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,37936,no-resolve))
+# 网易
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,45062,no-resolve))
+# 哔哩哔哩
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,140633,no-resolve))
+# 快手
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,139799,no-resolve))
+# 爱奇艺
+- AND,((DOMAIN-REGEX,^$),(IP-ASN,133865,no-resolve))

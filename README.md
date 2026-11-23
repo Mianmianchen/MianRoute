@@ -1,6 +1,6 @@
 # MianRoute
 
-MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提供分流规则。公共模板拦截广告与追踪，优先按域名分流。域名规则未命中时，大陆 IP 直连，其余流量默认走代理。
+MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提供分流规则。公共模板拦截广告与追踪，优先按域名分流。域名规则未命中时，收录企业的裸 IP 和大陆 IP 默认直连，其余流量默认走代理。
 
 ## 使用模板
 
@@ -19,13 +19,13 @@ MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提�
 | 局域网、大陆服务 | 局域网、指定 Steam 下载主机、`.cn` 和大陆域名分类直连。PayPal、Microsoft 等指定厂商的大陆入口优先代理。 |
 | Apple | 明确的大陆服务例外直连。APNs、App Store 及其余命中 Apple 规则的连接走 Apple 代理组。Egern 已启用 APNs 接管。 |
 | 游戏平台 | Steam 等游戏平台走代理，指定大陆下载主机优先直连。 |
-| 未命中域名规则的连接 | 按目标 IP 的 GeoIP 归属判断。大陆 IP 直连，其余走兜底代理。直接访问公网 IP 时也按此规则处理。 |
+| 未命中域名规则的连接 | 收录企业的裸 IP（含海外 CDN 和云节点）及大陆 IP 走中国大陆组，默认直连。其余走兜底代理。 |
 
 个人域名和 IP 可加在模板标出的本地例外位置。Nikki 的设备白名单和专用 BT 下载设备的绕过在路由器的 LAN 访问控制中设置。同一设备混合使用浏览器与 BT 时，需要单独区分流量。模板关闭客户端 IPv6。要在全网停用 IPv6，还需在路由器核对 WAN6、RA 和 DHCPv6。DNS 上游由本地配置决定。
 
 ## 单独订阅规则
 
-已有配置可从 [Mihomo 目录](mihomo/rules/) 或 [Egern 目录](egern/rules/) 选取所需文件。公共直连补充使用 `cn-services.yaml`。旧订阅 `cn-direct.yaml` 内容相同，任选一份。广告拦截须配对使用 `ads.yaml` 和 `ads-exceptions.yaml`，组合写法见模板。规则按顺序匹配，Steam 下载和 Apple 大陆直连例外分别放在各自的代理规则前。
+已有配置可从 [Mihomo 目录](mihomo/rules/) 或 [Egern 目录](egern/rules/) 选取所需文件。公共直连补充使用 `cn-services.yaml`。旧订阅 `cn-direct.yaml` 内容相同，任选一份。Nikki 在这份订阅中仅对未识别到域名的连接匹配企业 ASN。Egern 将同一份 ASN 名单放在 `cn-general.yaml`，沿用模板中的海外域名优先级。云厂商的共享 IP 也会匹配，规则无法从裸 IP 区分云租户。广告拦截须配对使用 `ads.yaml` 和 `ads-exceptions.yaml`，组合写法见模板。规则按顺序匹配，Steam 下载和 Apple 大陆直连例外分别放在各自的代理规则前。
 
 广告表按域名拦截广告和追踪。与正常内容共用域名的广告、依赖网页路径或页面元素的广告，无法靠这份域名表完整区分。[上游与例外说明](mihomo/rules/ADS-SOURCES.md)
 

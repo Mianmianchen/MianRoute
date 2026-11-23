@@ -2,9 +2,21 @@
 # Public-input-only native format converter. Requires PyYAML.
 import yaml,json,hashlib,re,pathlib,collections
 import argparse
-a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);a.add_argument('--geosite-source',help='URL of the exact GeoSite release used');args=a.parse_args()
+a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);a.add_argument('--geosite-source',help='URL of the exact GeoSite release used')
+a.add_argument('--sync-cn-alias', action='store_true', help='Copy the canonical Mihomo cn-services provider to the legacy cn-direct path')
+args=a.parse_args()
 R=pathlib.Path(args.mihomo_dir);OUT=pathlib.Path(args.output);OUT.mkdir(parents=True,exist_ok=True)
 GEO=pathlib.Path(args.geosite)
+# The Mihomo subscription is the source of the enterprise ASN list. Its domain
+# guard belongs only to Mihomo; Egern uses ASN matches later in cn-general.
+cn_source = R / 'cn-services.yaml'
+cn_alias = R / 'cn-direct.yaml'
+if args.sync_cn_alias:
+ cn_alias.write_bytes(cn_source.read_bytes())
+if cn_alias.read_bytes() != cn_source.read_bytes():
+ raise ValueError('Mihomo cn-direct and cn-services differ; compare them before syncing the legacy alias')
+asn_rule = re.compile(r'AND,\(\(DOMAIN-REGEX,\^\$\),\(IP-ASN,([1-9][0-9]*),no-resolve\)\)')
+service_asns = []
 def fields(b):
  i=0
  def vi():
@@ -39,6 +51,7 @@ def geos(d,name):
  for t,v in sites[name]:add(d,{{0:'domain_keyword',1:'domain_regex',2:'domain_suffix',3:'domain'}[t]:{'match':v}})
 def write(name,d):
  for k,vs in d.items():
+  if not isinstance(vs,list):continue
   seen=set(); d[k]=[v for v in vs if not (json.dumps(v,sort_keys=True) in seen or seen.add(json.dumps(v,sort_keys=True)))]
  if name in ('ads','ads-exceptions'):
   header = '# MianRoute public advertising rules. Generated from maintenance/ad-sources.lock.json.\n'
@@ -47,7 +60,7 @@ def write(name,d):
   header = '# MianRoute Egern native rule set; generated, no credentials.\n'
   body = yaml.safe_dump(d, allow_unicode=True, sort_keys=False, width=150)
  (OUT/(name+'.yaml')).write_bytes((header+body).encode('utf-8'))
- return {k:len(v) for k,v in d.items()}
+ return {k:len(v) for k,v in d.items() if isinstance(v,list)}
 manifest_path = OUT.parent / 'BUILD-MANIFEST.json'
 source_manifest = pathlib.Path(__file__).with_name('BUILD-MANIFEST.json')
 previous_path = manifest_path if manifest_path.exists() else source_manifest
@@ -60,6 +73,16 @@ if source:
 for name in ['apple-direct','apple-proxy','cn-direct','cn-services','ads-exceptions']:
  d={}
  for s in yaml.safe_load((R/(name+'.yaml')).read_text(encoding='utf-8'))['payload']:
+  if name in ('cn-services','cn-direct') and s.startswith('AND,'):
+   match = asn_rule.fullmatch(s)
+   if not match:
+    raise ValueError('Unsupported mainland service rule: ' + s)
+   if name=='cn-services':
+    number = int(match.group(1))
+    if number > 4294967295 or 'AS'+str(number) in service_asns:
+     raise ValueError('Invalid or duplicated service ASN: ' + str(number))
+    service_asns.append('AS'+str(number))
+   continue
   if name=='apple-proxy' and s.startswith('AND,'):continue # use documented top-level AND in templates/egern.yaml
   add(d,rule(s))
  manifest['files'][name]=write(name,d)
@@ -77,6 +100,9 @@ for name,tags in [('proxy-priority',['paypal','microsoft','ebay','linkedin','goo
   # Mainland sovereign Microsoft 365 endpoints (Microsoft 21Vianet, Common/Office Online ID 7).
   # https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges-21vianet?view=o365-worldwide#microsoft-365-common-and-office-online
   for s in ['paypal.cn','paypal.com.cn','microsoft.cn','azclient.cn','partner.microsoftonline-m-i.net.cn','partner.microsoftonline-m.net.cn','amazon.cn','z.cn','amazonbusiness.cn','amazonbusiness.com.cn','aboutamazon.cn']:add(d,{'domain_suffix':{'match':s}})
+ if name=='cn-general' and service_asns:
+  d['asn_set'] = service_asns
+  d['no_resolve'] = True
  if name=='lan':
   for s in ['127.0.0.0/8','10.0.0.0/8','172.16.0.0/12','192.168.0.0/16','169.254.0.0/16','100.64.0.0/10','224.0.0.0/4','255.255.255.255/32']:add(d,{'ip_cidr':{'match':s}})
  manifest['files'][name]=write(name,d)
