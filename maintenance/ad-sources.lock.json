@@ -1,22 +1,22 @@
 {
   "files": {
     "hagezi/dns-blocklists/wildcard/pro-onlydomains.txt": {
-      "revision": "a1535e5eff3c0c58932288111e3a80b6e5d2ee7d",
-      "sha256": "1cf32c0a4e6b4b45c543e0690d95dd68bb3027cb7feca2549ed1f9bccc68625e",
-      "bytes": 4867871,
-      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/a1535e5eff3c0c58932288111e3a80b6e5d2ee7d/wildcard/pro-onlydomains.txt"
+      "revision": "778749c7474f1261f84d3a46a4780f03df1177f0",
+      "sha256": "0abfb2d7c858ebd34453a5df8e1a76c4adfe806b5df24254b5b819d129667778",
+      "bytes": 4788941,
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/778749c7474f1261f84d3a46a4780f03df1177f0/wildcard/pro-onlydomains.txt"
     },
     "AdguardTeam/AdGuardSDNSFilter/Filters/filter.txt": {
-      "revision": "cc70b9bfcba30786780a442c590cf25dcad9f53f",
-      "sha256": "5ea1a4598c8d0e2f307e1caa843e9138680b17558987d87d32157fadffc58cd2",
-      "bytes": 4703792,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/cc70b9bfcba30786780a442c590cf25dcad9f53f/Filters/filter.txt"
+      "revision": "8fdcec26c508e5f1fb85615b7e48f53da4957655",
+      "sha256": "63bc23c48e5a9b3b01c27ec2cc496e1f546dd04f69529e584c051d53642bb460",
+      "bytes": 4666730,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/8fdcec26c508e5f1fb85615b7e48f53da4957655/Filters/filter.txt"
     },
     "easylist/easylist/easylist/easylist_adservers.txt": {
-      "revision": "3f65dd619a994d35c130a9acff42088e33b9fd26",
-      "sha256": "3ede8a0584de92038fcbd93b6aa94f64f0fe8ba597188067e9241f3c84dfbe88",
-      "bytes": 1000916,
-      "url": "https://raw.githubusercontent.com/easylist/easylist/3f65dd619a994d35c130a9acff42088e33b9fd26/easylist/easylist_adservers.txt"
+      "revision": "d3dfef7c187906b62b411fd5da37329f69b2bb89",
+      "sha256": "9e17a4a5f53879e15049020848ec2b722205fa51ac7882986ecb7c86398d5744",
+      "bytes": 963467,
+      "url": "https://raw.githubusercontent.com/easylist/easylist/d3dfef7c187906b62b411fd5da37329f69b2bb89/easylist/easylist_adservers.txt"
     },
     "easylist/easylist/easylist/easylist_adservers_popup.txt": {
       "revision": "85ffebca7d470897f183c55b18476beae0fe609f",
@@ -98,7 +98,7 @@
     }
   },
   "counts": {
-    "suffix": 342913,
+    "suffix": 338553,
     "exact": 3448,
     "exceptions": 123,
     "supplemental_exact": 568
