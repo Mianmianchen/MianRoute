@@ -1,0 +1,52 @@
+{
+  "asn_revision": "ad8a989a779db7c2ba00a59476749eb6d8e68b35",
+  "asn_source": "https://github.com/ipverse/as-ip-blocks",
+  "announced_ipv4_prefix_counts": {
+    "24429": 259,
+    "37963": 103,
+    "45102": 198,
+    "134963": 90,
+    "203513": 1,
+    "45090": 78,
+    "132203": 180,
+    "133478": 3,
+    "137876": 1,
+    "139341": 328,
+    "131486": 4,
+    "137753": 5,
+    "137787": 1,
+    "38365": 33,
+    "55967": 18,
+    "59025": 0,
+    "63619": 0,
+    "146781": 0,
+    "63648": 2,
+    "37936": 4,
+    "45062": 91,
+    "140633": 1,
+    "139799": 1,
+    "133865": 12
+  },
+  "merged_enterprise_ipv4_prefixes": 1304,
+  "geoip_asset": {
+    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261122232722/geoip-full.dat.gz",
+    "digest": "sha256:fefd9e1793066ad16c73ebd17cd34abf9e2aebe22bb8cd42ffb8ca0162009d0e"
+  },
+  "public_rule_sha256": {
+    "ads.yaml": "6d5cb3b40762ad7431a93faf50456c44dea15f6f3c9af7a9cc44d24909f69c8b",
+    "ads-exceptions.yaml": "21994ffa61ded416dcc82ada7b0ad9d7b99b8483ac14def45817655c4f5dc7cd",
+    "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
+    "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
+    "cn-services.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be",
+    "foreign-proxy.yaml": "9f52585f83cad649347b959a8eb9c0c6d8e49c8587ec61f84ebfb0949c2448bd",
+    "apple-direct.yaml": "a960a2a46c38b6b6ff9de076efc5d347ec4ddaf98da4a8b5c9b93f8e2bc36a91",
+    "apple-proxy.yaml": "c1e25b42328ded66eeed581e918f58634e72e9ceab0af49224b28c050ec1d100",
+    "foreign-general.yaml": "30d3830d06435317522123810aaaa6b75a48391dc8c2a61e992f7cd9d8c724cc",
+    "cn-general.yaml": "c2ccb14981fe58ac09bf46807d669da2f06b6d7ed6396e7c0376907cb650feb8"
+  },
+  "output_sha256": {
+    "mianroute-site.dat": "5a910818b5c9c88296c3273bbabcb2a7ad4b3a5a6821fb99e6eba4f0b723169c",
+    "mianroute-ip.dat": "9b4e224320b13e3f5b86c5531959b8300d5eb8aef3e1cb32a9f8aa96cb131cd9",
+    "routing.json": "561ee04e963d94d4e9bffaedb642cd9efb6ea7beacbe6c264ca79b5c37caec55"
+  }
+}

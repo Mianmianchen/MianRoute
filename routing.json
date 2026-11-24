@@ -1,0 +1,194 @@
+[
+  {
+    "remarks": "广告与追踪（已扣除例外）",
+    "outboundTag": "block",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:ads"
+    ]
+  },
+  {
+    "remarks": "lan",
+    "outboundTag": "direct",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:lan"
+    ]
+  },
+  {
+    "remarks": "lan IP",
+    "outboundTag": "direct",
+    "enabled": true,
+    "ip": [
+      "ext:mianroute-ip.dat:lan"
+    ]
+  },
+  {
+    "remarks": "proxy-priority",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:proxy-priority"
+    ]
+  },
+  {
+    "remarks": "cn-services",
+    "outboundTag": "direct",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:cn-services"
+    ]
+  },
+  {
+    "remarks": "foreign-proxy",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:foreign-proxy"
+    ]
+  },
+  {
+    "remarks": "apple-direct",
+    "outboundTag": "direct",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:apple-direct"
+    ]
+  },
+  {
+    "remarks": "APNs 17.0.0.0/8",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "network": "tcp",
+    "port": "5223",
+    "ip": [
+      "17.0.0.0/8"
+    ]
+  },
+  {
+    "remarks": "APNs 17.249.0.0/16",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "network": "tcp",
+    "port": "443",
+    "ip": [
+      "17.249.0.0/16"
+    ]
+  },
+  {
+    "remarks": "APNs 17.252.0.0/16",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "network": "tcp",
+    "port": "443",
+    "ip": [
+      "17.252.0.0/16"
+    ]
+  },
+  {
+    "remarks": "APNs 17.57.144.0/22",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "network": "tcp",
+    "port": "443",
+    "ip": [
+      "17.57.144.0/22"
+    ]
+  },
+  {
+    "remarks": "APNs 17.188.128.0/18",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "network": "tcp",
+    "port": "443",
+    "ip": [
+      "17.188.128.0/18"
+    ]
+  },
+  {
+    "remarks": "APNs 17.188.20.0/23",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "network": "tcp",
+    "port": "443",
+    "ip": [
+      "17.188.20.0/23"
+    ]
+  },
+  {
+    "remarks": "apple-proxy",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:apple-proxy"
+    ]
+  },
+  {
+    "remarks": ".cn",
+    "outboundTag": "direct",
+    "enabled": true,
+    "domain": [
+      "domain:cn"
+    ]
+  },
+  {
+    "remarks": ".tw",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "domain:tw"
+    ]
+  },
+  {
+    "remarks": "foreign-general",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:foreign-general"
+    ]
+  },
+  {
+    "remarks": "cn-general",
+    "outboundTag": "direct",
+    "enabled": true,
+    "domain": [
+      "ext:mianroute-site.dat:cn-general"
+    ]
+  },
+  {
+    "remarks": "大陆 IP",
+    "outboundTag": "direct",
+    "enabled": true,
+    "ip": [
+      "ext:mianroute-ip.dat:cn"
+    ]
+  },
+  {
+    "remarks": "未分类域名 · 其他 IPv4",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "regexp:.+"
+    ],
+    "ip": [
+      "0.0.0.0/0"
+    ]
+  },
+  {
+    "remarks": "企业 ASN · 裸 IP",
+    "outboundTag": "direct",
+    "enabled": true,
+    "ip": [
+      "ext:mianroute-ip.dat:enterprise"
+    ]
+  },
+  {
+    "remarks": "兜底代理",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "ip": [
+      "0.0.0.0/0",
+      "::/0"
+    ]
+  }
+]
