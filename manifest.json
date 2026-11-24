@@ -29,11 +29,11 @@
   },
   "merged_enterprise_ipv4_prefixes": 1304,
   "geoip_asset": {
-    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261122232722/geoip-full.dat.gz",
-    "digest": "sha256:fefd9e1793066ad16c73ebd17cd34abf9e2aebe22bb8cd42ffb8ca0162009d0e"
+    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261124035530/geoip-full.dat.gz",
+    "digest": "sha256:c4a7f9732fb248ff68191971fdcbd1abe2b5cb84c5b1e1eb2f953fe47ea0f0a3"
   },
   "public_rule_sha256": {
-    "ads.yaml": "6d5cb3b40762ad7431a93faf50456c44dea15f6f3c9af7a9cc44d24909f69c8b",
+    "ads.yaml": "b9c3d4ef42f7c7212a2d2a790734bcc6da63ea316050184c0ad006b54d932fdc",
     "ads-exceptions.yaml": "21994ffa61ded416dcc82ada7b0ad9d7b99b8483ac14def45817655c4f5dc7cd",
     "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
@@ -45,8 +45,8 @@
     "cn-general.yaml": "c2ccb14981fe58ac09bf46807d669da2f06b6d7ed6396e7c0376907cb650feb8"
   },
   "output_sha256": {
-    "mianroute-site.dat": "5a910818b5c9c88296c3273bbabcb2a7ad4b3a5a6821fb99e6eba4f0b723169c",
-    "mianroute-ip.dat": "9b4e224320b13e3f5b86c5531959b8300d5eb8aef3e1cb32a9f8aa96cb131cd9",
+    "mianroute-site.dat": "7ead8215b91e50cf929c01ec8ce4e5c8d172e3b2d9460f6ab81d56c8b4dd329a",
+    "mianroute-ip.dat": "96bb9920df202f21c1bfa44753cf66d039f094456a419d17b438cafc2d3452e3",
     "routing.json": "561ee04e963d94d4e9bffaedb642cd9efb6ea7beacbe6c264ca79b5c37caec55"
   }
 }
