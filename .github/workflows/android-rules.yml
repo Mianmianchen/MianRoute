@@ -1,0 +1,63 @@
+name: Publish v2rayNG rules
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'egern/rules/**'
+      - 'templates/egern.yaml'
+      - 'maintenance/*android*.py'
+      - '.github/workflows/android-rules.yml'
+  workflow_run:
+    workflows: ['Refresh advertising rules']
+    types: [completed]
+    branches: [main]
+  schedule:
+    - cron: '43 4 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: publish-v2rayng-main
+  cancel-in-progress: false
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      PYTHONHASHSEED: '0'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+      - name: Generate from the shared public rules and upstream snapshots
+        run: |
+          python3 -m pip install PyYAML==6.0.3 greenery==4.2.2
+          python3 maintenance/build_android.py "$RUNNER_TEMP/android"
+      - name: Verify with the Xray core shipped with v2rayNG 2.3.15
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP"
+          curl -fsSL --retry 3 https://github.com/XTLS/Xray-core/releases/download/v26.10.31/Xray-linux-64.zip -o xray.zip
+          echo 'e4bd9119f50ae7c41658b1abd0679ae06f98bd864a2907ff33f2f2cf7081b214  xray.zip' | sha256sum -c -
+          unzip -q xray.zip xray
+          chmod +x xray
+          python3 "$GITHUB_WORKSPACE/maintenance/verify_android.py" "$RUNNER_TEMP/xray" "$RUNNER_TEMP/android"
+      - name: Publish the verified files together
+        run: |
+          set -euo pipefail
+          branch=v2rayng-data
+          if git ls-remote --exit-code --heads origin "$branch" > /dev/null; then
+            git fetch --depth=1 origin "refs/heads/$branch"
+            git switch -C "$branch" FETCH_HEAD
+          else
+            status=$?
+            if [ "$status" != 2 ]; then exit "$status"; fi
+            git switch --orphan "$branch"
+          fi
+          cp "$RUNNER_TEMP/android/"{mianroute-site.dat,mianroute-ip.dat,routing.json,manifest.json} .
+          git add -- mianroute-site.dat mianroute-ip.dat routing.json manifest.json
+          if git diff --cached --quiet; then exit 0; fi
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Publish verified v2rayNG routing data'
+          git push origin "HEAD:refs/heads/$branch"

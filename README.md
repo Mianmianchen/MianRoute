@@ -1,6 +1,6 @@
 # MianRoute
 
-MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提供分流规则。公共模板拦截广告与追踪，优先按域名分流。域名规则未命中时，收录企业的裸 IP 和大陆 IP 默认直连，其余流量默认走代理。
+MianRoute 为 OpenWrt 上的 Nikki（Mihomo）、Apple 设备上的 Egern 和 Android 上的 v2rayNG 提供分流规则。公共模板拦截广告与追踪，优先按域名分流。域名规则未命中时，收录企业的裸 IP 和大陆 IP 默认直连，其余流量默认走代理。
 
 ## 使用模板
 
@@ -8,8 +8,9 @@ MianRoute 为 OpenWrt 上的 Nikki（Mihomo）和 Apple 设备上的 Egern 提�
 | --- | --- | --- |
 | Nikki | [带注释的 YAML](templates/nikki.yaml) · [下载](https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/templates/nikki.yaml) | 在本地副本填入节点，并将 `PROXY` 的 `REJECT` 换成节点名。使用订阅时按模板注释配置 `proxy-providers` 和 `use`。在 Nikki 选用该文件后，核对 DNS 混入和透明代理接管范围。 |
 | Egern | [带注释的 YAML](templates/egern.yaml) · [下载](https://raw.githubusercontent.com/Mianmianchen/MianRoute/main/templates/egern.yaml) | 在本地副本或 App 中添加节点或订阅，再在 `PROXY` 组选中实际节点。模板仅使用网络分流，无需安装证书或插件。 |
+| v2rayNG | [Android 导入说明和订阅地址](v2rayng/) | 添加域名与 IP 资源，导入路由 JSON，选择自己的节点。 |
 
-两个模板的代理出口初始设为 `REJECT`。首次启用前先选好节点，否则需要代理的连接会被拒绝。
+两个 YAML 模板的代理出口初始设为 `REJECT`。首次启用前先选好节点，否则需要代理的连接会被拒绝。
 
 ## 默认分流
 
