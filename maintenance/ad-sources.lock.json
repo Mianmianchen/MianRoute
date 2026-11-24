@@ -1,22 +1,22 @@
 {
   "files": {
     "hagezi/dns-blocklists/wildcard/pro-onlydomains.txt": {
-      "revision": "a9656847eb8401b14583144db60d6a8d4ee4646c",
-      "sha256": "7bb1f2533e89113033945b57949a000e81e8102eabf7da5472fe478ead7fc90b",
-      "bytes": 4869461,
-      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/a9656847eb8401b14583144db60d6a8d4ee4646c/wildcard/pro-onlydomains.txt"
+      "revision": "12bfb04fad3cd8ccb4a6ff503dfdb7f147dd5379",
+      "sha256": "837361d2be86126d298c7e744d454e1314c5cf1e9acae6f517b62187ec39ed8e",
+      "bytes": 4978530,
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/12bfb04fad3cd8ccb4a6ff503dfdb7f147dd5379/wildcard/pro-onlydomains.txt"
     },
     "AdguardTeam/AdGuardSDNSFilter/Filters/filter.txt": {
-      "revision": "5207563ee25822f363ca0c9ed5fa25d5f2624ef0",
-      "sha256": "7710cafdf3979cddf761bfb31c9a6969a1f1440d35ad6bc3ad4d11d65d50961f",
-      "bytes": 4751022,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/5207563ee25822f363ca0c9ed5fa25d5f2624ef0/Filters/filter.txt"
+      "revision": "4798fcbe77db7220cc3604707d93a20602e0bc68",
+      "sha256": "002e8831a380d3458b742330a71c9db7dbe9498734dd39736b6b9074d023650c",
+      "bytes": 4755187,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/4798fcbe77db7220cc3604707d93a20602e0bc68/Filters/filter.txt"
     },
     "easylist/easylist/easylist/easylist_adservers.txt": {
-      "revision": "66b6d4473c249ccdcf5f79c9ab80a839a7136f4c",
-      "sha256": "11aa0605491166076736a4225c70b53a2a2432722f905d85228fad5ebd9007c3",
-      "bytes": 968713,
-      "url": "https://raw.githubusercontent.com/easylist/easylist/66b6d4473c249ccdcf5f79c9ab80a839a7136f4c/easylist/easylist_adservers.txt"
+      "revision": "35c331384f2a71fcd2b552622c04f6262124343f",
+      "sha256": "9eddbc128ac8bd5f0a358e9ba70b73ff05171bb5191bb7ae40b3bb89f400908a",
+      "bytes": 972358,
+      "url": "https://raw.githubusercontent.com/easylist/easylist/35c331384f2a71fcd2b552622c04f6262124343f/easylist/easylist_adservers.txt"
     },
     "easylist/easylist/easylist/easylist_adservers_popup.txt": {
       "revision": "66b6d4473c249ccdcf5f79c9ab80a839a7136f4c",
@@ -91,16 +91,16 @@
       "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/151c9614ab53005f90330f890b25b3a2ebf1a70a/data/combined_disguised_mail_trackers_justdomains.txt"
     },
     "publicsuffix/list/public_suffix_list.dat": {
-      "revision": "faf981a207f390881e6c3bcc7b9a1d57b8db066f",
-      "sha256": "c83df04395f07a81145d0480e81a5e6793a39226597eec958e81759b192aa6b6",
-      "bytes": 342921,
-      "url": "https://raw.githubusercontent.com/publicsuffix/list/faf981a207f390881e6c3bcc7b9a1d57b8db066f/public_suffix_list.dat"
+      "revision": "41dad7397b7fe9f03c694fbdb1b864973fe006c4",
+      "sha256": "2b76736dfe20db933f532847148020ed9dd2dd07ab8d8502b47bcd49acfbde80",
+      "bytes": 343047,
+      "url": "https://raw.githubusercontent.com/publicsuffix/list/41dad7397b7fe9f03c694fbdb1b864973fe006c4/public_suffix_list.dat"
     }
   },
   "counts": {
-    "suffix": 341099,
-    "exact": 3493,
+    "suffix": 351630,
+    "exact": 3471,
     "exceptions": 123,
-    "supplemental_exact": 613
+    "supplemental_exact": 591
   }
 }
