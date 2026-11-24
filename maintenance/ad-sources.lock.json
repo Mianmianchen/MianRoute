@@ -1,28 +1,28 @@
 {
   "files": {
     "hagezi/dns-blocklists/wildcard/pro-onlydomains.txt": {
-      "revision": "778749c7474f1261f84d3a46a4780f03df1177f0",
-      "sha256": "0abfb2d7c858ebd34453a5df8e1a76c4adfe806b5df24254b5b819d129667778",
-      "bytes": 4788941,
-      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/778749c7474f1261f84d3a46a4780f03df1177f0/wildcard/pro-onlydomains.txt"
+      "revision": "a9656847eb8401b14583144db60d6a8d4ee4646c",
+      "sha256": "7bb1f2533e89113033945b57949a000e81e8102eabf7da5472fe478ead7fc90b",
+      "bytes": 4869461,
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/a9656847eb8401b14583144db60d6a8d4ee4646c/wildcard/pro-onlydomains.txt"
     },
     "AdguardTeam/AdGuardSDNSFilter/Filters/filter.txt": {
-      "revision": "8fdcec26c508e5f1fb85615b7e48f53da4957655",
-      "sha256": "63bc23c48e5a9b3b01c27ec2cc496e1f546dd04f69529e584c051d53642bb460",
-      "bytes": 4666730,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/8fdcec26c508e5f1fb85615b7e48f53da4957655/Filters/filter.txt"
+      "revision": "5207563ee25822f363ca0c9ed5fa25d5f2624ef0",
+      "sha256": "7710cafdf3979cddf761bfb31c9a6969a1f1440d35ad6bc3ad4d11d65d50961f",
+      "bytes": 4751022,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/5207563ee25822f363ca0c9ed5fa25d5f2624ef0/Filters/filter.txt"
     },
     "easylist/easylist/easylist/easylist_adservers.txt": {
-      "revision": "d3dfef7c187906b62b411fd5da37329f69b2bb89",
-      "sha256": "9e17a4a5f53879e15049020848ec2b722205fa51ac7882986ecb7c86398d5744",
-      "bytes": 963467,
-      "url": "https://raw.githubusercontent.com/easylist/easylist/d3dfef7c187906b62b411fd5da37329f69b2bb89/easylist/easylist_adservers.txt"
+      "revision": "66b6d4473c249ccdcf5f79c9ab80a839a7136f4c",
+      "sha256": "11aa0605491166076736a4225c70b53a2a2432722f905d85228fad5ebd9007c3",
+      "bytes": 968713,
+      "url": "https://raw.githubusercontent.com/easylist/easylist/66b6d4473c249ccdcf5f79c9ab80a839a7136f4c/easylist/easylist_adservers.txt"
     },
     "easylist/easylist/easylist/easylist_adservers_popup.txt": {
-      "revision": "85ffebca7d470897f183c55b18476beae0fe609f",
-      "sha256": "d6ece282df6e7f862df2300464081757b6399119c82be435fed9accf995e0c88",
-      "bytes": 63491,
-      "url": "https://raw.githubusercontent.com/easylist/easylist/85ffebca7d470897f183c55b18476beae0fe609f/easylist/easylist_adservers_popup.txt"
+      "revision": "66b6d4473c249ccdcf5f79c9ab80a839a7136f4c",
+      "sha256": "b0ba0a20fd5b9c53a180006f4bd96c605c18f369e4b57a6eb04125beded7c588",
+      "bytes": 63533,
+      "url": "https://raw.githubusercontent.com/easylist/easylist/66b6d4473c249ccdcf5f79c9ab80a839a7136f4c/easylist/easylist_adservers_popup.txt"
     },
     "easylist/easylist/easyprivacy/easyprivacy_trackingservers.txt": {
       "revision": "85ffebca7d470897f183c55b18476beae0fe609f",
@@ -73,34 +73,34 @@
       "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/d44e8a308c35cda172fc128be50134f2c33bd370/ChineseFilter/sections/allowlist.txt"
     },
     "AdguardTeam/cname-trackers/data/combined_disguised_ads_justdomains.txt": {
-      "revision": "dd5bd59eda209a97efeee1ee7898e119c582a13b",
-      "sha256": "792da6926afe70f158a065a3e96314ac5d2dd1f5809eb4cd54c304c094bbdef4",
-      "bytes": 305312,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/dd5bd59eda209a97efeee1ee7898e119c582a13b/data/combined_disguised_ads_justdomains.txt"
+      "revision": "151c9614ab53005f90330f890b25b3a2ebf1a70a",
+      "sha256": "0804806c083d7e1948fafb3592888c4c0314acd90f1d47b209fa2615f7ff8312",
+      "bytes": 340063,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/151c9614ab53005f90330f890b25b3a2ebf1a70a/data/combined_disguised_ads_justdomains.txt"
     },
     "AdguardTeam/cname-trackers/data/combined_disguised_trackers_justdomains.txt": {
-      "revision": "dd5bd59eda209a97efeee1ee7898e119c582a13b",
-      "sha256": "f6a241680c4a3e561d4e7566ad67d77d8f0e9969f4dc71a9bf50ae2a1f406b42",
-      "bytes": 9748285,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/dd5bd59eda209a97efeee1ee7898e119c582a13b/data/combined_disguised_trackers_justdomains.txt"
+      "revision": "151c9614ab53005f90330f890b25b3a2ebf1a70a",
+      "sha256": "431a88c3c4a69d5eae647aa4f5c37cc18ea6bf66323c68f8a8cddc0a497a20b8",
+      "bytes": 11942564,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/151c9614ab53005f90330f890b25b3a2ebf1a70a/data/combined_disguised_trackers_justdomains.txt"
     },
     "AdguardTeam/cname-trackers/data/combined_disguised_mail_trackers_justdomains.txt": {
-      "revision": "dd5bd59eda209a97efeee1ee7898e119c582a13b",
-      "sha256": "f51d1885527c9e438dcfc485df13a48e809e44f3e87b6c77eaa582b6948c8a64",
-      "bytes": 9095352,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/dd5bd59eda209a97efeee1ee7898e119c582a13b/data/combined_disguised_mail_trackers_justdomains.txt"
+      "revision": "151c9614ab53005f90330f890b25b3a2ebf1a70a",
+      "sha256": "74a31751a0397cac34924c2857cd3a3924ceae8e0164ed20ba7abd8f285e2e85",
+      "bytes": 9821862,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/151c9614ab53005f90330f890b25b3a2ebf1a70a/data/combined_disguised_mail_trackers_justdomains.txt"
     },
     "publicsuffix/list/public_suffix_list.dat": {
-      "revision": "87a2c1b8de5886a133ff4da21b2aa6fec88d8739",
-      "sha256": "00a0af2ed2379634523b9ca80de3469d1466893915c252a91264e248c92d69d8",
-      "bytes": 342782,
-      "url": "https://raw.githubusercontent.com/publicsuffix/list/87a2c1b8de5886a133ff4da21b2aa6fec88d8739/public_suffix_list.dat"
+      "revision": "faf981a207f390881e6c3bcc7b9a1d57b8db066f",
+      "sha256": "c83df04395f07a81145d0480e81a5e6793a39226597eec958e81759b192aa6b6",
+      "bytes": 342921,
+      "url": "https://raw.githubusercontent.com/publicsuffix/list/faf981a207f390881e6c3bcc7b9a1d57b8db066f/public_suffix_list.dat"
     }
   },
   "counts": {
-    "suffix": 338553,
-    "exact": 3448,
+    "suffix": 341099,
+    "exact": 3493,
     "exceptions": 123,
-    "supplemental_exact": 568
+    "supplemental_exact": 613
   }
 }
