@@ -124,22 +124,6 @@
     ]
   },
   {
-    "remarks": ".cn",
-    "outboundTag": "direct",
-    "enabled": true,
-    "domain": [
-      "domain:cn"
-    ]
-  },
-  {
-    "remarks": ".tw",
-    "outboundTag": "proxy",
-    "enabled": true,
-    "domain": [
-      "domain:tw"
-    ]
-  },
-  {
     "remarks": "foreign-general",
     "outboundTag": "proxy",
     "enabled": true,
@@ -153,6 +137,22 @@
     "enabled": true,
     "domain": [
       "ext:mianroute-site.dat:cn-general"
+    ]
+  },
+  {
+    "remarks": ".cn",
+    "outboundTag": "direct",
+    "enabled": true,
+    "domain": [
+      "domain:cn"
+    ]
+  },
+  {
+    "remarks": ".tw",
+    "outboundTag": "proxy",
+    "enabled": true,
+    "domain": [
+      "domain:tw"
     ]
   },
   {

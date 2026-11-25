@@ -47,6 +47,6 @@
   "output_sha256": {
     "mianroute-site.dat": "20987260bb3262a3d388db7dba31ae80f9a6eae9ee9fe6f0caada4ffdd36fc25",
     "mianroute-ip.dat": "ea5398c9f31e86f16117bd4eaeb1119f85603d8de110d6e58acbc204ed844524",
-    "routing.json": "561ee04e963d94d4e9bffaedb642cd9efb6ea7beacbe6c264ca79b5c37caec55"
+    "routing.json": "a1cc20d753c2d10662b2fe49491b30d2a0a158c242fd3595bd39f2f6594339f3"
   }
 }
