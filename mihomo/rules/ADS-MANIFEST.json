@@ -1,27 +1,27 @@
 {
-  "snapshot_date_utc": "2026-11-24",
+  "snapshot_date_utc": "2026-11-25",
   "sources": [
     {
-      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/4efe36574890b5ceacfb0ca8c693fee5c7395fb6/wildcard/pro-onlydomains.txt",
-      "sha256": "d8ccd54b29a00fd097945e113d6b2b42354d4885181b21ec7c6d6579eee8e1f2",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/f48350a24a98958355da012d91d77758208db620/wildcard/pro-onlydomains.txt",
+      "sha256": "4b35109229f209c2dadabfd263fc339081032d2004e4a739ef382e1e90e003f8",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "hagezi.txt",
-      "snapshot_size_bytes": 5017007,
-      "commit": "4efe36574890b5ceacfb0ca8c693fee5c7395fb6"
+      "snapshot_size_bytes": 4966577,
+      "commit": "f48350a24a98958355da012d91d77758208db620"
     },
     {
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/b46c8941b6db40b8d7fc3eaa9b31a6d4103f1d03/Filters/filter.txt",
-      "sha256": "77cb5853f4561b71ad111b0521758f7322eec076acbbe5e92d49890377202f00",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/f71fecb8bf2e1ca3c86d2aa393076f12653fd3d7/Filters/filter.txt",
+      "sha256": "635412751a3851e72528863f054a2886a062b79b39782095c10f7789e6511b3a",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "adguard.txt",
-      "snapshot_size_bytes": 4758651,
-      "commit": "b46c8941b6db40b8d7fc3eaa9b31a6d4103f1d03"
+      "snapshot_size_bytes": 4762904,
+      "commit": "f71fecb8bf2e1ca3c86d2aa393076f12653fd3d7"
     }
   ],
   "outputs": {
-    "ads.yaml": "f0a8522682660825963ab9d75c02f0115d857ec7b0de3781731ee5e72123ac09",
+    "ads.yaml": "5fd6358dff054c98c0845ecc3527eccc5faaa3a5553792b2009c9046457d5045",
     "ads-exceptions.yaml": "24411ab64b477c3d2266b43888e83a1d446c9704b06ff9b9b1dfa0e5fc7db9e6"
   },
   "notes": [
