@@ -1,17 +1,17 @@
 {
-  "asn_revision": "ad8a989a779db7c2ba00a59476749eb6d8e68b35",
+  "asn_revision": "e09a9ca47834a124b898c1ae3906b90ed12db387",
   "asn_source": "https://github.com/ipverse/as-ip-blocks",
   "announced_ipv4_prefix_counts": {
     "24429": 259,
-    "37963": 103,
+    "37963": 101,
     "45102": 198,
-    "134963": 90,
+    "134963": 89,
     "203513": 1,
     "45090": 78,
     "132203": 180,
-    "133478": 3,
+    "133478": 2,
     "137876": 1,
-    "139341": 328,
+    "139341": 329,
     "131486": 4,
     "137753": 5,
     "137787": 1,
@@ -27,13 +27,13 @@
     "139799": 1,
     "133865": 12
   },
-  "merged_enterprise_ipv4_prefixes": 1304,
+  "merged_enterprise_ipv4_prefixes": 1302,
   "geoip_asset": {
-    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261124035530/geoip-full.dat.gz",
-    "digest": "sha256:c4a7f9732fb248ff68191971fdcbd1abe2b5cb84c5b1e1eb2f953fe47ea0f0a3"
+    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261125020512/geoip-full.dat.gz",
+    "digest": "sha256:b69ee6d5a85d99687c8dc58aa77fe8bc57468bf9536f4b534d8f587812476041"
   },
   "public_rule_sha256": {
-    "ads.yaml": "b9c3d4ef42f7c7212a2d2a790734bcc6da63ea316050184c0ad006b54d932fdc",
+    "ads.yaml": "f3954ca70410fb334fa90f4d3c91052928258823a14d1cb0fa41c1b2aed5252a",
     "ads-exceptions.yaml": "21994ffa61ded416dcc82ada7b0ad9d7b99b8483ac14def45817655c4f5dc7cd",
     "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
@@ -45,8 +45,8 @@
     "cn-general.yaml": "c2ccb14981fe58ac09bf46807d669da2f06b6d7ed6396e7c0376907cb650feb8"
   },
   "output_sha256": {
-    "mianroute-site.dat": "7ead8215b91e50cf929c01ec8ce4e5c8d172e3b2d9460f6ab81d56c8b4dd329a",
-    "mianroute-ip.dat": "96bb9920df202f21c1bfa44753cf66d039f094456a419d17b438cafc2d3452e3",
+    "mianroute-site.dat": "1ffc43e09124ac898d2715cc163702ce5c8b98bafc9cab9ad6226391460bbb44",
+    "mianroute-ip.dat": "ea5398c9f31e86f16117bd4eaeb1119f85603d8de110d6e58acbc204ed844524",
     "routing.json": "561ee04e963d94d4e9bffaedb642cd9efb6ea7beacbe6c264ca79b5c37caec55"
   }
 }
