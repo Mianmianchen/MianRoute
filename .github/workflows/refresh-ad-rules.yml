@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: '17 2,14 * * *'
   push:
-    branches: [main, maintain/ads-20261122]
+    branches: [main]
     paths:
       - '.github/workflows/refresh-ad-rules.yml'
       - 'maintenance/build_ads.py'
