@@ -5,6 +5,7 @@ import gzip
 import hashlib
 import ipaddress
 import json
+import os
 import pathlib
 import re
 import time
@@ -23,19 +24,40 @@ POLICY = {"中国大陆": "direct", "DIRECT": "direct", "Apple直连": "direct",
 
 
 def fetch(url, missing=False):
+    request = Request(url, headers={"User-Agent": "MianRoute-public-builder"})
+    token = os.environ.get("GH_TOKEN")
+    if token and url.startswith("https://api.github.com/"):
+        request.add_unredirected_header("Authorization", "Bearer " + token)
+
     for attempt in range(3):
+        delay = 2 ** attempt
         try:
-            with urlopen(Request(url, headers={"User-Agent": "MianRoute-public-builder"}), timeout=45) as r:
+            with urlopen(request, timeout=45) as r:
                 return r.read()
         except HTTPError as e:
-            if missing and e.code == 404:
-                return None
-            if e.code < 500 and e.code != 429:
-                raise
+            with e:
+                if missing and e.code == 404:
+                    return None
+                remaining = e.headers.get("X-RateLimit-Remaining")
+                retry_after = e.headers.get("Retry-After", "")
+                limited = e.code == 429 or (e.code == 403 and (
+                    remaining == "0" or retry_after or b"rate limit" in e.read(4096).lower()
+                    or "rate limit" in str(e.reason).lower()
+                ))
+                if attempt == 2 or (e.code < 500 and not limited):
+                    raise
+                if limited:
+                    reset = e.headers.get("X-RateLimit-Reset", "")
+                    if retry_after.isdigit():
+                        delay = max(1, int(retry_after))
+                    elif remaining == "0" and reset.isdigit():
+                        delay = max(1, int(reset) - int(time.time()) + 1)
+                    else:
+                        delay = 60 * 2 ** attempt
         except (TimeoutError, URLError):
-            pass
-        time.sleep(2 ** attempt)
-    raise RuntimeError("Download failed: " + url)
+            if attempt == 2:
+                raise
+        time.sleep(delay)
 
 
 def read_yaml(path):

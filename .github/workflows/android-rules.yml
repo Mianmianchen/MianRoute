@@ -32,6 +32,8 @@ jobs:
         with:
           ref: main
       - name: Generate from the shared public rules and upstream snapshots
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           python3 -m pip install PyYAML==6.0.3 greenery==4.2.2
           python3 maintenance/build_android.py "$RUNNER_TEMP/android"
