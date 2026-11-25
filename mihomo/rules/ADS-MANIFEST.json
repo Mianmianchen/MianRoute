@@ -11,17 +11,17 @@
       "commit": "f48350a24a98958355da012d91d77758208db620"
     },
     {
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/f71fecb8bf2e1ca3c86d2aa393076f12653fd3d7/Filters/filter.txt",
-      "sha256": "635412751a3851e72528863f054a2886a062b79b39782095c10f7789e6511b3a",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/f3711024566def9ba330ab33bb9e8a949e8457fc/Filters/filter.txt",
+      "sha256": "e60d9ca04a5a53f512b22bbd75c61834c4b8a3511fed6afd5236b166d202f9f0",
       "url_kind": "immutable_git_revision",
       "immutable_revision_verified": true,
       "snapshot_cache_name": "adguard.txt",
-      "snapshot_size_bytes": 4762904,
-      "commit": "f71fecb8bf2e1ca3c86d2aa393076f12653fd3d7"
+      "snapshot_size_bytes": 4764837,
+      "commit": "f3711024566def9ba330ab33bb9e8a949e8457fc"
     }
   ],
   "outputs": {
-    "ads.yaml": "5fd6358dff054c98c0845ecc3527eccc5faaa3a5553792b2009c9046457d5045",
+    "ads.yaml": "6fdeeaeee7fa92a6eb452b75a1789708bb7ec599dcae963f60c7448dee7d6ffa",
     "ads-exceptions.yaml": "24411ab64b477c3d2266b43888e83a1d446c9704b06ff9b9b1dfa0e5fc7db9e6"
   },
   "notes": [

@@ -7,16 +7,16 @@
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/f48350a24a98958355da012d91d77758208db620/wildcard/pro-onlydomains.txt"
     },
     "AdguardTeam/AdGuardSDNSFilter/Filters/filter.txt": {
-      "revision": "f71fecb8bf2e1ca3c86d2aa393076f12653fd3d7",
-      "sha256": "635412751a3851e72528863f054a2886a062b79b39782095c10f7789e6511b3a",
-      "bytes": 4762904,
-      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/f71fecb8bf2e1ca3c86d2aa393076f12653fd3d7/Filters/filter.txt"
+      "revision": "f3711024566def9ba330ab33bb9e8a949e8457fc",
+      "sha256": "e60d9ca04a5a53f512b22bbd75c61834c4b8a3511fed6afd5236b166d202f9f0",
+      "bytes": 4764837,
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/f3711024566def9ba330ab33bb9e8a949e8457fc/Filters/filter.txt"
     },
     "easylist/easylist/easylist/easylist_adservers.txt": {
-      "revision": "593b097224d8799e15be1952fc7f20c6a6e0fa8b",
-      "sha256": "0fe7f965ab2fdf69ce0f529cbcfddcb99f3becb413a4af87b7841c8e34d9d42e",
-      "bytes": 980076,
-      "url": "https://raw.githubusercontent.com/easylist/easylist/593b097224d8799e15be1952fc7f20c6a6e0fa8b/easylist/easylist_adservers.txt"
+      "revision": "9de1491aae5e0c63f105650dd28146e68fee65f4",
+      "sha256": "c9c6b4dfc7964863f4dad8d9c9c860f0c8f245413bb82bee0fc3b278da630617",
+      "bytes": 981637,
+      "url": "https://raw.githubusercontent.com/easylist/easylist/9de1491aae5e0c63f105650dd28146e68fee65f4/easylist/easylist_adservers.txt"
     },
     "easylist/easylist/easylist/easylist_adservers_popup.txt": {
       "revision": "66b6d4473c249ccdcf5f79c9ab80a839a7136f4c",
@@ -91,16 +91,16 @@
       "url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/151c9614ab53005f90330f890b25b3a2ebf1a70a/data/combined_disguised_mail_trackers_justdomains.txt"
     },
     "publicsuffix/list/public_suffix_list.dat": {
-      "revision": "8727c5c7a529cca5c232adc45acc7b7e26742b57",
-      "sha256": "42f73ae62415f5bd9a5b70e27d47d9038a34b2eb9e43527e2b6bd96f1ce85ab0",
-      "bytes": 344170,
-      "url": "https://raw.githubusercontent.com/publicsuffix/list/8727c5c7a529cca5c232adc45acc7b7e26742b57/public_suffix_list.dat"
+      "revision": "a7d71bcee31fb2b0b9f04777b7ea02d09bfea5f2",
+      "sha256": "2b0d8847af43256bc86a4212a9a33deb2b9b8741f2adaaec2755fd5f98b7b223",
+      "bytes": 344265,
+      "url": "https://raw.githubusercontent.com/publicsuffix/list/a7d71bcee31fb2b0b9f04777b7ea02d09bfea5f2/public_suffix_list.dat"
     }
   },
   "counts": {
-    "suffix": 352009,
-    "exact": 3482,
+    "suffix": 352091,
+    "exact": 3471,
     "exceptions": 123,
-    "supplemental_exact": 602
+    "supplemental_exact": 591
   }
 }
