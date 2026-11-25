@@ -116,9 +116,9 @@ rules:
   - RULE-SET,apple-proxy,Apple代理,no-resolve
 
   # 先按域名分类。未命中时按目标 IP 判断，大陆 IP 直连。
-  - DOMAIN-SUFFIX,cn,中国大陆
-  - DOMAIN-SUFFIX,tw,国外网站
   - GEOSITE,geolocation-!cn,国外网站
   - GEOSITE,cn,中国大陆
+  - DOMAIN-SUFFIX,cn,中国大陆
+  - DOMAIN-SUFFIX,tw,国外网站
   - GEOIP,CN,中国大陆
   - MATCH,兜底
