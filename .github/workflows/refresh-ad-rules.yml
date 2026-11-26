@@ -10,7 +10,6 @@ on:
       - 'maintenance/build_ads.py'
       - 'maintenance/verify_ads.py'
       - 'maintenance/ad-endpoints.json'
-      - 'mihomo/rules/build-ads.py'
 permissions:
   contents: write
 concurrency:
