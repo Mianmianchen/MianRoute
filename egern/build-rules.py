@@ -70,7 +70,7 @@ source = args.geosite_source or (previous.get('geosite_source') if previous.get(
 manifest = {'geosite_sha256': geosite_hash, 'files': {}}
 if source:
  manifest['geosite_source'] = source
-for name in ['apple-direct','apple-proxy','cn-direct','cn-services','ads-exceptions']:
+for name in ['apple-direct','apple-proxy','cn-services','ads-exceptions']:
  d={}
  for s in yaml.safe_load((R/(name+'.yaml')).read_text(encoding='utf-8'))['payload']:
   if name in ('cn-services','cn-direct') and s.startswith('AND,'):
