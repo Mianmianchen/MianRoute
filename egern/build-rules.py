@@ -3,18 +3,12 @@
 import yaml,json,hashlib,re,pathlib,collections
 import argparse
 a=argparse.ArgumentParser();a.add_argument('--mihomo-dir',required=True);a.add_argument('--geosite',required=True);a.add_argument('--output',required=True);a.add_argument('--geosite-source',help='URL of the exact GeoSite release used')
-a.add_argument('--sync-cn-alias', action='store_true', help='Copy the canonical Mihomo cn-services provider to the legacy cn-direct path')
 args=a.parse_args()
 R=pathlib.Path(args.mihomo_dir);OUT=pathlib.Path(args.output);OUT.mkdir(parents=True,exist_ok=True)
 GEO=pathlib.Path(args.geosite)
 # The Mihomo subscription is the source of the enterprise ASN list. Its domain
 # guard belongs only to Mihomo; Egern uses ASN matches later in cn-general.
 cn_source = R / 'cn-services.yaml'
-cn_alias = R / 'cn-direct.yaml'
-if args.sync_cn_alias:
- cn_alias.write_bytes(cn_source.read_bytes())
-if cn_alias.read_bytes() != cn_source.read_bytes():
- raise ValueError('Mihomo cn-direct and cn-services differ; compare them before syncing the legacy alias')
 asn_rule = re.compile(r'AND,\(\(DOMAIN-REGEX,\^\$\),\(IP-ASN,([1-9][0-9]*),no-resolve\)\)')
 service_asns = []
 def fields(b):
@@ -73,7 +67,7 @@ if source:
 for name in ['apple-direct','apple-proxy','cn-services','ads-exceptions']:
  d={}
  for s in yaml.safe_load((R/(name+'.yaml')).read_text(encoding='utf-8'))['payload']:
-  if name in ('cn-services','cn-direct') and s.startswith('AND,'):
+  if name == 'cn-services' and s.startswith('AND,'):
    match = asn_rule.fullmatch(s)
    if not match:
     raise ValueError('Unsupported mainland service rule: ' + s)
@@ -111,7 +105,7 @@ def hash_file(path):
 manifest['format'] = 'Egern native rule set'
 manifest['validation'] = 'Static checks only, not Egern core/device validation'
 manifest['apns_note'] = 'Six TCP/port/IP conditions are defined in templates/egern.yaml; apple-proxy.yaml contains the domain rules.'
-source_names = ('ads', 'ads-custom', 'ads-exceptions', 'apple-direct', 'apple-proxy', 'cn-direct', 'cn-services', 'foreign-proxy')
+source_names = ('ads', 'ads-custom', 'ads-exceptions', 'apple-direct', 'apple-proxy', 'cn-services', 'foreign-proxy')
 manifest['source_files'] = {name+'.yaml': hash_file(R/(name+'.yaml')) for name in source_names if (R/(name+'.yaml')).is_file()}
 manifest['output_sha256'] = {name+'.yaml': hash_file(OUT/(name+'.yaml')) for name in manifest['files']}
 manifest_path.write_bytes((json.dumps(manifest, indent=2)+'\n').encode('utf-8'))
