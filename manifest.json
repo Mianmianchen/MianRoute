@@ -33,7 +33,7 @@
     "digest": "sha256:1017638f15e7f3fc34a184c955cf0fda072b7501f8265056e28baa173bcf38b1"
   },
   "public_rule_sha256": {
-    "ads.yaml": "8617a30d7304c0e8ba336e9acf0f3472c6ea8b751d68cb1d16fa4a8d692e5685",
+    "ads.yaml": "db76e5a61ad0c52445f7258abcdd78696a72baa20e4d2a9ed9a4b742f3983d50",
     "ads-exceptions.yaml": "21994ffa61ded416dcc82ada7b0ad9d7b99b8483ac14def45817655c4f5dc7cd",
     "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
@@ -45,7 +45,7 @@
     "cn-general.yaml": "c2ccb14981fe58ac09bf46807d669da2f06b6d7ed6396e7c0376907cb650feb8"
   },
   "output_sha256": {
-    "mianroute-site.dat": "629ee0a01b4c1142855e73d48964243e467fe0756808d24e178a8cd3a82b529d",
+    "mianroute-site.dat": "c5a9b7994efbe74b5b36214bdf63178faad2778b5cf13bb4c1dae031916eb262",
     "mianroute-ip.dat": "42048990648b31a5d6d15221c4681cf46e468455590d28c4830b6beece728509",
     "routing.json": "a1cc20d753c2d10662b2fe49491b30d2a0a158c242fd3595bd39f2f6594339f3"
   }
