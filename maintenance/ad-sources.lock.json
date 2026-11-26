@@ -13,10 +13,10 @@
       "url": "https://raw.githubusercontent.com/AdguardTeam/AdGuardSDNSFilter/ccc428f3dd0e413925b4dadbae028ae578140e01/Filters/filter.txt"
     },
     "easylist/easylist/easylist/easylist_adservers.txt": {
-      "revision": "e3dc56a12d5093cd84cccc92d44523dcfb5b2daa",
-      "sha256": "be95787a360506f95c4fe2a9e60a5affc0a481f6348d5fce0298bd07df6f212b",
-      "bytes": 985279,
-      "url": "https://raw.githubusercontent.com/easylist/easylist/e3dc56a12d5093cd84cccc92d44523dcfb5b2daa/easylist/easylist_adservers.txt"
+      "revision": "0faaa600fa9cfe204c7ffd5a7ef28db892d82955",
+      "sha256": "6d03d12f16b0b7a65889051ec64c50260bc1e56dffec0af8b04a57d262a8621d",
+      "bytes": 985326,
+      "url": "https://raw.githubusercontent.com/easylist/easylist/0faaa600fa9cfe204c7ffd5a7ef28db892d82955/easylist/easylist_adservers.txt"
     },
     "easylist/easylist/easylist/easylist_adservers_popup.txt": {
       "revision": "66b6d4473c249ccdcf5f79c9ab80a839a7136f4c",
@@ -99,8 +99,8 @@
   },
   "counts": {
     "suffix": 346850,
-    "exact": 3486,
+    "exact": 3488,
     "exceptions": 123,
-    "supplemental_exact": 606
+    "supplemental_exact": 608
   }
 }
