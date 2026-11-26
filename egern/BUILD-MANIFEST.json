@@ -11,10 +11,6 @@
       "domain_set": 7,
       "domain_keyword_set": 1
     },
-    "cn-direct": {
-      "domain_suffix_set": 678,
-      "domain_set": 9
-    },
     "ads-exceptions": {
       "domain_suffix_set": 87,
       "domain_set": 26,
@@ -65,7 +61,6 @@
     "ads-exceptions.yaml": "24411ab64b477c3d2266b43888e83a1d446c9704b06ff9b9b1dfa0e5fc7db9e6",
     "apple-direct.yaml": "5d99b70658fdedb423af0d94bd5dc39404c218dad325a9a715837da30c5ae0a8",
     "apple-proxy.yaml": "399b8dfbe208a7fc2cd3a8111d4b618e1fa18382da77b36c23055237ab2f7b2b",
-    "cn-direct.yaml": "da746f42e829c4b649c2063e414b3de503779a0375132d7ccb8f1ebc4fe9c4c8",
     "cn-services.yaml": "da746f42e829c4b649c2063e414b3de503779a0375132d7ccb8f1ebc4fe9c4c8"
   },
   "output_sha256": {
@@ -78,7 +73,6 @@
     "foreign-general.yaml": "30d3830d06435317522123810aaaa6b75a48391dc8c2a61e992f7cd9d8c724cc",
     "apple-proxy.yaml": "c1e25b42328ded66eeed581e918f58634e72e9ceab0af49224b28c050ec1d100",
     "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
-    "cn-direct.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be",
     "cn-services.yaml": "3edc17d2c4bdfabe5c7925f6deef90dbc0289cc4475aae2521c28cddf15a24be"
   },
   "apns_note": "Six TCP/port/IP conditions are defined in templates/egern.yaml; apple-proxy.yaml contains the domain rules."
