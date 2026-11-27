@@ -1,5 +1,5 @@
 {
-  "asn_revision": "383fa214cc8b3a8d41272fa964c53cccf446a25c",
+  "asn_revision": "b89173ad7e0dc17b61cf79aebeae639893a94baf",
   "asn_source": "https://github.com/ipverse/as-ip-blocks",
   "announced_ipv4_prefix_counts": {
     "24429": 259,
@@ -29,11 +29,11 @@
   },
   "merged_enterprise_ipv4_prefixes": 1302,
   "geoip_asset": {
-    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261126014317/geoip-full.dat.gz",
-    "digest": "sha256:1017638f15e7f3fc34a184c955cf0fda072b7501f8265056e28baa173bcf38b1"
+    "url": "https://github.com/XTLS/Xray-rules-dat/releases/download/20261127013728/geoip-full.dat.gz",
+    "digest": "sha256:f3fe702c5c1189d6d5f8829c447c9e5a8bcef04528fcd9a9a6e7d8af21568daf"
   },
   "public_rule_sha256": {
-    "ads.yaml": "a372e519e04ca7f6963b86b3e00814c0f8daa39518493b1f9ac4852c0df68b3f",
+    "ads.yaml": "29a01a725fc72a5596a904ce099c73c02f7e1d6b7d72c4580a0035f6d8746abf",
     "ads-exceptions.yaml": "21994ffa61ded416dcc82ada7b0ad9d7b99b8483ac14def45817655c4f5dc7cd",
     "lan.yaml": "2b83e45c47fd31ccc41acc60891a2e4b7187ada719ca731a29a4678855517c31",
     "proxy-priority.yaml": "4d97e546cb4d33a0a8dcfd5b61953f9fe038466ac08b02cec72e3d6d0f5ca0da",
@@ -45,8 +45,8 @@
     "cn-general.yaml": "c2ccb14981fe58ac09bf46807d669da2f06b6d7ed6396e7c0376907cb650feb8"
   },
   "output_sha256": {
-    "mianroute-site.dat": "d30033065f7234e6c7177ab73de367d4562effae9aaab45c13410c316fd60047",
-    "mianroute-ip.dat": "42048990648b31a5d6d15221c4681cf46e468455590d28c4830b6beece728509",
+    "mianroute-site.dat": "1492b8aede70f6dc079c26cac6fa545d3dbade9f40308636f51241b6b2ef2cca",
+    "mianroute-ip.dat": "6d542cce4003524c5dd34baab8fcd5ee6b6344956159df31062e2b617aa26519",
     "routing.json": "a1cc20d753c2d10662b2fe49491b30d2a0a158c242fd3595bd39f2f6594339f3"
   }
 }
